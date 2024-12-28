@@ -9,8 +9,6 @@ interface props {
 
 const Toolbar = ({ data, setSearch }: props) => {
   const onChange = (value: string) => {
-    console.log(value);
-
     if (value === "") {
       setSearch(data);
     } else {
@@ -21,7 +19,6 @@ const Toolbar = ({ data, setSearch }: props) => {
             language.toLowerCase().includes(value.toLowerCase()),
           ),
       );
-      console.log(filter);
       setSearch(filter);
     }
   };
