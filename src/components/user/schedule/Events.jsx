@@ -1,7 +1,7 @@
 const Events = ({ event }) => {
   return (
     <div
-      className={`flex w-full flex-col rounded-lg bg-white p-3 text-black shadow-sm`}
+      className={`flex w-full flex-col rounded bg-white p-3 text-black shadow-sm`}
     >
       <div className="text-sm font-extrabold">{event.summary}</div>
       <div className="mt-2 flex w-full flex-col items-center justify-center gap-0">
