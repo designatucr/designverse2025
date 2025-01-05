@@ -3,13 +3,14 @@ import logo from "@/public/logos/short.png";
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { SiInstagram, SiLinkedin } from "@icons-pack/react-simple-icons";
+import data from "@/data/config";
 
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 bg-[#102D39] p-8 text-white">
       <Image src={logo} width={100} alt="DesignVerse Short logo" />
       <div className="flex items-center justify-center gap-4">
-        <Link href="mailto:designverseucr@gmail.com ">
+        <Link href={`mailto:${data.email}`}>
           <Mail className="text-3xl text-white hover:cursor-pointer lg:text-4xl" />
         </Link>
         <Link href="https://www.instagram.com/designverseucr/">
@@ -20,7 +21,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="">
-        Made with&nbsp;{"<3"}
+        Made with&nbsp;{data.heart}
         &nbsp;by the DesignVerse Team 2024
       </div>
     </div>

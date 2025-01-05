@@ -1,3 +1,5 @@
+import data from "./config";
+
 type QuestionAnswer = {
   question: string;
   answer: string;
@@ -60,6 +62,6 @@ export const QUESTIONS: QuestionAnswer[] = [
   },
   {
     question: "My question is not here.",
-    answer: "Feel free to email us at designverseucr@gmail.com",
+    answer: `Feel free to email us at ${data.email}`,
   },
 ];
