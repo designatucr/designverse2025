@@ -1,4 +1,4 @@
-import Logo from "@/public/logos/primary.png";
+import Logo from "@/public/logos/primary.webp";
 // import CountDown from "./Countdown";
 import Image from "next/image";
 import Countdown from "./countdown";
