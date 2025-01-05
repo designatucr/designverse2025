@@ -1,8 +1,5 @@
 name: Sync Changes from Template
-on:
-  schedule:
-    # Run at 6:00 AM every day
-    - cron: "0 14 * * *"
+on: workflow_dispatch
 
 jobs:
   sync-from-template:
@@ -30,8 +27,8 @@ jobs:
           branch_exists=$(git branch --list --remote | { grep -F "origin/sync-template" || true; } )
           if [ -z "$branch_exists" ]
           then
-            git checkout -b sync-template template/dev
-            git push origin sync-template
+            git checkout -b sync-template
+            git merge template/dev --allow-unrelated-histories --strategy=recursive -X ours
             gh pr create --base dev --head sync-template --title "Sync Template Changes" --body "Syncing template changes"
           else
             git checkout -b sync-template origin/sync-template
