@@ -34,6 +34,7 @@ jobs:
           then
             git checkout -b sync-template
             git merge template/dev --allow-unrelated-histories --strategy=recursive -X ours
+            git add .
             git commit -m "chore: sync template changes"
             gh pr create --base dev --head sync-template --title "Sync Template Changes" --body "Syncing template changes"
           else
