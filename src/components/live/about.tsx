@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex w-full items-center justify-center bg-[#51ADD7]"
+      className="flex h-[70vh] w-full items-start justify-center bg-[#51ADD7]"
     >
       <div className="w-10/12">
         <div className="w-1/2 text-white">
