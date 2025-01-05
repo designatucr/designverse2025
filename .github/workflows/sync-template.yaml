@@ -15,6 +15,11 @@ jobs:
           path: ${{ github.repository }}
           token: ${{ secrets.WORKFLOW_TOKEN }}
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "Github Actions Bot"
+          git config --global user.email "actions@github.com"
+
       - name: Fetch all
         working-directory: ${{ github.repository }}
         run: |
@@ -29,6 +34,7 @@ jobs:
           then
             git checkout -b sync-template
             git merge template/dev --allow-unrelated-histories --strategy=recursive -X ours
+            git commit -m "chore: sync template changes"
             gh pr create --base dev --head sync-template --title "Sync Template Changes" --body "Syncing template changes"
           else
             git checkout -b sync-template origin/sync-template
