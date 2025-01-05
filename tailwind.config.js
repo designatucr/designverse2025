@@ -16,6 +16,16 @@ module.exports = {
         poppins: ["var(--font-poppins)"],
       },
       colors: {
+        designverse: {
+          button: "#07374B",
+          gradients: {
+            landing: {
+              start: "#61C0F0",
+              via: "#F4B68C",
+              end: "#FFB9BA",
+            },
+          },
+        },
         hackathon: {
           "blue-100": "#38A3A5",
           "blue-200": "#22577A",
