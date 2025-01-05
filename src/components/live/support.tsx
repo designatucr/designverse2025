@@ -33,7 +33,7 @@ const support = [
 
 const Support = () => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center bg-[#4495B0] py-24">
+    <div className="relative flex w-full flex-col items-center justify-center bg-[#4495B0]">
       <p className="flex text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
         SUPPORT US
       </p>

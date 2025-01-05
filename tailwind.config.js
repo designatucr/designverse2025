@@ -17,7 +17,7 @@ module.exports = {
       },
       colors: {
         designverse: {
-          button: "#07374B",
+          priamry: "#07374B",
           gradients: {
             landing: {
               start: "#61C0F0",

@@ -9,6 +9,7 @@ import Support from "./support";
 // import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
+import Resources from "./resources";
 
 const Live = () => {
   return (
@@ -16,6 +17,7 @@ const Live = () => {
       <Landing />
       <About />
       <Support />
+      <Resources />
       {/* <Tracks /> */}
       {/* <Schedule /> */}
       {/* <Sponsors /> */}
