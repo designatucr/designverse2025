@@ -1,3 +1,4 @@
+import Navigation from "./navigation";
 import Landing from "./landing";
 import About from "./about";
 import Support from "./support";
@@ -14,6 +15,7 @@ import Resources from "./resources";
 const Live = () => {
   return (
     <>
+      <Navigation />
       <Landing />
       <About />
       <Support />

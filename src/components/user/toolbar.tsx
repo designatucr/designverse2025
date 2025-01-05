@@ -1,6 +1,6 @@
 "use client";
 import { InputWithClear } from "@/components/ui/input";
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface props {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

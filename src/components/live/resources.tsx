@@ -1,4 +1,3 @@
-import React from "react";
 import Figma from "@/public/resources/figma.webp";
 import Dribble from "@/public/resources/dribble.webp";
 import Miro from "@/public/resources/miro.webp";
