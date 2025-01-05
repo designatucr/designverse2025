@@ -6,7 +6,7 @@ import Questions from "./questions";
 import Confirmation from "./confirmation";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
-import LOGO from "@/public/logos/primary.png";
+import LOGO from "@/public/logos/primary.webp";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
