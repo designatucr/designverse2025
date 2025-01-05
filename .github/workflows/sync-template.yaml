@@ -1,0 +1,42 @@
+name: Sync Changes from Template
+on:
+  schedule:
+    # Run at 6:00 AM every day
+    - cron: "0 14 * * *"
+
+jobs:
+  sync-from-template:
+    # don't run this job on the template
+    if: github.repository != 'acm-ucr/hackathon-website'
+    name: Sync changes from acm-ucr/hackathon-website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Current Repo
+        uses: actions/checkout@v4
+        with:
+          path: ${{ github.repository }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+
+      - name: Fetch all
+        working-directory: ${{ github.repository }}
+        run: |
+          git remote add template https://github.com/acm-ucr/hackathon-website
+          git fetch --all
+
+      - name: Checkout and push Template Dev Branch
+        working-directory: ${{ github.repository }}
+        run: |
+          branch_exists=$(git branch --list --remote | { grep -F "origin/sync-template" || true; } )
+          if [ -z "$branch_exists" ]
+          then
+            git checkout -b sync-template template/dev
+            git push origin sync-template
+            gh pr create --base dev --head sync-template --title "Sync Template Changes" --body "Syncing template changes"
+          else
+            git checkout -b sync-template origin/sync-template
+            git pull template dev
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}

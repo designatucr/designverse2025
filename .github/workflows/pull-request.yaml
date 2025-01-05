@@ -1,0 +1,60 @@
+name: Hackathon Website
+
+on:
+  pull_request:
+    branches: [main, dev]
+  workflow_dispatch:
+
+jobs:
+  format:
+    name: formatting
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use ACM Formatting
+        uses: acm-ucr/formatting@v2
+
+  lint:
+    name: linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use ACM Linting
+        uses: acm-ucr/linting@v2
+
+  images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use ACM Images Optimization
+        uses: acm-ucr/images@v2
+        with:
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use ACM Build
+        uses: acm-ucr/build@v2
+
+    env:
+      NEXT_PUBLIC_FIREBASE_API_KEY: ${{secrets.NEXT_PUBLIC_FIREBASE_API_KEY}}
+      NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{secrets.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN}}
+      NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{secrets.NEXT_PUBLIC_FIREBASE_PROJECT_ID}}
+      NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: ${{secrets.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET}}
+      NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{secrets.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID}}
+      NEXT_PUBLIC_FIREBASE_APP_ID: ${{secrets.NEXT_PUBLIC_FIREBASE_APP_ID}}
+      NEXT_PUBLIC_FIREBASE_CLIENT_EMAIL: ${{secrets.NEXT_PUBLIC_FIREBASE_CLIENT_EMAIL}}
+      NEXT_PUBLIC_FIREBASE_PRIVATE_KEY: ${{secrets.NEXT_PUBLIC_FIREBASE_PRIVATE_KEY}}
+      NEXT_PUBLIC_GOOGLE_CLIENT_ID: ${{secrets.NEXT_PUBLIC_GOOGLE_CLIENT_ID}}
+      NEXT_PUBLIC_GOOGLE_CLIENT_SECRET: ${{secrets.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET}}
+      NEXTAUTH_SECRET: ${{secrets.NEXTAUTH_SECRET}}
+      NEXTAUTH_URL: ${{secrets.NEXTAUTH_URL}}
+      RESEND_API_KEY: "re_test_api_key"
