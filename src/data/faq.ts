@@ -19,7 +19,7 @@ export const QUESTIONS: QuestionAnswer[] = [
   {
     question: "Where will the event be held?",
     answer:
-      "DesignVerse 2024 will be in person and located at the University of California, Riverside. Specific locations will be released as we approach the date of the event.",
+      "DesignVerse 2025 will be in person and located at the University of California, Riverside. Specific locations will be released as we approach the date of the event.",
   },
   {
     question: "I have no experience, can I still join?",
