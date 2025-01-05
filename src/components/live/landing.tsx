@@ -15,7 +15,7 @@ const Landing = () => {
       <div className="flex h-fit w-3/5 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 p-12 text-white">
         <Image className="-mt-36" src={Logo} alt="Logo" />
         <div className="mt-4 text-2xl">
-          University of California Riverside | May 11 - 12, 2024
+          University of California Riverside | May 11 - 12, 2025
         </div>
         <Countdown />
       </div>

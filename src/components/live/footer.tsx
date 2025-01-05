@@ -2,7 +2,11 @@ import Image from "next/image";
 import logo from "@/public/logos/short.png";
 import Link from "next/link";
 import { Mail } from "lucide-react";
-import { SiInstagram, SiLinkedin } from "@icons-pack/react-simple-icons";
+import {
+  SiInstagram,
+  SiLinkedin,
+  SiTiktok,
+} from "@icons-pack/react-simple-icons";
 import data from "@/data/config";
 import Layer1 from "@/public/footer/layer_1.svg";
 import Layer2 from "@/public/footer/layer_2.svg";
@@ -48,16 +52,19 @@ const Footer = () => {
           <Link href={`mailto:${data.email}`}>
             <Mail className="text-3xl text-white hover:cursor-pointer lg:text-4xl" />
           </Link>
-          <Link href="https://www.instagram.com/designverseucr/">
+          <Link href={data.instagram}>
             <SiInstagram className="text-2xl text-white hover:cursor-pointer lg:text-3xl" />
           </Link>
-          <Link href="https://www.linkedin.com/company/designverseucr">
+          <Link href={data.linkedin}>
             <SiLinkedin className="text-2xl text-white hover:cursor-pointer lg:text-3xl" />
+          </Link>
+          <Link href="https://www.tiktok.com/@designverseucr">
+            <SiTiktok className="text-2xl text-white hover:cursor-pointer lg:text-3xl" />
           </Link>
         </div>
         <div className="">
           Made with&nbsp;{data.heart}
-          &nbsp;by the DesignVerse Team 2024
+          &nbsp;by the DesignVerse Team 2025
         </div>
       </div>
     </div>
