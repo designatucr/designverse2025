@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/logos/short.png";
+import logo from "@/public/logos/short.webp";
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import {
