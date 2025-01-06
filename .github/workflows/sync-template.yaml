@@ -35,10 +35,7 @@ jobs:
             echo "checking out new branch"
             git checkout -b sync-template
             echo "merging changes"
-            git merge template/dev --allow-unrelated-histories --strategy=recursive -X ours
-            echo "adding and committing changes"
-            git add .
-            git commit -m "chore: sync template changes"
+            git merge template/dev --allow-unrelated-histories --strategy=recursive -X ours -m "chore: sync template changes"
             echo "pushing changes"
             git push origin sync-template
             echo "creating pull request"
