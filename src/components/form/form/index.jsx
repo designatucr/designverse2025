@@ -38,7 +38,7 @@ const Form = ({
       </div>
       <div className="flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
         <Image src={LOGO} className="m-4 w-64" alt="Logo" />
-        <p className="bg-designverse-priamry m-0 w-full rounded-t-xl px-4 py-4 text-xl font-semibold text-white">
+        <p className="m-0 w-full rounded-t-xl bg-designverse-priamry px-4 py-4 text-xl font-semibold text-white">
           {header}
         </p>
         <div className="rounded-b-xl bg-white p-8">
