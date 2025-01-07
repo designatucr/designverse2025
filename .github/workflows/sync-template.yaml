@@ -40,7 +40,7 @@ jobs:
             git pull https://github.com/acm-ucr/hackathon-website.git --allow-unrelated-histories --squash --strategy=recursive -X theirs
             git add .
             git commit -m "chore: syncing template changes"
-            git push origin sync-template
+            git push --set-upstream origin sync-template
             gh pr create --base dev --title "Sync Template Changes" --body "Syncing template changes"
           else
             git checkout -b sync-template origin/sync-template
