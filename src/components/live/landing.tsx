@@ -41,7 +41,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            SPONSOR US <ExternalLink />
+            SPONSOR <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">

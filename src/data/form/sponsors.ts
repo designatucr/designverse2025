@@ -137,7 +137,7 @@ export const FIELDS: Fields = {
   },
   tier: {
     input: "radio",
-    text: "Sponsorship Tier (check sponsorship packet)",
+    text: "Sponsorship Tier (check sponsorship packet below)",
     options: Object.values(TIERS),
     field: "tier",
     width: 12,
