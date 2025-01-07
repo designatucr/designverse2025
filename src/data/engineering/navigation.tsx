@@ -1,4 +1,5 @@
 import { SiGithub as Github } from "@icons-pack/react-simple-icons";
+import React from "react";
 
 type tab = {
   label: string | React.ReactElement;
