@@ -16,10 +16,10 @@ const FAQ = () => {
       <Image src={Layer2} alt="Layer" className="absolute bottom-full w-full" />
 
       <div className="flex h-[200vh] w-full flex-col items-center bg-[#35798F] text-white">
-        <p className="flex text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
+        <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
           FAQ
         </p>
-        <Accordion type="single" collapsible className="w-8/12">
+        <Accordion type="single" collapsible className="w-8/12 font-work">
           {QUESTIONS.map(({ question, answer }, index) => (
             <AccordionItem value={question} key={index}>
               <AccordionTrigger>{question}</AccordionTrigger>

@@ -78,7 +78,7 @@ const Footer = () => {
             <SiTiktok className="text-2xl text-white hover:cursor-pointer lg:text-3xl" />
           </Link>
         </div>
-        <div className="">
+        <div className="font-work">
           Made with&nbsp;{data.heart}
           &nbsp;by the DesignVerse Team 2025
         </div>

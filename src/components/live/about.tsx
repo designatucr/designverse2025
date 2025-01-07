@@ -21,11 +21,11 @@ const About = () => {
       >
         <div className="w-10/12 pt-[8vh]">
           <div className="w-1/2 text-white">
-            <p className="flex text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
+            <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
               ABOUT US
             </p>
             <br />
-            <p className="w-10/12 text-sm lg:w-full lg:text-base">
+            <p className="w-10/12 font-work text-sm lg:w-full lg:text-base">
               DesignVerse is the first ever 24-hour beginner-friendly
               Design-a-Thon hosted by the University of California, Riverside.
               Designers are challenged to create the interface of an app or
