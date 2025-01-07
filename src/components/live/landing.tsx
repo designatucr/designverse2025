@@ -1,7 +1,7 @@
 import Logo from "@/public/logos/primary.svg";
-import cloud1 from "../../../public/resources/cloud1.svg";
-import cloud2 from "../../../public/resources/cloud2.svg";
-import sand1 from "../../../public/resources/sand1.svg";
+import cloud1 from "@/public/resources/cloud1.svg";
+import cloud2 from "@/public/resources/cloud2.svg";
+import sand1 from "@/public/resources/sand1.svg";
 // import CountDown from "./Countdown";
 import Image from "next/image";
 import Countdown from "./countdown";
