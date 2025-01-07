@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import Layer1 from "@/public/support/layer_1.svg";
-import Layer2 from "@/public/support/layer_2.svg";
 import Image from "next/image";
 
 const support = [
@@ -33,8 +32,13 @@ const support = [
 const Support = () => {
   return (
     <div className="relative">
-      <Image src={Layer1} alt="Layer" className="absolute bottom-full w-full" />
-      <Image src={Layer2} alt="Layer" className="absolute bottom-full w-full" />
+      <div className="backdrop-blur-3xl">
+        <Image
+          src={Layer1}
+          alt="Layer"
+          className="absolute bottom-full w-full"
+        />
+      </div>
       <section
         id="support-us"
         className="relative flex h-[75vh] w-full flex-col items-center justify-start bg-[#4495B0]"
