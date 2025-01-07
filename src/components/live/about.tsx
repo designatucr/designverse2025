@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Bubble from "@/public/about/bubble1.svg";
 import Bubble2 from "@/public/about/bubble2.svg";
+import Water from "@/public/about/water.svg";
 
 const About = () => {
   return (
     <div className="relative">
+      <Image
+        src={Water}
+        alt="Water"
+        className="absolute top-[-100px] z-0 w-screen"
+      />
       <Image
         src={Bubble2}
         alt="Bubble"
@@ -19,7 +25,7 @@ const About = () => {
         id="about"
         className="z-20 flex h-[85vh] w-full items-start justify-center bg-[#51ADD7]"
       >
-        <div className="w-10/12 pt-[8vh]">
+        <div className="z-10 w-10/12 pt-[8vh]">
           <div className="w-1/2 text-white">
             <p className="flex text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
               ABOUT US
