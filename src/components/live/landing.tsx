@@ -2,7 +2,6 @@ import Logo from "@/public/logos/primary.svg";
 import cloud1 from "@/public/resources/cloud1.svg";
 import cloud2 from "@/public/resources/cloud2.svg";
 import sand1 from "@/public/resources/sand1.svg";
-// import CountDown from "./Countdown";
 import Image from "next/image";
 import Countdown from "./countdown";
 import { Button } from "../ui/button";
@@ -29,11 +28,11 @@ const Landing = () => {
       <div className="z-20 flex w-3/5 justify-center gap-3">
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
           <Link
-            href="/form/interest"
+            href="/form/participant"
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            SHOW INTEREST <ExternalLink />
+            REGISTER <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
@@ -42,7 +41,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            SPONSOR US <ExternalLink />
+            SPONSOR <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
@@ -51,7 +50,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            BE A MENTOR <ExternalLink />
+            MENTOR <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
@@ -60,7 +59,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            BE A VOLUNTEER <ExternalLink />
+            VOLUNTEER <ExternalLink />
           </Link>
         </Button>
       </div>
