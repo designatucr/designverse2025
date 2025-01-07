@@ -4,7 +4,6 @@ import Miro from "@/public/resources/miro.webp";
 import Image from "next/image";
 import Link from "next/link";
 import Layer1 from "@/public/resources/layer_1.svg";
-import Layer2 from "@/public/resources/layer_2.svg";
 
 const resources = [
   {
@@ -34,7 +33,6 @@ const Resources = () => {
   return (
     <div className="relative">
       <Image src={Layer1} alt="Layer" className="absolute bottom-full w-full" />
-      <Image src={Layer2} alt="Layer" className="absolute bottom-full w-full" />
       <section
         id="resources"
         className="flex h-[80vh] flex-col items-center justify-start bg-[#3D859E] text-white"
