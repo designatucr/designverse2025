@@ -1,5 +1,6 @@
 name: Sync Changes from Template
-on: workflow_dispatch
+on:
+  workflow_dispatch
   # schedule:
   #   # Run at 6:00 AM every day
   #   - cron: "0 14 * * *"
