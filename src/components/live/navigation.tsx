@@ -1,28 +1,28 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronLeft, Menu } from "lucide-react";
+import { ChevronLeft, Menu, Anchor, Waves, Fish, Ship } from "lucide-react";
 
 const items = [
   {
     name: "Home",
     link: "/#home",
-    icon: <Menu />,
+    icon: <Anchor />,
   },
   {
     name: "About",
     link: "/#about",
-    icon: <Menu />,
+    icon: <Waves />,
   },
   {
     name: "Support Us",
     link: "/#support-us",
-    icon: <Menu />,
+    icon: <Ship />,
   },
   {
     name: "Resources",
     link: "/#resources",
-    icon: <Menu />,
+    icon: <Fish />,
   },
 ];
 
