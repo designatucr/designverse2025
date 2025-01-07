@@ -1,8 +1,8 @@
 name: Sync Changes from Template
-on:
-  schedule:
-    # Run at 6:00 AM every day
-    - cron: "0 14 * * *"
+on: workflow_dispatch
+  # schedule:
+  #   # Run at 6:00 AM every day
+  #   - cron: "0 14 * * *"
 
 jobs:
   sync-from-template:
@@ -35,14 +35,10 @@ jobs:
           branch_exists=$(git branch --list --remote | { grep -F "origin/sync-template" || true; } )
           if [ -z "$branch_exists" ]
           then
-            echo "checking out new branch"
             git checkout -b sync-template
-            echo "merging changes"
-            git merge template/dev --allow-unrelated-histories --strategy=recursive -X ours -m "chore: sync template changes"
-            echo "pushing changes"
+            git merge https://github.com/acm-ucr/hackathon-website.git --allow-unrelated-histories --squash --strategy=recursive -X theirs -m "chore: sync template changes"
             git push origin sync-template
-            echo "creating pull request"
-            gh pr create --base dev --head sync-template --title "Sync Template Changes" --body "Syncing template changes"
+            gh pr create --base dev --title "Sync Template Changes" --body "Syncing template changes"
           else
             git checkout -b sync-template origin/sync-template
             git pull template dev
