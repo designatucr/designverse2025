@@ -12,7 +12,7 @@
 
 ## Figma
 
-[Hackathon Website Template Figma Design File](https://www.figma.com/design/aJJ3jBpjDlbPmxhXm21gFg/DV-2024-2025-Website?node-id=395-536)
+[Designverse 2025 Figma Design File](https://www.figma.com/design/aJJ3jBpjDlbPmxhXm21gFg/DV-2024-2025-Website?node-id=395-536)
 
 ## Node.js
 
