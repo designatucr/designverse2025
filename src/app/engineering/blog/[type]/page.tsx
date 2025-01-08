@@ -44,7 +44,7 @@ const Page = async ({ params }: PageProps) => {
 
     return (
       <div
-        className={"my-8 flex w-full items-start justify-center font-poppins"}
+        className={"font-poppins my-8 flex w-full items-start justify-center"}
       >
         <title>{`Engineering | ${data.title}`}</title>
         <div className="prose min-h-screen">

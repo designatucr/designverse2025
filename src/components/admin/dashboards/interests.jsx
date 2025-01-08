@@ -5,7 +5,7 @@ import Table from "./dashboard/dashboard";
 
 const Interests = ({ searchParams }) => {
   return (
-    <div className="flex h-full flex-col gap-3 py-4 font-poppins">
+    <div className="font-poppins flex h-full flex-col gap-3 py-4">
       <Table
         searchParams={searchParams}
         title="Interests"

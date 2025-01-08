@@ -13,7 +13,6 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        poppins: ["var(--font-poppins)"],
         sora: ["var(--font-sora)"],
         work: ["var(--font-work-sans)"],
       },
