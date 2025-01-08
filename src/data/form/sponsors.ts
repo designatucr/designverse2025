@@ -137,7 +137,7 @@ export const FIELDS: Fields = {
   },
   tier: {
     input: "radio",
-    text: "Sponsorship Tier (check sponsorship packet)",
+    text: "Sponsorship Tier (check sponsorship packet below)",
     options: Object.values(TIERS),
     field: "tier",
     width: 12,
@@ -165,7 +165,7 @@ export const FIELDS: Fields = {
       "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
       "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
-      "I consent to providing a safe space for hackers to learn and grow their interests in computing",
+      "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
       "I understand that failure to comply with guidelines or creating an unsafe space will result in my removal from the event",
       "I understand this is an in person event taking place in UCR and I must attend in person in order to participate",
