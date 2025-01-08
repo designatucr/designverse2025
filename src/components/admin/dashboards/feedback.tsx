@@ -9,7 +9,7 @@ type props = {
 
 const Feedback = ({ searchParams }: props) => {
   return (
-    <div className="font-poppins flex h-full flex-col gap-3 py-4">
+    <div className="flex h-full flex-col gap-3 py-4 font-work">
       <Table
         searchParams={searchParams}
         title="Feedback"

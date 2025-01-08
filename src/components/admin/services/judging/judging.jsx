@@ -11,7 +11,7 @@ const Judging = () => {
   const [view, setView] = useState(false);
 
   return (
-    <div className="font-poppins flex h-full flex-col gap-3 py-4">
+    <div className="flex h-full flex-col gap-3 py-4 font-work">
       <Label className="pr-5 text-2xl font-bold">Judging</Label>
       <Toolbar
         data={teams}

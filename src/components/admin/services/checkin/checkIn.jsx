@@ -83,7 +83,7 @@ const CheckIn = () => {
   };
 
   return (
-    <div className="font-poppins flex h-full flex-col gap-3 py-4">
+    <div className="flex h-full flex-col gap-3 py-4 font-work">
       <Label className="pr-5 text-2xl font-bold">Checkin</Label>
       <div className="flex flex-col items-center justify-center">
         <div className="flex w-full flex-col gap-3 overflow-hidden py-3">
