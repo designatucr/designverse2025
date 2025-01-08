@@ -43,9 +43,7 @@ const Page = async ({ params }: PageProps) => {
     const markdown = await convertMarkdownToHtml(content);
 
     return (
-      <div
-        className={"my-8 flex w-full items-start justify-center font-poppins"}
-      >
+      <div className={"my-8 flex w-full items-start justify-center font-work"}>
         <title>{`Engineering | ${data.title}`}</title>
         <div className="prose min-h-screen">
           <article dangerouslySetInnerHTML={{ __html: markdown }} />
