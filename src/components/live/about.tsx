@@ -2,6 +2,7 @@ import Image from "next/image";
 import Bubble from "@/public/about/bubble1.svg";
 import Bubble2 from "@/public/about/bubble2.svg";
 import Water from "@/public/about/water.svg";
+import Light from "@/public/about/light.svg";
 
 const About = () => {
   return (
@@ -21,9 +22,10 @@ const About = () => {
         alt="Bubble"
         className="absolute left-[30%] top-[5%]"
       />
+      <Image src={Light} alt="Light" className="absolute right-0" />
       <section
         id="about"
-        className="z-20 flex h-[85vh] w-full items-start justify-center bg-[#51ADD7]"
+        className="z-20 flex h-[90vh] w-full items-start justify-center bg-[#51ADD7]"
       >
         <div className="z-10 w-10/12 pt-[8vh]">
           <div className="w-1/2 text-white">
