@@ -25,7 +25,7 @@ const About = () => {
       <Image src={Light} alt="Light" className="absolute right-0" />
       <section
         id="about"
-        className="z-20 flex h-[90vh] md:h-[130vh] lg:h-[90vh] w-full items-start justify-center bg-[#51ADD7]"
+        className="z-20 flex h-[90vh] w-full items-start justify-center bg-[#51ADD7] md:h-[130vh] lg:h-[90vh]"
       >
         <div className="z-10 w-10/12 pt-[8vh]">
           <div className="w-full text-white lg:w-1/2">
