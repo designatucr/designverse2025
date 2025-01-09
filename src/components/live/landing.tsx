@@ -12,10 +12,10 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="relative flex h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work"
+      className="relative flex h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work md:h-[160vh]"
     >
       <Image
-        className="absolute right-0 top-0 w-3/4 lg:w-fit"
+        className="absolute right-0 top-0 w-1/2 lg:w-fit"
         src={cloud1}
         alt={cloud1}
       />
@@ -25,8 +25,12 @@ const Landing = () => {
         alt={cloud2}
       />
 
-      <div className="z-20 flex h-fit w-11/12 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 py-4 text-white lg:w-3/5 lg:p-12">
-        <Image className="-mt-40 lg:-mt-36" src={Logo} alt="Logo" />
+      <div className="z-20 flex w-11/12 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 py-4 text-white lg:w-3/5 lg:p-12">
+        <Image
+          className="-mt-40 md:-mt-32 md:h-1/2 md:w-1/2 lg:-mt-36"
+          src={Logo}
+          alt="Logo"
+        />
         <div className="text-md mt-4 flex flex-col items-center justify-center text-center font-bold lg:text-2xl">
           <p className="flex items-center gap-1 text-lg lg:text-2xl">
             {" "}

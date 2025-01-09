@@ -23,7 +23,7 @@ const Footer = () => {
       <Image
         src={Fish2}
         alt="Fish2"
-        className="absolute bottom-[250%] left-[60%] lg:bottom-[425%] lg:left-[30%]"
+        className="absolute bottom-[250%] left-[60%] md:left-[80%] lg:bottom-[425%] lg:left-[30%]"
       />
       <Image
         src={Fish3}
