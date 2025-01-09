@@ -1,4 +1,4 @@
-# Designverse 2025 Website
+# DesignVerse 2025 Website
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -12,7 +12,7 @@
 
 ## Figma
 
-[Designverse 2025 Figma Design File](https://www.figma.com/design/aJJ3jBpjDlbPmxhXm21gFg/DV-2024-2025-Website?node-id=395-536)
+[DesignVerse 2025 Figma Design File](https://www.figma.com/design/aJJ3jBpjDlbPmxhXm21gFg/DV-2024-2025-Website?node-id=395-536)
 
 ## Node.js
 
