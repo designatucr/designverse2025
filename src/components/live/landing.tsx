@@ -6,7 +6,7 @@ import Image from "next/image";
 import Countdown from "./countdown";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MapPin, Calendar } from "lucide-react";
 
 const Landing = () => {
   return (
@@ -14,18 +14,33 @@ const Landing = () => {
       id="home"
       className="relative flex h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work"
     >
-      <Image className="absolute right-0 top-0" src={cloud1} alt={cloud1} />
-      <Image className="absolute left-0 top-[8vh]" src={cloud2} alt={cloud2} />
+      <Image
+        className="absolute right-0 top-0 w-3/4 lg:w-fit"
+        src={cloud1}
+        alt={cloud1}
+      />
+      <Image
+        className="absolute left-0 top-[8vh] w-1/4 lg:w-fit"
+        src={cloud2}
+        alt={cloud2}
+      />
 
-      <div className="z-20 flex h-fit w-3/5 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 p-12 text-white">
-        <Image className="-mt-36" src={Logo} alt="Logo" />
-        <div className="mt-4 text-2xl font-bold">
-          University of California Riverside | May 11 - 12, 2025
+      <div className="z-20 flex h-fit w-11/12 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 py-4 text-white lg:w-3/5 lg:p-12">
+        <Image className="-mt-40 lg:-mt-36" src={Logo} alt="Logo" />
+        <div className="text-md mt-4 flex flex-col items-center justify-center text-center font-bold lg:text-2xl">
+          <p className="flex items-center gap-1 text-lg lg:text-2xl">
+            {" "}
+            <MapPin size={24} /> University of California Riverside{" "}
+          </p>
+          <p className="flex items-center gap-1 text-sm lg:text-lg">
+            {" "}
+            <Calendar size={20} /> May 11 - 12, 2025
+          </p>
         </div>
         <Countdown />
       </div>
 
-      <div className="z-20 flex w-3/5 justify-center gap-3">
+      <div className="z-20 flex w-3/5 flex-col justify-center gap-3 lg:flex-row">
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
           <Link
             href="/form/participant"
@@ -64,9 +79,9 @@ const Landing = () => {
         </Button>
       </div>
       <Image
-        className="absolute top-[30vh] z-0 w-full"
+        className="absolute top-[45vh] z-0 min-h-full w-full lg:top-[30vh] lg:h-fit"
         src={sand1}
-        alt={sand1}
+        alt="sand1"
       />
     </section>
   );

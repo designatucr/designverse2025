@@ -10,17 +10,17 @@ const About = () => {
       <Image
         src={Water}
         alt="Water"
-        className="absolute top-[-100px] z-0 w-screen"
+        className="absolute z-0 w-screen lg:top-[-100px]"
       />
       <Image
         src={Bubble2}
         alt="Bubble"
-        className="absolute left-[27%] top-[2%]"
+        className="absolute left-[73%] top-[8%] h-4 w-4 lg:left-[27%] lg:h-8 lg:w-8"
       />
       <Image
         src={Bubble}
         alt="Bubble"
-        className="absolute left-[30%] top-[5%]"
+        className="absolute left-[80%] top-[10%] h-8 w-8 lg:left-[30%] lg:h-14 lg:w-14"
       />
       <Image src={Light} alt="Light" className="absolute right-0" />
       <section
@@ -28,7 +28,7 @@ const About = () => {
         className="z-20 flex h-[90vh] w-full items-start justify-center bg-[#51ADD7]"
       >
         <div className="z-10 w-10/12 pt-[8vh]">
-          <div className="w-1/2 text-white">
+          <div className="w-full text-white lg:w-1/2">
             <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
               ABOUT US
             </p>

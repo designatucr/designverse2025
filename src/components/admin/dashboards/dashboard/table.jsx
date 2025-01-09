@@ -36,7 +36,7 @@ const Table = ({
     <>
       <div className="flex h-[75vh] flex-col justify-between overflow-y-scroll bg-white">
         <Datatable>
-          <TableHeader className="bg-designverse-primary rounded-t-lg text-white">
+          <TableHeader className="rounded-t-lg bg-designverse-primary text-white">
             {getHeaderGroups().map(({ headers, id }) => (
               <TableRow key={id}>
                 {headers.map(({ id, column, getContext }) => (
