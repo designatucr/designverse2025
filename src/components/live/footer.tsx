@@ -66,16 +66,16 @@ const Footer = () => {
         <Image src={logo} width={100} alt="DesignVerse Short logo" />
         <div className="flex items-center justify-center gap-4">
           <Link href={`mailto:${data.email}`}>
-            <Mail className="text-3xl text-white hover:cursor-pointer lg:text-4xl" />
+            <Mail className="text-3xl text-white hover:scale-125 hover:cursor-pointer lg:text-4xl" />
           </Link>
           <Link href={data.instagram}>
-            <SiInstagram className="text-2xl text-white hover:cursor-pointer lg:text-3xl" />
+            <SiInstagram className="text-2xl text-white hover:scale-125 hover:cursor-pointer lg:text-3xl" />
           </Link>
           <Link href={data.linkedin}>
-            <SiLinkedin className="text-2xl text-white hover:cursor-pointer lg:text-3xl" />
+            <SiLinkedin className="text-2xl text-white hover:scale-125 hover:cursor-pointer lg:text-3xl" />
           </Link>
           <Link href="https://www.tiktok.com/@designverseucr">
-            <SiTiktok className="text-2xl text-white hover:cursor-pointer lg:text-3xl" />
+            <SiTiktok className="text-2xl text-white hover:scale-125 hover:cursor-pointer lg:text-3xl" />
           </Link>
         </div>
         <div className="">
