@@ -244,8 +244,8 @@ export const FIELDS: Fields = {
   meeting: {
     input: "radio",
     text: "Would you be interested in meeting teammates during the event or prior?",
-    options: ["Yes", "No", "Maybe"],
-    field: "overnight",
+    options: ["Prior to the Event", "During the Event", "N/A"],
+    field: "meeting",
     width: 12,
     required: true,
     editable: true,

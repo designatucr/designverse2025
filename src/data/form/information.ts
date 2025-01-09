@@ -122,9 +122,8 @@ export const AFFILIATIONS = {
   director: "director",
   marketing: "marketing",
   sponsorship: "sponsorship",
-  recruitment: "recruitment",
+  publicRelations: "public relations",
   software: "software",
   uiux: "uiux",
   operations: "operations",
-  student: "student",
 };

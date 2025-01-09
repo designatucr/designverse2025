@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-designverse-priamry text-slate-50 hover:bg-designverse-priamry/90",
+          "bg-designverse-primary text-slate-50 hover:bg-designverse-primary/90",
         destructive:
           "bg-red-500 text-slate-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90",
         outline:

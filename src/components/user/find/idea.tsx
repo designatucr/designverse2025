@@ -13,7 +13,9 @@ const Idea = ({ title, languages, description, contact }: props) => {
       <p className="text-lg font-semibold">{title}</p>
       <div className="my-2 flex gap-3">
         {languages.map((technology, index) => (
-          <Badge key={index}>{technology}</Badge>
+          <Badge key={index} type="primary">
+            {technology}
+          </Badge>
         ))}
       </div>
       <p>{description}</p>

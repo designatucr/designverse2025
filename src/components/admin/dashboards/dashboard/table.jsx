@@ -36,7 +36,7 @@ const Table = ({
     <>
       <div className="flex h-[75vh] flex-col justify-between overflow-y-scroll bg-white">
         <Datatable>
-          <TableHeader className="rounded-t-lg bg-hackathon-blue-200 text-white">
+          <TableHeader className="bg-designverse-primary rounded-t-lg text-white">
             {getHeaderGroups().map(({ headers, id }) => (
               <TableRow key={id}>
                 {headers.map(({ id, column, getContext }) => (
@@ -93,9 +93,6 @@ const Table = ({
                           {flexRender(column.columnDef.cell, getContext())}
                         </TableCell>
                       ))}
-
-                      {/* TODO: ADD DROPDOWN CONTENT UPON CLICKING THE ROW */}
-                      {/* <Dropdown object={original} /> */}
                     </TableRow>
                   ),
                 )}

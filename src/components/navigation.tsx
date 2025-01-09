@@ -1,6 +1,6 @@
 "use client";
 
-import LOGO from "@/app/favicon.ico";
+import LOGO from "@/public/logos/primary.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { TABS } from "@/data/navigation";
@@ -33,11 +33,7 @@ const Navigation = () => {
   return (
     <Sidebar className="text-white">
       <SidebarHeader className="py-8">
-        <Image
-          src={LOGO}
-          className="mx-auto h-12 w-12"
-          alt={`${data.name} Logo`}
-        />
+        <Image src={LOGO} className="mx-auto" alt={`${data.name} Logo`} />
       </SidebarHeader>
       <SidebarContent>
         {Object.entries(tabs).map(([title, subTabs], index) => (
