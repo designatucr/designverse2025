@@ -36,12 +36,12 @@ const Support = () => {
         <Image
           src={Layer1}
           alt="Layer"
-          className="absolute bottom-full w-full"
+          className="absolute bottom-full -mb-2 w-full"
         />
       </div>
       <section
         id="support-us"
-        className="relative flex h-[100vh] w-full flex-col items-center justify-start bg-[#4495B0] md:h-[180vh] lg:h-[80vh]"
+        className="relative flex h-[100vh] w-full flex-col items-center justify-start bg-[#4495B0] md:h-[190vh] lg:h-[80vh]"
       >
         <p className="mt-5 flex font-sora text-3xl font-bold text-white lg:mb-8 lg:mt-0 lg:text-5xl">
           SUPPORT US

@@ -35,7 +35,7 @@ const Resources = () => {
       <Image src={Layer1} alt="Layer" className="absolute bottom-full w-full" />
       <section
         id="resources"
-        className="flex h-[110vh] flex-col items-center justify-start bg-[#3D859E] text-white md:h-[200vh] lg:h-[80vh]"
+        className="flex h-[110vh] flex-col items-center justify-start bg-[#3D859E] text-white md:h-[210vh] lg:h-[80vh]"
       >
         <p className="flex pb-3 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
           RESOURCES
