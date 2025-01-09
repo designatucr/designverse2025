@@ -41,9 +41,9 @@ const Support = () => {
       </div>
       <section
         id="support-us"
-        className="relative flex h-[80vh] w-full flex-col items-center justify-start bg-[#4495B0]"
+        className="relative flex h-[100vh] w-full flex-col items-center justify-start bg-[#4495B0] md:h-[180vh] lg:h-[80vh]"
       >
-        <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
+        <p className="mt-5 flex font-sora text-3xl font-bold text-white lg:mb-8 lg:mt-0 lg:text-5xl">
           SUPPORT US
         </p>
         <div className="grid w-8/12 gap-4 font-work lg:grid-cols-3 lg:gap-x-4">

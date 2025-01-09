@@ -13,7 +13,7 @@ const Toolbar = ({ onFilterChange }) => {
           }}
           className={`m-0.5 px-3 py-1 ${
             selected === "all"
-              ? "bg-designverse-primary rounded text-white"
+              ? "rounded bg-designverse-primary text-white"
               : "bg-white text-black"
           }`}
         >
@@ -26,7 +26,7 @@ const Toolbar = ({ onFilterChange }) => {
           }}
           className={`m-0.5 px-3 py-1 ${
             selected === "hackweek"
-              ? "bg-designverse-primary rounded text-white"
+              ? "rounded bg-designverse-primary text-white"
               : "bg-white text-black"
           }`}
         >
@@ -39,7 +39,7 @@ const Toolbar = ({ onFilterChange }) => {
           }}
           className={`m-0.5 px-3 py-1 ${
             selected === "hackathon"
-              ? "bg-designverse-primary rounded text-white"
+              ? "rounded bg-designverse-primary text-white"
               : "bg-white text-black"
           }`}
         >

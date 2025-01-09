@@ -14,21 +14,21 @@ import Fish2 from "@/public/footer/fish2.svg";
 import Fish3 from "@/public/footer/fish3.svg";
 const Footer = () => {
   return (
-    <div className="relative mt-[15vh]">
+    <div className="relative lg:mt-[15vh]">
       <Image
         src={Fish1}
         alt="Fish1"
-        className="absolute bottom-[475%] left-20"
+        className="absolute bottom-[200%] left-8 lg:bottom-[475%] lg:left-20"
       />
       <Image
         src={Fish2}
         alt="Fish2"
-        className="absolute bottom-[425%] left-[30%]"
+        className="absolute bottom-[250%] left-[60%] md:left-[80%] lg:bottom-[425%] lg:left-[30%]"
       />
       <Image
         src={Fish3}
         alt="Fish3"
-        className="absolute bottom-[450%] right-[10%]"
+        className="absolute bottom-[300%] lg:bottom-[450%] lg:right-[10%]"
       />
 
       <Image
