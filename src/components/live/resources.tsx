@@ -35,9 +35,9 @@ const Resources = () => {
       <Image src={Layer1} alt="Layer" className="absolute bottom-full w-full" />
       <section
         id="resources"
-        className="flex h-[80vh] flex-col items-center justify-start bg-[#3D859E] text-white"
+        className="flex h-[110vh] flex-col items-center justify-start bg-[#3D859E] text-white md:h-[200vh] lg:h-[80vh]"
       >
-        <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
+        <p className="flex pb-3 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
           RESOURCES
         </p>
         <div className="grid w-8/12 grid-cols-1 gap-8 font-work lg:grid-cols-3">
@@ -49,7 +49,7 @@ const Resources = () => {
               <Link
                 href={link}
                 target="_blank"
-                className="w-2/5 hover:scale-105 hover:cursor-pointer lg:w-1/2"
+                className="md:h-2/12 w-2/5 hover:scale-105 hover:cursor-pointer md:w-2/12 lg:w-1/2"
               >
                 <Image src={image} className="rounded-full" alt="Resource" />
               </Link>
