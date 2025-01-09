@@ -15,19 +15,19 @@ const About = () => {
       <Image
         src={Bubble2}
         alt="Bubble"
-        className="absolute left-[27%] top-[2%]"
+        className="absolute left-[28%] top-[10%]"
       />
       <Image
         src={Bubble}
         alt="Bubble"
-        className="absolute left-[30%] top-[5%]"
+        className="absolute left-[30%] top-[13%]"
       />
       <Image src={Light} alt="Light" className="absolute right-0" />
       <section
         id="about"
-        className="z-20 flex h-[90vh] w-full items-start justify-center bg-[#51ADD7]"
+        className="z-20 flex h-[95vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7]"
       >
-        <div className="z-10 w-10/12 pt-[8vh]">
+        <div className="z-10 w-10/12 pt-[12vh]">
           <div className="w-1/2 text-white">
             <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
               ABOUT US
