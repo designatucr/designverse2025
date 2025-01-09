@@ -15,17 +15,17 @@ const About = () => {
       <Image
         src={Bubble2}
         alt="Bubble"
-        className="absolute left-[73%] top-[8%] h-4 w-4 lg:left-[27%] lg:h-8 lg:w-8"
+        className="absolute left-[73%] top-[8%] h-4 w-4 lg:left-[27%] lg:top-[2%] lg:h-8 lg:w-8"
       />
       <Image
         src={Bubble}
         alt="Bubble"
-        className="absolute left-[80%] top-[10%] h-8 w-8 lg:left-[30%] lg:h-14 lg:w-14"
+        className="absolute left-[80%] top-[10%] h-8 w-8 lg:left-[30%] lg:top-[5%] lg:h-14 lg:w-14"
       />
       <Image src={Light} alt="Light" className="absolute right-0" />
       <section
         id="about"
-        className="z-20 flex h-[90vh] w-full items-start justify-center bg-[#51ADD7] md:h-[130vh]"
+        className="z-20 flex h-[90vh] md:h-[130vh] lg:h-[90vh] w-full items-start justify-center bg-[#51ADD7]"
       >
         <div className="z-10 w-10/12 pt-[8vh]">
           <div className="w-full text-white lg:w-1/2">
