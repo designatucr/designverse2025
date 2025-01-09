@@ -43,10 +43,10 @@ const Support = () => {
         id="support-us"
         className="relative flex h-[75vh] w-full flex-col items-center justify-start bg-[#4495B0]"
       >
-        <p className="flex text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
+        <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
           SUPPORT US
         </p>
-        <div className="grid w-8/12 gap-4 lg:grid-cols-3 lg:gap-x-4">
+        <div className="grid w-8/12 gap-4 font-work lg:grid-cols-3 lg:gap-x-4">
           {support.map(({ title, description, form, link }, index) => (
             <div
               key={index}
@@ -56,7 +56,7 @@ const Support = () => {
               <div className="text-center text-sm lg:text-base">
                 {description}
               </div>
-              <Button asChild className="w-1/2 rounded-full">
+              <Button asChild className="w-1/2 rounded-full font-sora">
                 <Link href={link} className="flex gap-2">
                   {form} <ExternalLink />
                 </Link>

@@ -37,10 +37,10 @@ const Resources = () => {
         id="resources"
         className="flex h-[80vh] flex-col items-center justify-start bg-[#3D859E] text-white"
       >
-        <p className="flex text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
+        <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
           RESOURCES
         </p>
-        <div className="grid w-8/12 grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid w-8/12 grid-cols-1 gap-8 font-work lg:grid-cols-3">
           {resources.map(({ link, title, description, image }, index) => (
             <div
               className="flex flex-col items-center justify-center gap-4"
