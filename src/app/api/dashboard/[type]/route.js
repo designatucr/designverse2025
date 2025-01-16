@@ -61,12 +61,6 @@ export const POST = async (req, { params }) => {
           timestamp: Timestamp.now(),
           [`roles.${params.type}`]: 0,
         }),
-        updateDoc(doc(db, "statistics", "statistics"), {
-          [`${params.type}.status.0`]: increment(1),
-          [`${params.type}.shirt.0.${element.size}`]: increment(1),
-          [`${params.type}.diet.0.${element.diet}`]: increment(1),
-          [`${params}.participants.school.0.${element.school}`]: increment(1),
-        }),
         send({
           email: user.email,
           id: "confirmation",
