@@ -3,6 +3,7 @@ import Bubble from "@/public/about/bubble1.svg";
 import Bubble2 from "@/public/about/bubble2.svg";
 import Water from "@/public/about/water.svg";
 import Light from "@/public/about/light.svg";
+import Trident from "@/public/about/trident.svg";
 
 const About = () => {
   return (
@@ -23,6 +24,11 @@ const About = () => {
         className="absolute left-[80%] top-[12%] h-8 w-8 lg:left-[35%] lg:top-[20%] lg:h-14 lg:w-14"
       />
       <Image src={Light} alt="Light" className="absolute right-0" />
+      <Image
+        src={Trident}
+        alt="Trident"
+        className="absolute bottom-[20%] right-[12%]"
+      />
       <section
         id="about"
         className="z-20 flex h-[90vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:h-[135vh] lg:h-[105vh]"
