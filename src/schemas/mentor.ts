@@ -5,6 +5,8 @@ import {
   GRADES,
   MAJORS,
   AVAILABILITY,
+  AGES,
+  DIETS,
 } from "@/data/form/information";
 
 export const schema = z.object({
@@ -16,6 +18,9 @@ export const schema = z.object({
   discord: z.string().min(1, { message: "Discord username is invalid" }),
   major: z.enum(MAJORS as [string, ...string[]], {
     required_error: "Please select your major",
+  }),
+  age: z.enum(AGES as [string, ...string[]], {
+    required_error: "Please select your age",
   }),
   grade: z.enum(GRADES as [string, ...string[]], {
     required_error: "Please select your grade",
@@ -30,6 +35,9 @@ export const schema = z.object({
     required_error: "Please select your shirt size",
   }),
   response: z.string().min(1, { message: "Response is required" }),
+  diet: z.enum(DIETS as [string, ...string[]], {
+    message: "Please select your dietary restrictions",
+  }),
   requirements: z
     .array(z.string())
     .min(1, { message: "You must agree to the terms and conditions" }),
