@@ -25,8 +25,8 @@ const Template = ({ children, name, preview }) => {
             <Section className="mt-[32px]">
               <Img
                 src="https://xlbau04o7z.ufs.sh/f/nuPM78a2zSTsnMCZfpa2zSTsUbytBgE8ivVYMaWxZuJepwAG"
-                width="40"
-                height="37"
+                width="212"
+                height="88"
                 alt="DesignVerse"
                 className="mx-auto my-0"
               />
