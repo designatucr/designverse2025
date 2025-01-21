@@ -56,9 +56,13 @@ const Schedule = async () => {
       <Image
         src={Fish}
         alt="Fish"
-        className="absolute bottom-[20%] right-8 lg:right-20"
+        className="absolute bottom-[20%] right-8 blur-[2px] lg:right-20"
       />
-      <Image src={Vine} alt="Vine" className="absolute bottom-[25%] left-0" />
+      <Image
+        src={Vine}
+        alt="Vine"
+        className="absolute bottom-[25%] left-0 blur-[2px]"
+      />
     </div>
   );
 };
