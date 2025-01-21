@@ -33,11 +33,9 @@ const Landing = () => {
         />
         <div className="text-md mt-4 flex flex-col items-center justify-center text-center font-bold lg:text-2xl">
           <p className="flex items-center gap-1 text-lg lg:text-2xl">
-            {" "}
             <MapPin size={24} /> University of California Riverside{" "}
           </p>
           <p className="flex items-center gap-1 text-sm lg:text-lg">
-            {" "}
             <Calendar size={20} /> May 11 - 12, 2025
           </p>
         </div>
@@ -87,7 +85,7 @@ const Landing = () => {
       </div>
 
       <Image
-        className="absolute top-[45vh] z-0 min-h-full w-full lg:top-[30vh] lg:h-fit"
+        className="absolute top-[43vh] z-0 min-h-full w-full lg:top-[15vh] lg:h-fit"
         src={sand1}
         alt="sand1"
       />
