@@ -6,6 +6,7 @@ import Link from "next/link";
 import Castle from "@/public/resources/castle.svg";
 import Turtle from "@/public/resources/turtle.svg";
 import Bubbles from "@/public/resources/bubbles.svg";
+import Layer from "@/public/resources/layer.svg";
 
 const resources = [
   {
@@ -61,13 +62,22 @@ const Resources = () => {
             </div>
           ))}
         </div>
+
         <div className="relative flex w-full items-center justify-center">
           <Image
             src={Bubbles}
             alt="Bubbles"
             className="absolute left-8 top-0 lg:left-20"
           />
-          <Image src={Castle} alt="Castle" className="mt-8" />
+          <div className="flex w-full flex-col items-center justify-center">
+            <Image src={Castle} alt="Castle" className="mt-8" />
+
+            <Image
+              src={Layer}
+              alt="Layer"
+              className="left-0 -mt-[18%] w-screen"
+            />
+          </div>
           <Image
             src={Turtle}
             alt="Turtle"

@@ -6,15 +6,12 @@ import {
 } from "@/components/ui/accordion";
 import { QUESTIONS } from "@/data/faq";
 import Image from "next/image";
-import Layer1 from "@/public/faq/layer_1.svg";
 import Angelfish from "@/public/faq/angelfish.svg";
 import Stingray from "@/public/faq/stingray.svg";
 
 const FAQ = () => {
   return (
     <div className="relative">
-      <Image src={Layer1} alt="Layer" className="absolute bottom-full w-full" />
-
       <Image
         src={Angelfish}
         alt="Angelfish"
