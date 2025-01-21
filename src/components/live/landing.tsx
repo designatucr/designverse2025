@@ -85,7 +85,7 @@ const Landing = () => {
       </div>
 
       <Image
-        className="absolute top-[45vh] z-0 min-h-full w-full lg:top-[15vh] lg:h-fit"
+        className="absolute top-[43vh] z-0 min-h-full w-full lg:top-[15vh] lg:h-fit"
         src={sand1}
         alt="sand1"
       />
