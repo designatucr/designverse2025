@@ -70,12 +70,12 @@ const Resources = () => {
             className="absolute left-8 top-0 lg:left-20"
           />
           <div className="flex w-full flex-col items-center justify-center">
-            <Image src={Castle} alt="Castle" className="mt-8" />
+            <Image src={Castle} alt="Castle" className="mt-8 blur-[2px]" />
 
             <Image
               src={Layer}
               alt="Layer"
-              className="left-0 -mt-[18%] w-screen"
+              className="left-0 -mt-[20%] w-screen z-[50] blur-[2px]"
             />
           </div>
           <Image
