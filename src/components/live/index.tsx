@@ -1,3 +1,5 @@
+"use client";
+
 import Navigation from "./navigation";
 import Landing from "./landing";
 import About from "./about";
