@@ -2,8 +2,12 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
-import Layer1 from "@/public/support/layer_1.svg";
 import Image from "next/image";
+import Bubbles from "@/public/support/bubbles.svg";
+import School from "@/public/support/school.svg";
+import Layer from "@/public/support/layer.svg";
+import Shark from "@/public/support/shark.svg";
+import Column from "@/public/support/column.svg";
 
 const support = [
   {
@@ -32,20 +36,19 @@ const support = [
 const Support = () => {
   return (
     <div className="relative">
-      <div className="backdrop-blur-3xl">
-        <Image
-          src={Layer1}
-          alt="Layer"
-          className="absolute bottom-full -mb-2 w-full"
-        />
-      </div>
       <section
         id="support-us"
-        className="relative flex h-[100vh] w-full flex-col items-center justify-start bg-[#4495B0] md:h-[190vh] lg:h-[40vh]"
+        className="relative flex h-[100vh] w-full flex-col items-center justify-start bg-[#3D8AA3] md:h-[190vh] lg:h-[40vh]"
       >
-        <p className="mt-5 flex font-sora text-3xl font-bold text-white lg:mb-8 lg:mt-0 lg:text-5xl">
+        <div className="-mb-10 flex w-8/12 items-center justify-between">
+          <Image src={Bubbles} alt="Bubbles" />
+          <Image src={School} alt="School" />
+        </div>
+
+        <p className="mb-10 flex font-sora text-3xl font-bold text-white lg:text-5xl">
           SUPPORT US
         </p>
+
         <div className="grid w-8/12 gap-4 font-work lg:grid-cols-3 lg:gap-x-4">
           {support.map(({ title, description, form, link }, index) => (
             <div
@@ -65,6 +68,19 @@ const Support = () => {
           ))}
         </div>
       </section>
+
+      <Image
+        src={Column}
+        alt="Column"
+        className="absolute bottom-[20%] left-12 lg:left-[10%]"
+      />
+
+      <Image
+        src={Shark}
+        alt="Shark"
+        className="absolute bottom-[25%] right-12 lg:right-[10%]"
+      />
+      <Image src={Layer} alt="Layer" className="-mb-2 w-full bg-[#3D8AA3]" />
     </div>
   );
 };

@@ -47,15 +47,6 @@ const Landing = () => {
       <div className="z-20 flex w-3/5 flex-col justify-center gap-3 lg:flex-row">
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
           <Link
-            href="/form/participant"
-            className="flex gap-2 text-xl"
-            target="_blank"
-          >
-            REGISTER <ExternalLink />
-          </Link>
-        </Button>
-        <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
-          <Link
             href="/form/sponsor"
             className="flex gap-2 text-xl"
             target="_blank"
@@ -82,6 +73,19 @@ const Landing = () => {
           </Link>
         </Button>
       </div>
+
+      <div className="z-20 flex flex-col justify-center">
+        <Button asChild className="rounded-full bg-[#406F82] px-8 py-6">
+          <Link
+            href="/form/participant"
+            className="flex gap-2 text-xl"
+            target="_blank"
+          >
+            APPLY NOW !
+          </Link>
+        </Button>
+      </div>
+
       <Image
         className="absolute top-[45vh] z-0 min-h-full w-full lg:top-[30vh] lg:h-fit"
         src={sand1}

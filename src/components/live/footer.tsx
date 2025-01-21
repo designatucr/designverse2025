@@ -12,6 +12,7 @@ import Layer1 from "@/public/footer/layer_1.svg";
 import Fish1 from "@/public/footer/fish1.svg";
 import Fish2 from "@/public/footer/fish2.svg";
 import Fish3 from "@/public/footer/fish3.svg";
+
 const Footer = () => {
   return (
     <div className="relative lg:mt-[15vh]">
