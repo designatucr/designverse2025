@@ -24,7 +24,7 @@ const Template = ({ children, name, preview }) => {
           <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] bg-[#456B7F] p-[20px]">
             <Section className="mt-[32px]">
               <Img
-                src="https://www.designverseucr.org/_next/static/media/primary.4ebfacac.svg"
+                src="https://xlbau04o7z.ufs.sh/f/nuPM78a2zSTsnMCZfpa2zSTsUbytBgE8ivVYMaWxZuJepwAG"
                 width="40"
                 height="37"
                 alt="DesignVerse"
