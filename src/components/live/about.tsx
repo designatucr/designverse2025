@@ -16,22 +16,22 @@ const About = () => {
       <Image
         src={Water}
         alt="Water"
-        className="absolute top-[-2%] z-0 w-screen md:top-[-50px] lg:top-[-5%]"
+        className="absolute top-[-2%] z-0 w-screen md:top-[-50px] lg:top-[-8%]"
       />
       <Image
         src={Bubble}
         alt="Bubble"
-        className="absolute left-[80%] top-[12%] h-8 w-8 lg:left-[35%] lg:top-[15%] lg:h-20 lg:w-40"
+        className="absolute left-[80%] top-[12%] h-8 w-8 lg:left-[35%] lg:top-[19%] lg:h-20 lg:w-40"
       />
       <Image src={Light} alt="Light" className="absolute right-0" />
       <Image
         src={Trident}
         alt="Trident"
-        className="absolute bottom-[20%] right-[12%]"
+        className="absolute bottom-[1%] right-[8%] w-1/12 blur-[3px] md:bottom-[10%] md:right-[12%] md:w-auto"
       />
       <section
         id="about"
-        className="z-20 flex h-[90vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:h-[135vh] lg:h-[90vh]"
+        className="z-20 flex h-[75vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:h-[135vh] lg:h-[105vh] 2xl:h-[90vh]"
       >
         <div className="z-10 w-10/12 pt-[10vh] lg:pt-[20vh]">
           <div className="w-full pl-[4vw] text-white lg:w-1/2">
@@ -64,37 +64,36 @@ const About = () => {
       <Image
         src={Tubes}
         alt="Tubes"
-        className="absolute bottom-[5%] left-[25%]"
+        className="absolute bottom-[0%] left-[35%] w-1/12 blur-[2px] md:bottom-[2%] md:left-[30%] md:w-auto"
       />
 
       <Image
         src={Rock}
         alt="Rock"
-        className="absolute bottom-[8%] left-[15%]"
+        className="absolute bottom-[1%] left-[20%] w-1/12 blur-[2px] md:bottom-[7%] md:left-[15%] md:w-auto"
       />
 
       <Image
         src={Seaweed}
         alt="Seaweed"
-        className="absolute bottom-[10%] left-[5%]"
+        className="absolute bottom-[2%] left-[5%] w-1/12 blur-[2px] md:bottom-[8%] md:w-auto"
       />
 
       <Image
         src={Shell}
         alt="Shell"
-        className="absolute bottom-[8%] left-[50%]"
+        className="absolute bottom-[1%] left-[50%] w-1/12 blur-[2px] md:bottom-[7%] md:left-[50%] md:w-auto"
       />
 
       <Image
         src={Coral}
         alt="Coral"
-        className="absolute bottom-[10%] left-[60%]"
+        className="absolute bottom-[2%] left-[70%] w-1/12 blur-[2px] md:bottom-[9%] md:left-[60%] md:w-auto"
       />
-
       <Image
         src={Layer1}
         alt="Layer"
-        className="absolute bottom-0 -mb-2 w-full"
+        className="absolute bottom-0 -mb-2 w-full blur-[2px]"
       />
     </div>
   );

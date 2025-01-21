@@ -35,7 +35,7 @@ const Footer = () => {
       <Image
         src={Layer1}
         alt="Layer"
-        className="absolute bottom-[95%] w-full"
+        className="absolute bottom-[95%] w-full blur-[2px]"
       />
 
       <div className="flex flex-col items-center justify-center gap-4 bg-[#081c28] p-8 text-white">
