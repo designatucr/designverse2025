@@ -15,13 +15,13 @@ const FAQ = () => {
       <Image
         src={Angelfish}
         alt="Angelfish"
-        className="absolute right-8 top-0 lg:right-20"
+        className="absolute right-8 top-0 blur-[2px] lg:right-20"
       />
 
       <Image
         src={Stingray}
         alt="Stingray"
-        className="absolute left-8 top-0 lg:left-20"
+        className="absolute left-8 top-0 blur-[2px] lg:left-20"
       />
 
       <div className="flex h-[200vh] w-full flex-col items-center bg-[#35798F] text-white md:h-[325vh] lg:h-[200vh]">
