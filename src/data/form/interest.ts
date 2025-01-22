@@ -38,7 +38,7 @@ export const FIELDS: Fields = {
         data.name
       }, we appreciate your efforts to help support ${data.name}. ${
         data.name
-      } is a ${data.description} hackathon spanning ${
+      } is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",

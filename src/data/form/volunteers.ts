@@ -32,7 +32,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for considering to become a volunteer, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -41,7 +41,7 @@ export const FIELDS: Fields = {
       })}.`,
       "Volunteers are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
       "Volunteer duties include but are not limited to setup, workshop organization, food handling, cleanup and more.",
-      "Note: Volunteers are not permitted to become participants for the hackathon.",
+      "Note: Volunteers are not permitted to become participants for the designathon.",
     ],
   },
   name: {

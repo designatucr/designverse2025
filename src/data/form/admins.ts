@@ -55,7 +55,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for being on the organizing team, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -63,7 +63,7 @@ export const FIELDS: Fields = {
         year: "numeric",
       })}.`,
       "Admins are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
-      "Note: Admins are not permitted to become participants for the hackathon.",
+      "Note: Admins are not permitted to become participants for the designathon.",
     ],
   },
   name: {

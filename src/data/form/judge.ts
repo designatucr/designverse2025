@@ -55,7 +55,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for considering to become a judge, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -64,7 +64,7 @@ export const FIELDS: Fields = {
       })}.`,
       "Judges are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
       "Judge duties include but are not limited to visiting various teams to assess teams on their idea, technical complexities, and overall presentation after which they will decide the winners.",
-      "Note: Judges are not permitted to become participants for the hackathon.",
+      "Note: Judges are not permitted to become participants for the designathon.",
     ],
   },
   name: {

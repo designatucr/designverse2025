@@ -69,7 +69,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for being on the Sponsorship team, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",

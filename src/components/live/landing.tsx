@@ -38,7 +38,7 @@ const Landing = () => {
           </p>
           <p className="flex items-center gap-1 text-sm lg:text-lg">
             {" "}
-            <Calendar size={20} /> May 11 - 12, 2025
+            <Calendar size={20} /> May 10 - 11, 2025
           </p>
         </div>
         <Countdown />

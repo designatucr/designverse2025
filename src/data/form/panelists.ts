@@ -17,7 +17,7 @@ export const FIELDS = {
         data.name
       }. Thank you for considering to become a panelist. We appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
