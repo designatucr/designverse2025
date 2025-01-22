@@ -34,9 +34,9 @@ export const schema = z.object({
   shirt: z.enum(SHIRTS as [string, ...string[]], {
     required_error: "Please select your shirt size",
   }),
-  diet: z
-    .array(z.enum(DIETS as [string, ...string[]]))
-    .min(0, { message: "Please select your dietary restrictions" }),
+  diet: z.enum(DIETS as [string, ...string[]], {
+    message: "Please select your dietary restrictions",
+  }),
   resume: z.string().optional(),
   requirements: z
     .array(z.string())
