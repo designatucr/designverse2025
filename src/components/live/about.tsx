@@ -27,7 +27,7 @@ const About = () => {
       <Image
         src={Trident}
         alt="Trident"
-        className="absolute bottom-[1%] right-[2%] w-1/4 rotate-12 blur-[3px] md:bottom-[10%] md:right-[12%] md:w-auto md:rotate-0"
+        className="absolute bottom-0.5 right-[5%] w-1/5 blur-[3px] md:bottom-[10%] md:right-[12%] md:w-auto md:rotate-0"
       />
       <section
         id="about"
