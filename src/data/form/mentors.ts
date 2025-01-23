@@ -7,7 +7,15 @@ import {
   TextareaInput,
   TextInput,
 } from "@/types/forms";
-import { MAJORS, GRADES, GENDERS, SHIRTS, AVAILABILITY } from "./information";
+import {
+  MAJORS,
+  GRADES,
+  GENDERS,
+  SHIRTS,
+  AVAILABILITY,
+  AGES,
+  DIETS,
+} from "./information";
 import data from "@/data/config";
 
 type Fields = {
@@ -17,11 +25,13 @@ type Fields = {
   phone: TextInput;
   discord: TextInput;
   major: SelectInput;
+  age: SelectInput;
   grade: SelectInput;
   availability: CheckboxInput;
   gender: RadioInput;
   shirt: RadioInput;
   response: TextareaInput;
+  diet: RadioInput;
   requirements: TermsAndConditions;
 };
 
@@ -31,10 +41,12 @@ type Attributes = {
   phone: string;
   discord: string;
   major: string;
+  age: string;
   grade: string;
   availability: string[];
   gender: string;
   shirt: string;
+  diet: string;
   response: string;
   requirements: string[];
 };
@@ -115,6 +127,17 @@ export const FIELDS: Fields = {
     searchable: true,
     editable: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
   grade: {
     input: "select",
     title: "Grade",
@@ -153,6 +176,15 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   response: {
     input: "textarea",
     name: "response",
@@ -189,10 +221,12 @@ export const ATTRIBUTES: Attributes = {
   phone: "",
   discord: "",
   major: "",
+  age: "",
   grade: "",
   availability: [],
   gender: "",
   shirt: "",
+  diet: "",
   response: "",
   requirements: [],
 };

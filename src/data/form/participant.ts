@@ -1,5 +1,4 @@
 import {
-  CheckboxInput,
   Description,
   RadioInput,
   SelectInput,
@@ -26,7 +25,7 @@ interface Attributes {
   grade: string;
   gender: string;
   shirt: string;
-  diet: string[];
+  diet: string;
   resume: string;
   requirements: string[];
   team: string;
@@ -46,7 +45,7 @@ interface Fields {
   grade: SelectInput;
   gender: RadioInput;
   shirt: RadioInput;
-  diet: CheckboxInput;
+  diet: RadioInput;
   resume: UploadInput;
   socials: TextInput;
   food: TextInput;
@@ -192,7 +191,7 @@ export const FIELDS: Fields = {
     editable: true,
   },
   diet: {
-    input: "checkboxes",
+    input: "radio",
     text: "Dietary Restrictions",
     width: 12,
     field: "diet",
@@ -281,7 +280,7 @@ export const ATTRIBUTES: Attributes = {
   grade: "",
   gender: "",
   shirt: "",
-  diet: [],
+  diet: "",
   resume: "",
   requirements: [],
   team: "",

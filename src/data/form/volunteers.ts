@@ -1,4 +1,12 @@
-import { MAJORS, GRADES, GENDERS, SHIRTS, AVAILABILITY } from "./information";
+import {
+  MAJORS,
+  GRADES,
+  GENDERS,
+  SHIRTS,
+  AVAILABILITY,
+  AGES,
+  DIETS,
+} from "./information";
 import data from "@/data/config";
 import {
   CheckboxInput,
@@ -16,10 +24,12 @@ interface Fields {
   phone: TextInput;
   discord: TextInput;
   major: SelectInput;
+  age: SelectInput;
   grade: SelectInput;
   availability: CheckboxInput;
   gender: RadioInput;
   shirt: RadioInput;
+  diet: RadioInput;
   requirements: TermsAndConditions;
 }
 
@@ -100,6 +110,17 @@ export const FIELDS: Fields = {
     editable: true,
     searchable: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
   grade: {
     input: "select",
     title: "Grade",
@@ -138,6 +159,15 @@ export const FIELDS: Fields = {
     editable: true,
     required: true,
   },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   requirements: {
     text: "Terms and Conditions",
     input: "terms",
@@ -165,10 +195,12 @@ interface Attributes {
   discord: string;
   major: string;
   grade: string;
+  age: string;
   availability: string[];
   gender: string;
   shirt: string;
   response: string;
+  diet: string;
   requirements: string[];
 }
 
@@ -179,9 +211,11 @@ export const ATTRIBUTES: Attributes = {
   discord: "",
   major: "",
   grade: "",
+  age: "",
   availability: [],
   gender: "",
   shirt: "",
   response: "",
+  diet: "",
   requirements: [],
 };

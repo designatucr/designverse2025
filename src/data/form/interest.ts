@@ -2,22 +2,31 @@ import {
   Description,
   TextInput,
   SelectInput,
+  RadioInput,
   TermsAndConditions,
 } from "@/types/forms";
 import data from "@/data/config";
-import { SOURCES } from "./information";
+import { SOURCES, SHIRTS, GENDERS, AGES, DIETS } from "./information";
 
 interface Attributes {
   name: string;
   email: string;
+  age: string;
+  gender: string;
+  shirt: string;
   eventSource: string;
+  diet: string;
   requirements: string[];
 }
 
 export const ATTRIBUTES: Attributes = {
   name: "",
   email: "",
+  age: "",
+  gender: "",
+  shirt: "",
   eventSource: "",
+  diet: "",
   requirements: [],
 };
 
@@ -25,7 +34,11 @@ interface Fields {
   description: Description;
   name: TextInput;
   email: TextInput;
+  age: SelectInput;
+  gender: RadioInput;
+  shirt: RadioInput;
   eventSource: SelectInput;
+  diet: RadioInput;
   requirements: TermsAndConditions;
 }
 
@@ -70,6 +83,35 @@ export const FIELDS: Fields = {
     editable: false,
     required: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
+  gender: {
+    input: "radio",
+    text: "Gender",
+    options: GENDERS,
+    field: "gender",
+    width: 12,
+    required: true,
+    editable: true,
+  },
+  shirt: {
+    input: "radio",
+    text: "Shirt Size",
+    options: SHIRTS,
+    field: "shirt",
+    width: 12,
+    required: true,
+    editable: true,
+  },
   eventSource: {
     input: "select",
     title: `How did you find ${data.name}?`,
@@ -80,6 +122,15 @@ export const FIELDS: Fields = {
     required: true,
     editable: false,
     searchable: true,
+  },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
   },
   requirements: {
     text: "Terms and Conditions",

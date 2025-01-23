@@ -5,7 +5,7 @@ import {
   TermsAndConditions,
   TextInput,
 } from "@/types/forms";
-import { MAJORS, GRADES, SHIRTS, GENDERS } from "./information";
+import { MAJORS, GRADES, SHIRTS, GENDERS, AGES, DIETS } from "./information";
 import data from "@/data/config";
 import { AFFILIATIONS } from "./information";
 
@@ -16,9 +16,11 @@ interface Attributes {
   affiliation: string;
   requirements: string[];
   major: string;
+  age: string;
   gender: string;
   grade: string;
   shirt: string;
+  diet: string;
 }
 
 interface Fields {
@@ -27,11 +29,13 @@ interface Fields {
   email: TextInput;
   discord: TextInput;
   major: SelectInput;
+  age: SelectInput;
   grade: SelectInput;
   gender: RadioInput;
   shirt: RadioInput;
   affiliation: RadioInput;
   requirements: TermsAndConditions;
+  diet: RadioInput;
 }
 
 export const FIELDS: Fields = {
@@ -98,6 +102,17 @@ export const FIELDS: Fields = {
     editable: true,
     searchable: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
   grade: {
     input: "select",
     title: "Grade",
@@ -136,6 +151,15 @@ export const FIELDS: Fields = {
     editable: true,
     required: true,
   },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   requirements: {
     text: "Terms and Conditions",
     input: "terms",
@@ -164,7 +188,9 @@ export const ATTRIBUTES: Attributes = {
   affiliation: "",
   requirements: [],
   major: "",
+  age: "",
   gender: "",
   grade: "",
   shirt: "",
+  diet: "",
 };

@@ -20,6 +20,8 @@ import {
   Newspaper,
   Code,
   Globe,
+  FileSearch,
+  FolderSearch2,
 } from "lucide-react";
 import data from "./config";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
@@ -214,12 +216,12 @@ export const TABS: Tabs = {
         {
           name: "Post Team Idea",
           link: "/form/idea",
-          icon: <Search className={iconStyle} />,
+          icon: <FolderSearch2 className={iconStyle} />,
         },
         {
           name: "Feedback",
           link: "/form/feedback",
-          icon: <Search className={iconStyle} />,
+          icon: <FileSearch className={iconStyle} />,
         },
       ],
     },
