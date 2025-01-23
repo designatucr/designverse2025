@@ -21,17 +21,17 @@ const About = () => {
       <Image
         src={Bubble}
         alt="Bubble"
-        className="absolute left-[80%] top-[12%] h-8 w-8 lg:left-[35%] lg:top-[19%] lg:h-20 lg:w-40"
+        className="absolute left-[65%] top-[8%] h-20 w-20 lg:left-[35%] lg:top-[19%] lg:h-20 lg:w-40"
       />
       <Image src={Light} alt="Light" className="absolute right-0" />
       <Image
         src={Trident}
         alt="Trident"
-        className="absolute bottom-[1%] right-[8%] w-1/12 blur-[3px] md:bottom-[10%] md:right-[12%] md:w-auto"
+        className="absolute bottom-[1%] right-[2%] w-1/4 rotate-12 blur-[3px] md:bottom-[10%] md:right-[12%] md:w-auto md:rotate-0"
       />
       <section
         id="about"
-        className="z-20 flex h-[75vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:h-[135vh] lg:h-[105vh] 2xl:h-[90vh]"
+        className="z-20 flex h-[105vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:h-[135vh] lg:h-[105vh] 2xl:h-[90vh]"
       >
         <div className="z-10 w-10/12 pt-[10vh] lg:pt-[20vh]">
           <div className="w-full pl-[4vw] text-white lg:w-1/2">
@@ -70,13 +70,13 @@ const About = () => {
       <Image
         src={Rock}
         alt="Rock"
-        className="absolute bottom-[1%] left-[20%] w-1/12 blur-[2px] md:bottom-[7%] md:left-[15%] md:w-auto"
+        className="absolute bottom-[1%] left-[15%] w-12 blur-[2px] md:bottom-[7%] md:left-[15%] md:w-auto"
       />
 
       <Image
         src={Seaweed}
         alt="Seaweed"
-        className="absolute bottom-[2%] left-[5%] w-1/12 blur-[2px] md:bottom-[8%] md:w-auto"
+        className="absolute bottom-[7%] left-[3%] w-1/12 rotate-45 blur-[2px] md:bottom-[8%] md:left-[5%] md:w-auto md:rotate-0"
       />
 
       <Image
@@ -88,7 +88,7 @@ const About = () => {
       <Image
         src={Coral}
         alt="Coral"
-        className="absolute bottom-[2%] left-[70%] w-1/12 blur-[2px] md:bottom-[9%] md:left-[60%] md:w-auto"
+        className="absolute bottom-[2%] left-[65%] w-12 blur-[2px] md:bottom-[9%] md:left-[60%] md:w-auto"
       />
       <Image
         src={Layer1}
