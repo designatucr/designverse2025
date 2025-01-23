@@ -67,7 +67,7 @@ const Resources = () => {
           <Image
             src={Bubbles}
             alt="Bubbles"
-            className="absolute left-8 top-0 lg:left-20"
+            className="absolute left-8 top-0 w-1/12 md:w-auto lg:left-20"
           />
           <div className="flex w-full flex-col items-center justify-center">
             <Image src={Castle} alt="Castle" className="mt-8" />
@@ -81,7 +81,7 @@ const Resources = () => {
           <Image
             src={Turtle}
             alt="Turtle"
-            className="absolute right-8 top-0 lg:right-20"
+            className="absolute right-8 top-0 w-1/4 md:w-auto lg:right-20"
           />
         </div>
       </section>

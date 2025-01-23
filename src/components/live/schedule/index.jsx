@@ -35,10 +35,21 @@ const Schedule = async () => {
 
   return (
     <div className="relative">
-      <section className="flex flex-col items-center justify-start bg-[#3D859D] p-8 text-white">
-        <div className="-mb-10 flex w-8/12 items-center justify-between">
-          <Image src={BubblesLeft} alt="BubblesLeft" />
-          <Image src={BubblesRight} alt="BubblesRight" />
+      <section
+        id="schedule"
+        className="flex flex-col items-center justify-start bg-[#3D859D] p-2 text-white md:p-8"
+      >
+        <div className="-mb-10 flex w-full items-center justify-between md:w-8/12">
+          <Image
+            src={BubblesLeft}
+            alt="BubblesLeft"
+            className="w-1/4 md:w-auto"
+          />
+          <Image
+            src={BubblesRight}
+            alt="BubblesRight"
+            className="w-1/4 md:w-auto"
+          />
         </div>
 
         <p className="flex pb-3 font-sora text-3xl font-bold text-white lg:text-5xl">
@@ -49,19 +60,23 @@ const Schedule = async () => {
           Pacific Standard Time (PST)
         </p>
 
-        <Image src={Coming} alt="Coming Soon" className="my-20" />
+        <Image
+          src={Coming}
+          alt="Coming Soon"
+          className="my-20 w-2/3 md:w-auto"
+        />
 
         {/* <Events events={items} totalDays={totalDays} /> */}
       </section>
       <Image
         src={Fish}
         alt="Fish"
-        className="absolute bottom-[20%] right-8 blur-[2px] lg:right-20"
+        className="absolute bottom-[20%] right-4 w-1/6 blur-[2px] lg:right-20"
       />
       <Image
         src={Vine}
         alt="Vine"
-        className="absolute bottom-[25%] left-0 blur-[2px]"
+        className="absolute bottom-[25%] left-0 w-1/6 blur-[2px]"
       />
     </div>
   );

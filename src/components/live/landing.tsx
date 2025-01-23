@@ -25,7 +25,7 @@ const Landing = () => {
         alt={cloud2}
       />
 
-      <div className="z-20 flex w-11/12 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 py-4 text-white lg:w-3/5 lg:p-6">
+      <div className="z-20 mt-24 flex w-11/12 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 py-4 text-white lg:w-3/5 lg:p-6">
         <Image
           className="-mt-40 md:-mt-32 md:h-1/2 md:w-1/2 lg:-mt-36"
           src={Logo}
