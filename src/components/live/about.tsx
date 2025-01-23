@@ -40,7 +40,7 @@ const About = () => {
             </p>
             <br />
             <p className="w-10/12 font-work text-sm lg:w-full lg:text-base">
-              DesignVerse is the first ever 24-hour beginner-friendly
+              DesignVerse is the first and only 24-hour beginner-friendly
               Design-a-Thon hosted by the University of California, Riverside.
               Designers are challenged to create the interface of an app or
               website through a given prompt, which would then be demoed and
