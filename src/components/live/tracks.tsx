@@ -10,7 +10,7 @@ const tracks = [
     title: "Atlantis Adventure",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
-    width: 40,
+    width: 50,
     height: 100,
   },
   {
@@ -18,7 +18,7 @@ const tracks = [
     title: "Visionary Voyage",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
-    width: 120,
+    width: 100,
     height: 100,
   },
   {
@@ -26,7 +26,7 @@ const tracks = [
     title: "Waves of Change",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
-    width: 160,
+    width: 150,
     height: 100,
   },
   {
@@ -34,19 +34,19 @@ const tracks = [
     title: "Tidal Testing",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
-    width: 160,
+    width: 150,
     height: 100,
   },
 ];
 
 const Tracks = () => {
   return (
-    <div className="flex h-[120vh] flex-col items-center justify-start bg-hackathon-blue-300 px-16 py-16 md:w-full">
+    <div className="bg-hackathon-blue-300 flex max-h-screen w-full flex-col items-center justify-center p-16">
       <p className="flex pb-3 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
         TRACKS
       </p>
 
-      <div className="grid gap-8 md:grid-cols-4">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {tracks.map(({ image, title, description, width, height }, index) => (
           <Track
             key={index}

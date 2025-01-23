@@ -21,7 +21,7 @@ const Track = ({ index, image, title, text, width, height }: props) => {
 
   return (
     <div
-      className={`text-white shadow-lg ${primary} flex flex-col justify-between rounded-lg p-4`}
+      className={`text-white shadow-lg ${primary} flex flex-col justify-between rounded-xl p-4`}
     >
       <div>
         <div className="text-6xl font-bold">
@@ -37,8 +37,8 @@ const Track = ({ index, image, title, text, width, height }: props) => {
       </div>
 
       <div>
-        <p className="mt-8 text-2xl font-semibold">{title}</p>
-        <p className="pt-2">{text}</p>
+        <p className="mt-16 text-2xl font-semibold">{title}</p>
+        <p className="mt-2">{text}</p>
       </div>
     </div>
   );
