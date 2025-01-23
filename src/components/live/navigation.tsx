@@ -1,7 +1,16 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronLeft, Menu, Anchor, Waves, Fish, Ship } from "lucide-react";
+import {
+  ChevronLeft,
+  Menu,
+  Anchor,
+  Waves,
+  Fish,
+  Ship,
+  CircleHelp,
+  Calendar,
+} from "lucide-react";
 
 const items = [
   {
@@ -20,9 +29,19 @@ const items = [
     icon: <Ship />,
   },
   {
+    name: "Schedule",
+    link: "/#schedule",
+    icon: <Calendar />,
+  },
+  {
     name: "Resources",
     link: "/#resources",
     icon: <Fish />,
+  },
+  {
+    name: "FAQ",
+    link: "/#faq",
+    icon: <CircleHelp />,
   },
 ];
 

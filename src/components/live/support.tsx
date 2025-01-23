@@ -38,11 +38,11 @@ const Support = () => {
     <div className="relative">
       <section
         id="support-us"
-        className="relative flex h-[100vh] w-full flex-col items-center justify-start bg-[#3D8AA3] md:h-[190vh] lg:h-[60vh] 2xl:h-[40vh]"
+        className="relative flex h-[115vh] w-full flex-col items-center justify-start bg-[#3D8AA3] pt-5 md:h-[190vh] lg:h-[60vh] 2xl:h-[40vh]"
       >
-        <div className="-mb-10 flex w-8/12 items-center justify-between">
+        <div className="-mb-10 flex w-11/12 items-center justify-between md:w-8/12">
           <Image src={Bubbles} alt="Bubbles" />
-          <Image src={School} alt="School" />
+          <Image src={School} alt="School" className="w-1/2 md:w-auto" />
         </div>
 
         <p className="mb-10 flex font-sora text-3xl font-bold text-white lg:text-5xl">
@@ -72,13 +72,13 @@ const Support = () => {
       <Image
         src={Column}
         alt="Column"
-        className="absolute bottom-[20%] left-12 blur-[2px] lg:bottom-[16%] lg:left-[10%]"
+        className="absolute bottom-[1%] left-12 w-1/6 blur-[2px] md:w-auto lg:bottom-[16%] lg:left-[10%]"
       />
 
       <Image
         src={Shark}
         alt="Shark"
-        className="absolute bottom-[25%] right-12 blur-[2px] lg:right-[10%]"
+        className="absolute bottom-[5%] right-12 w-1/4 blur-[2px] md:bottom-[30%] md:w-auto lg:right-[10%]"
       />
       <Image src={Layer} alt="Layer" className="-mb-2 w-full bg-[#3D8AA3]" />
     </div>
