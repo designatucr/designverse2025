@@ -41,7 +41,7 @@ const tracks = [
 
 const Tracks = () => {
   return (
-    <div className="bg-hackathon-blue-300 flex h-[120vh] flex-col items-center justify-start px-16 py-16 md:w-full">
+    <div className="flex h-[120vh] flex-col items-center justify-start bg-hackathon-blue-300 px-16 py-16 md:w-full">
       <p className="flex pb-3 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
         TRACKS
       </p>
