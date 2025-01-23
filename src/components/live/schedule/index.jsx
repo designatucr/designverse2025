@@ -35,7 +35,10 @@ const Schedule = async () => {
 
   return (
     <div className="relative">
-      <section className="flex flex-col items-center justify-start bg-[#3D859D] p-2 text-white md:p-8">
+      <section
+        id="schedule"
+        className="flex flex-col items-center justify-start bg-[#3D859D] p-2 text-white md:p-8"
+      >
         <div className="-mb-10 flex w-full items-center justify-between md:w-8/12">
           <Image
             src={BubblesLeft}
@@ -73,7 +76,7 @@ const Schedule = async () => {
       <Image
         src={Vine}
         alt="Vine"
-        className="absolute bottom-[25%] left-2 w-1/6 blur-[2px] md:left-0"
+        className="absolute bottom-[25%] left-0 w-1/6 blur-[2px]"
       />
     </div>
   );
