@@ -9,20 +9,16 @@ import {
 import data from "@/data/config";
 
 type Tiers = {
-  bronze: string;
-  silver: string;
-  gold: string;
-  tier4: string;
-  tier5: string;
+  tier1: string;
+  tier2: string;
+  tier3: string;
   other: string;
 };
 
 export const TIERS: Tiers = {
-  bronze: "Bronze",
-  silver: "Silver",
-  gold: "Gold",
-  tier4: "Tier4",
-  tier5: "Tier5",
+  tier1: "Moonlit Tides",
+  tier2: "Shimmering Seashells",
+  tier3: "Mermaid Treasure",
   other: "Other",
 };
 
@@ -32,7 +28,7 @@ interface Attributes {
   phone: string;
   company: string;
   position: string;
-  tier: "Bronze" | "Silver" | "Gold" | "Tier4" | "Tier5" | "Other";
+  tier: "Moonlit Tides" | "Shimmering Seashells" | "Mermaid Treasure" | "Other";
   comments: string;
   requirements: string[];
 }
@@ -43,7 +39,7 @@ export const ATTRIBUTES: Attributes = {
   phone: "",
   company: "",
   position: "",
-  tier: "Bronze",
+  tier: "Moonlit Tides",
   requirements: [],
   comments: "",
 };
