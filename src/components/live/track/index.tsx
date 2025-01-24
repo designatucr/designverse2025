@@ -5,6 +5,8 @@ interface props {
   image: StaticImageData;
   title: string;
   text: string;
+  width: number;
+  height: number;
 }
 
 const colors = [
@@ -14,12 +16,12 @@ const colors = [
   { primary: "bg-[#DAB983]", secondary: "bg-[#FFF7C3]" },
 ];
 
-const Track = ({ index, image, title, text }: props) => {
+const Track = ({ index, image, title, text, width, height }: props) => {
   const { primary, secondary } = colors[index];
 
   return (
     <div
-      className={`text-white shadow-lg ${primary} flex flex-col justify-between p-4`}
+      className={`text-white shadow-lg ${primary} flex flex-col justify-between rounded-xl p-4`}
     >
       <div>
         <div className="text-6xl font-bold">
@@ -29,14 +31,14 @@ const Track = ({ index, image, title, text }: props) => {
           <div
             className={`flex aspect-square h-32 items-center justify-center rounded-full ${secondary}`}
           >
-            <Image src={image} alt={title} />
+            <Image src={image} alt={title} width={width} height={height} />
           </div>
         </div>
       </div>
 
       <div>
-        <p className="text-2xl font-semibold">{title}</p>
-        <p>{text}</p>
+        <p className="mt-16 text-2xl font-semibold">{title}</p>
+        <p className="mt-2">{text}</p>
       </div>
     </div>
   );
