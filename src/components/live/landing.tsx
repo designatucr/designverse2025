@@ -12,7 +12,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="relative flex h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work md:h-[170vh] lg:h-screen"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work md:min-h-[170vh] lg:min-h-screen"
     >
       <Image
         className="absolute right-0 top-0 w-1/2 lg:w-fit"

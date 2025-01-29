@@ -31,7 +31,7 @@ const About = () => {
       />
       <section
         id="about"
-        className="z-20 flex h-[105vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:h-[135vh] lg:h-[105vh] 2xl:h-[90vh]"
+        className="z-20 flex min-h-[105vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:min-h-[135vh] lg:min-h-[105vh] 2xl:min-h-[90vh]"
       >
         <div className="z-10 w-10/12 pt-[10vh] lg:pt-[20vh]">
           <div className="w-full pl-[4vw] text-white lg:w-1/2">

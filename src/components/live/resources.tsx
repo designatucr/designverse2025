@@ -37,7 +37,7 @@ const Resources = () => {
     <div className="relative">
       <section
         id="resources"
-        className="flex flex-col items-center justify-start bg-[#3D859D] text-white"
+        className="flex min-h-[100vh] flex-col items-center justify-start bg-[#3D859D] text-white"
       >
         <p className="flex pb-3 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
           RESOURCES
