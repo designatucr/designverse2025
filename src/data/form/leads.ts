@@ -8,8 +8,15 @@ import {
   TextInput,
   UploadInput,
 } from "@/types/forms";
-import { AGES, MAJORS } from "./information";
-import { GRADES, GENDERS, SOURCES } from "./information";
+import {
+  AGES,
+  MAJORS,
+  GRADES,
+  GENDERS,
+  SOURCES,
+  DIETS,
+  SHIRTS,
+} from "./information";
 import { SCHOOLS } from "./schools";
 import data from "@/data/config";
 
@@ -22,6 +29,7 @@ interface Attributes {
   school: string;
   grade: string;
   gender: string;
+  shirt: string;
   resume: string;
   requirements: string[];
   priorHackathons: string[];
@@ -29,6 +37,7 @@ interface Attributes {
   eventSource: string;
   priorExperience: string;
   response: string;
+  diet: string;
 }
 
 export const ATTRIBUTES: Attributes = {
@@ -40,6 +49,7 @@ export const ATTRIBUTES: Attributes = {
   school: "",
   grade: "",
   gender: "",
+  shirt: "",
   resume: "",
   requirements: [],
   priorHackathons: [],
@@ -47,6 +57,7 @@ export const ATTRIBUTES: Attributes = {
   eventSource: "",
   priorExperience: "",
   response: "",
+  diet: "",
 };
 
 interface Fields {
@@ -60,11 +71,13 @@ interface Fields {
   school: SelectInput;
   grade: SelectInput;
   gender: RadioInput;
+  shirt: RadioInput;
   eventSource: SelectInput;
   priorHackathons: CheckboxInput;
   priorExperience: TextareaInput;
   response: TextareaInput;
   resume: UploadInput;
+  diet: RadioInput;
   requirements: TermsAndConditions;
 }
 
@@ -177,6 +190,24 @@ export const FIELDS: Fields = {
     editable: true,
     required: true,
   },
+  shirt: {
+    input: "radio",
+    text: "Shirt Size",
+    options: SHIRTS,
+    field: "shirt",
+    width: 12,
+    required: true,
+    editable: true,
+  },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   eventSource: {
     input: "select",
     title: "How did you find the event?",
@@ -243,9 +274,9 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
     options: [
-      "I have read the MLH code of conduct and agree to the terms and conditions listed",
-      "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
-      "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
+      // "I have read the MLH code of conduct and agree to the terms and conditions listed",
+      // "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
+      // "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
       "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",

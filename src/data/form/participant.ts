@@ -1,5 +1,4 @@
 import {
-  CheckboxInput,
   Description,
   RadioInput,
   SelectInput,
@@ -26,7 +25,7 @@ interface Attributes {
   grade: string;
   gender: string;
   shirt: string;
-  diet: string[];
+  diet: string;
   resume: string;
   requirements: string[];
   team: string;
@@ -46,7 +45,7 @@ interface Fields {
   grade: SelectInput;
   gender: RadioInput;
   shirt: RadioInput;
-  diet: CheckboxInput;
+  diet: RadioInput;
   resume: UploadInput;
   socials: TextInput;
   food: TextInput;
@@ -192,7 +191,7 @@ export const FIELDS: Fields = {
     editable: true,
   },
   diet: {
-    input: "checkboxes",
+    input: "radio",
     text: "Dietary Restrictions",
     width: 12,
     field: "diet",
@@ -258,9 +257,9 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
     options: [
-      "I have read the MLH code of conduct and agree to the terms and conditions listed",
-      "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
-      "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
+      // "I have read the MLH code of conduct and agree to the terms and conditions listed",
+      // "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
+      // "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
       "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
@@ -281,7 +280,7 @@ export const ATTRIBUTES: Attributes = {
   grade: "",
   gender: "",
   shirt: "",
-  diet: [],
+  diet: "",
   resume: "",
   requirements: [],
   team: "",

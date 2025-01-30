@@ -4,6 +4,8 @@ import {
   GRADES,
   MAJORS,
   AGES,
+  SHIRTS,
+  DIETS,
   SOURCES,
 } from "@/data/form/information";
 import { SCHOOLS } from "@/data/form/schools";
@@ -30,6 +32,9 @@ export const schema = z.object({
   gender: z.enum(GENDERS as [string, ...string[]], {
     required_error: "Please select your gender",
   }),
+  shirt: z.enum(SHIRTS as [string, ...string[]], {
+    required_error: "Please select your shirt size",
+  }),
   eventSource: z.enum(SOURCES as [string, ...string[]], {
     required_error: "Please select where you found the event",
   }),
@@ -41,6 +46,9 @@ export const schema = z.object({
     .min(1, { message: "Prior experience is required" }),
   response: z.string().min(1, { message: `Response is required` }),
   resume: z.string().optional(),
+  diet: z.enum(DIETS as [string, ...string[]], {
+    message: "Please select your dietary restrictions",
+  }),
   requirements: z
     .array(z.string())
     .min(1, { message: "You must agree to the terms and conditions" }),
