@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Mock from "@/public/mock/mock_andrew.jpeg";
+import Mock from "@/public/mock/mock_andrew.webp";
 
 const sponsorships = [
   {
