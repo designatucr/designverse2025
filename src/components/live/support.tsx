@@ -78,7 +78,7 @@ const Support = () => {
       <Image
         src={Shark}
         alt="Shark"
-        className="absolute bottom-[5%] right-12 w-1/4 blur-[2px] md:bottom-[30%] md:w-auto lg:right-[10%]"
+        className="absolute bottom-[5%] right-12 -z-20 w-1/4 blur-[2px] md:bottom-[30%] md:w-auto lg:right-[10%]"
       />
       <Image src={Layer} alt="Layer" className="-mb-2 w-full bg-[#3D8AA3]" />
     </div>
