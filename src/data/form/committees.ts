@@ -5,7 +5,7 @@ import {
   TermsAndConditions,
   TextInput,
 } from "@/types/forms";
-import { MAJORS, GRADES, SHIRTS, GENDERS } from "./information";
+import { MAJORS, GRADES, SHIRTS, GENDERS, AGES, DIETS } from "./information";
 import data from "@/data/config";
 import { AFFILIATIONS } from "./information";
 
@@ -16,9 +16,11 @@ interface Attributes {
   affiliation: string;
   requirements: string[];
   major: string;
+  age: string;
   gender: string;
   grade: string;
   shirt: string;
+  diet: string;
 }
 
 interface Fields {
@@ -27,11 +29,13 @@ interface Fields {
   email: TextInput;
   discord: TextInput;
   major: SelectInput;
+  age: SelectInput;
   grade: SelectInput;
   gender: RadioInput;
   shirt: RadioInput;
   affiliation: RadioInput;
   requirements: TermsAndConditions;
+  diet: RadioInput;
 }
 
 export const FIELDS: Fields = {
@@ -43,7 +47,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for being on the organizing team, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -51,7 +55,7 @@ export const FIELDS: Fields = {
         year: "numeric",
       })}.`,
       "Committee members are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
-      "Note: Committee members are allowed to become participants for the hackathon.",
+      "Note: Committee members are allowed to become participants for the designathon.",
     ],
   },
   name: {
@@ -98,6 +102,17 @@ export const FIELDS: Fields = {
     editable: true,
     searchable: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
   grade: {
     input: "select",
     title: "Grade",
@@ -136,6 +151,15 @@ export const FIELDS: Fields = {
     editable: true,
     required: true,
   },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   requirements: {
     text: "Terms and Conditions",
     input: "terms",
@@ -143,9 +167,9 @@ export const FIELDS: Fields = {
     field: "requirements",
     editable: true,
     options: [
-      "I have read the MLH code of conduct and agree to the terms and conditions listed",
-      "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
-      "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
+      // "I have read the MLH code of conduct and agree to the terms and conditions listed",
+      // "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
+      // "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
       "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
@@ -164,7 +188,9 @@ export const ATTRIBUTES: Attributes = {
   affiliation: "",
   requirements: [],
   major: "",
+  age: "",
   gender: "",
   grade: "",
   shirt: "",
+  diet: "",
 };

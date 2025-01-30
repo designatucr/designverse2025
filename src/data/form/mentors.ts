@@ -7,7 +7,15 @@ import {
   TextareaInput,
   TextInput,
 } from "@/types/forms";
-import { MAJORS, GRADES, GENDERS, SHIRTS, AVAILABILITY } from "./information";
+import {
+  MAJORS,
+  GRADES,
+  GENDERS,
+  SHIRTS,
+  AVAILABILITY,
+  AGES,
+  DIETS,
+} from "./information";
 import data from "@/data/config";
 
 type Fields = {
@@ -17,11 +25,13 @@ type Fields = {
   phone: TextInput;
   discord: TextInput;
   major: SelectInput;
+  age: SelectInput;
   grade: SelectInput;
   availability: CheckboxInput;
   gender: RadioInput;
   shirt: RadioInput;
   response: TextareaInput;
+  diet: RadioInput;
   requirements: TermsAndConditions;
 };
 
@@ -31,10 +41,12 @@ type Attributes = {
   phone: string;
   discord: string;
   major: string;
+  age: string;
   grade: string;
   availability: string[];
   gender: string;
   shirt: string;
+  diet: string;
   response: string;
   requirements: string[];
 };
@@ -48,7 +60,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for considering to become a mentor, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -57,7 +69,7 @@ export const FIELDS: Fields = {
       })}.`,
       "Mentors are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
       "Mentor duties include but are not limited to providing expertise and assistance to designers throughout the hackathon without jeopardizing their chances at winning.",
-      "Note: Mentors are not permitted to become participants for the hackathon.",
+      "Note: Mentors are not permitted to become participants for the designathon.",
     ],
   },
   name: {
@@ -115,6 +127,17 @@ export const FIELDS: Fields = {
     searchable: true,
     editable: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
   grade: {
     input: "select",
     title: "Grade",
@@ -153,6 +176,15 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   response: {
     input: "textarea",
     name: "response",
@@ -171,9 +203,9 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
     options: [
-      "I have read the MLH code of conduct and agree to the terms and conditions listed",
-      "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
-      "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
+      // "I have read the MLH code of conduct and agree to the terms and conditions listed",
+      // "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
+      // "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
       "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
@@ -189,10 +221,12 @@ export const ATTRIBUTES: Attributes = {
   phone: "",
   discord: "",
   major: "",
+  age: "",
   grade: "",
   availability: [],
   gender: "",
   shirt: "",
+  diet: "",
   response: "",
   requirements: [],
 };

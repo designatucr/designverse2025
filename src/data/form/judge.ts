@@ -1,12 +1,12 @@
 import {
   Description,
   RadioInput,
+  SelectInput,
   TermsAndConditions,
   TextInput,
   UploadInput,
 } from "@/types/forms";
-import { GENDERS } from "./information";
-import { SHIRTS } from "./information";
+import { GENDERS, SHIRTS, AGES, DIETS } from "./information";
 import data from "@/data/config";
 
 interface Attributes {
@@ -14,10 +14,12 @@ interface Attributes {
   email: string;
   phone: string;
   gender: string;
+  age: string;
   shirt: string;
   affiliation: "Professor" | "Student" | "Industry";
   title: string;
   photo: string;
+  diet: string;
   requirements: string[];
 }
 
@@ -27,10 +29,12 @@ interface Fields {
   email: TextInput;
   phone: TextInput;
   gender: RadioInput;
+  age: SelectInput;
   shirt: RadioInput;
   affiliation: RadioInput;
   title: TextInput;
   photo: UploadInput;
+  diet: RadioInput;
   requirements: TermsAndConditions;
 }
 
@@ -55,7 +59,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for considering to become a judge, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -64,7 +68,7 @@ export const FIELDS: Fields = {
       })}.`,
       "Judges are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
       "Judge duties include but are not limited to visiting various teams to assess teams on their idea, technical complexities, and overall presentation after which they will decide the winners.",
-      "Note: Judges are not permitted to become participants for the hackathon.",
+      "Note: Judges are not permitted to become participants for the designathon.",
     ],
   },
   name: {
@@ -109,6 +113,17 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
   shirt: {
     input: "radio",
     text: "Shirt Size",
@@ -150,6 +165,15 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   requirements: {
     text: "Terms and Conditions",
     input: "terms",
@@ -158,9 +182,9 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
     options: [
-      "I have read the MLH code of conduct and agree to the terms and conditions listed",
-      "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
-      "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
+      // "I have read the MLH code of conduct and agree to the terms and conditions listed",
+      // "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
+      // "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
       "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
@@ -175,9 +199,11 @@ export const ATTRIBUTES: Attributes = {
   email: "",
   phone: "",
   gender: "",
+  age: "",
   shirt: "",
   affiliation: "Professor",
   title: "",
   photo: "",
+  diet: "",
   requirements: [],
 };

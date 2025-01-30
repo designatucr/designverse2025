@@ -12,7 +12,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="relative flex h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work md:h-[170vh] lg:h-screen"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work md:min-h-[170vh] lg:min-h-screen"
     >
       <Image
         className="absolute right-0 top-0 w-1/2 lg:w-fit"
@@ -25,7 +25,7 @@ const Landing = () => {
         alt={cloud2}
       />
 
-      <div className="z-20 flex w-11/12 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 py-4 text-white lg:w-3/5 lg:p-6">
+      <div className="z-20 mt-24 flex w-11/12 flex-col items-center justify-center rounded-3xl bg-[#07374B]/80 py-4 text-white lg:w-3/5 lg:p-6">
         <Image
           className="-mt-40 md:-mt-32 md:h-1/2 md:w-1/2 lg:-mt-36"
           src={Logo}
@@ -36,13 +36,13 @@ const Landing = () => {
             <MapPin size={24} /> University of California Riverside{" "}
           </p>
           <p className="flex items-center gap-1 text-sm lg:text-lg">
-            <Calendar size={20} /> May 11 - 12, 2025
+            <Calendar size={20} /> May 10 - 11, 2025
           </p>
         </div>
         <Countdown />
       </div>
 
-      <div className="z-20 flex w-3/5 flex-col justify-center gap-3 lg:flex-row">
+      <div className="z-20 grid grid-cols-3 gap-3">
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
           <Link
             href="/form/sponsor"
@@ -70,10 +70,10 @@ const Landing = () => {
             VOLUNTEER <ExternalLink />
           </Link>
         </Button>
-      </div>
-
-      <div className="z-20 flex flex-col justify-center">
-        <Button asChild className="rounded-full bg-[#406F82] px-8 py-6">
+        <Button
+          asChild
+          className="cols-span-3 col-start-2 grid-cols-subgrid rounded-full bg-[#406F82] px-8 py-6"
+        >
           <Link
             href="/form/participant"
             className="flex gap-2 text-xl"

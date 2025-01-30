@@ -19,17 +19,17 @@ const Footer = () => {
       <Image
         src={Fish1}
         alt="Fish1"
-        className="absolute bottom-[200%] left-8 lg:bottom-[475%] lg:left-20"
+        className="absolute bottom-[200%] left-8 z-0 lg:bottom-[475%] lg:left-20"
       />
       <Image
         src={Fish2}
         alt="Fish2"
-        className="absolute bottom-[250%] left-[60%] md:left-[80%] lg:bottom-[425%] lg:left-[30%]"
+        className="absolute bottom-[250%] left-[60%] z-0 md:left-[80%] lg:bottom-[425%] lg:left-[30%]"
       />
       <Image
         src={Fish3}
         alt="Fish3"
-        className="absolute bottom-[300%] lg:bottom-[450%] lg:right-[10%]"
+        className="absolute bottom-[300%] z-0 lg:bottom-[450%] lg:right-[10%]"
       />
 
       <Image
@@ -38,7 +38,7 @@ const Footer = () => {
         className="absolute bottom-[95%] w-full blur-[2px]"
       />
 
-      <div className="flex flex-col items-center justify-center gap-4 bg-[#081c28] p-8 text-white">
+      <div className="flex min-h-[20vh] flex-col items-center justify-center gap-4 bg-[#081c28] p-8 text-white">
         <Image src={logo} width={100} alt="DesignVerse Short logo" />
         <div className="flex items-center justify-center gap-4">
           <Link href={`mailto:${data.email}`}>
