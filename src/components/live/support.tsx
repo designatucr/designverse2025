@@ -38,7 +38,7 @@ const Support = () => {
     <div className="relative">
       <section
         id="support-us"
-        className="relative flex h-[115vh] w-full flex-col items-center justify-start bg-[#3D8AA3] pt-5 md:h-[190vh] lg:h-[60vh] 2xl:h-[40vh]"
+        className="relative flex min-h-[115vh] w-full flex-col items-center justify-start bg-[#3D8AA3] pt-5 md:min-h-[190vh] lg:min-h-[60vh] 2xl:min-h-[40vh]"
       >
         <div className="-mb-10 flex w-11/12 items-center justify-between md:w-8/12">
           <Image src={Bubbles} alt="Bubbles" />

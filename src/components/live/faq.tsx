@@ -25,7 +25,7 @@ const FAQ = () => {
           className="absolute -top-[1%] left-8 w-1/6 blur-[2px] md:top-0 md:w-auto lg:left-20"
         />
 
-        <div className="flex h-[200vh] w-full flex-col items-center bg-[#35798F] text-white md:h-[325vh] lg:h-[200vh]">
+        <div className="flex min-h-[200vh] w-full flex-col items-center bg-[#35798F] text-white md:min-h-[325vh] lg:min-h-[200vh]">
           <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
             FAQ
           </p>
