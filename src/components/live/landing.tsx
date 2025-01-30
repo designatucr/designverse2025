@@ -42,7 +42,7 @@ const Landing = () => {
         <Countdown />
       </div>
 
-      <div className="z-20 flex w-3/5 flex-col justify-center gap-3 lg:flex-row">
+      <div className="z-20 grid grid-cols-3 gap-3">
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
           <Link
             href="/form/sponsor"
@@ -70,10 +70,10 @@ const Landing = () => {
             VOLUNTEER <ExternalLink />
           </Link>
         </Button>
-      </div>
-
-      <div className="z-20 flex flex-col justify-center">
-        <Button asChild className="rounded-full bg-[#406F82] px-8 py-6">
+        <Button
+          asChild
+          className="cols-span-3 col-start-2 grid-cols-subgrid rounded-full bg-[#406F82] px-8 py-6"
+        >
           <Link
             href="/form/participant"
             className="flex gap-2 text-xl"
