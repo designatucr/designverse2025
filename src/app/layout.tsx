@@ -7,6 +7,11 @@ import Providers from "@/components/providers";
 import { Toaster } from "react-hot-toast";
 import { getServerSession } from "next-auth";
 import { options } from "@/utils/auth";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DesignVerse 2025",
+};
 
 const workSans = Work_Sans({
   subsets: ["latin"],
