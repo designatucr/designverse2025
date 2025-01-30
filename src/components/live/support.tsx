@@ -38,7 +38,7 @@ const Support = () => {
     <div className="relative">
       <section
         id="support-us"
-        className="relative flex h-[115vh] w-full flex-col items-center justify-start bg-[#3D8AA3] pt-5 md:h-[190vh] lg:h-[60vh] 2xl:h-[40vh]"
+        className="relative flex min-h-[115vh] w-full flex-col items-center justify-start bg-[#3D8AA3] pt-5 md:min-h-[190vh] lg:min-h-[60vh] 2xl:min-h-[40vh]"
       >
         <div className="-mb-10 flex w-11/12 items-center justify-between md:w-8/12">
           <Image src={Bubbles} alt="Bubbles" />
@@ -78,7 +78,7 @@ const Support = () => {
       <Image
         src={Shark}
         alt="Shark"
-        className="absolute bottom-[5%] right-12 w-1/4 blur-[2px] md:bottom-[30%] md:w-auto lg:right-[10%]"
+        className="absolute bottom-[5%] right-12 -z-20 w-1/4 blur-[2px] md:bottom-[30%] md:w-auto lg:right-[10%]"
       />
       <Image src={Layer} alt="Layer" className="-mb-2 w-full bg-[#3D8AA3]" />
     </div>

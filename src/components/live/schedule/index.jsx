@@ -37,7 +37,7 @@ const Schedule = async () => {
     <div className="relative">
       <section
         id="schedule"
-        className="flex flex-col items-center justify-start bg-[#3D859D] p-2 text-white md:p-8"
+        className="flex min-h-[80vh] flex-col items-center justify-start bg-[#3D859D] p-2 text-white md:p-8"
       >
         <div className="-mb-10 flex w-full items-center justify-between md:w-8/12">
           <Image
