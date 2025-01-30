@@ -23,7 +23,7 @@ const data: config = {
   length: 24,
   date: new Date("2025-05-10T08:00:00"),
   end: new Date("2025-05-11T16:00:00"),
-  packet: "",
+  packet: "/DesignVerseSponsorship2025.pdf",
   devpost: "https://designverseucr.devpost.com",
   domain: "https://www.designverseucr.com",
   instagram: "https://www.instagram.com/designverseucr/",

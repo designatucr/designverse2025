@@ -68,19 +68,36 @@ const Questions = ({
     <div className="flex w-full flex-col gap-5">
       {Object.values(fields).map((field, index) => (
         <div key={index}>
-          {field.input === "description" &&
-            field.texts.map((description, index) => (
-              <div key={index}>
-                <p>{description}</p> <br />
-                {index === field.texts.length - 1 && (
-                  <p>
-                    Fields with
-                    <span className="text-red-500"> * </span>
-                    are required.
-                  </p>
+          {field.input === "description" && (
+            <>
+              {field.texts.map((description, index) => (
+                <div key={index}>
+                  <p>{description}</p> <br />
+                  {index === field.texts.length - 1 && (
+                    <p>
+                      Fields with
+                      <span className="text-red-500"> * </span>
+                      are required.
+                    </p>
+                  )}
+                </div>
+              ))}
+              <div className="mt-3">
+                {packet && (
+                  <Link
+                    href={data.packet}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="flex items-center text-lg font-semibold text-designverse-primary underline"
+                  >
+                    Sponsorship Packet
+                    <SquareArrowOutUpRight className="mx-2" size={18} />
+                  </Link>
                 )}
               </div>
-            ))}
+            </>
+          )}
+
           {field.input === "input" && (
             <>
               <div className="pb-1">
@@ -244,17 +261,7 @@ const Questions = ({
           <SquareArrowOutUpRight className="mx-2" size={15} />
         </Link>
       </div> */}
-      {packet && (
-        <Link
-          href={data.packet}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="flex items-center no-underline"
-        >
-          Sponsorship Packet
-          <SquareArrowOutUpRight className="mx-2" size={15} />
-        </Link>
-      )}
+
       <div className="flex justify-center">
         <Button onClick={handleSubmit} disabled={loading}>
           Submit
