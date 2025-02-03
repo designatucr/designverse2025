@@ -77,7 +77,7 @@ export const POST = async (req, { params }) => {
         },
       });
 
-      updateDoc(doc(db, "statistics", "genders"), {
+      updateDoc(doc(db, "statistics", ""), {
         [`${params.type}`]: {
           0: {
             [element.gender]: increment(1),
