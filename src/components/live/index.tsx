@@ -1,5 +1,3 @@
-"use client";
-
 import Landing from "./landing";
 import About from "./about";
 import Schedule from "./schedule";
