@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import Heatmap from "./heatmap";
 import { AGES, DIETS, GENDERS, SHIRTS } from "@/data/form/information";
 import { api } from "@/utils/api";
+import { STATUSES } from "@/data/statuses";
 
 const Statistics = () => {
   const { data } = useQuery({
@@ -23,18 +24,16 @@ const Statistics = () => {
   ];
 
   const orders = {
-    shirts: SHIRTS,
-    diets: DIETS,
-    ages: AGES,
-    genders: GENDERS,
+    shirt: SHIRTS,
+    diet: DIETS,
+    age: AGES,
+    gender: GENDERS,
   };
-
-  const statuses = ["-1", "0", "1"];
 
   const heatmaps = Object.keys(orders).map((label) => ({
     key: label,
     labels: orders[label],
-    values: statuses.map((status) =>
+    values: Object.keys(STATUSES).map((status) =>
       roles.map((key) => (data ? data[label][key][status] : [])),
     ),
   }));

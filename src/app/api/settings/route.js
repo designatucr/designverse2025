@@ -21,10 +21,10 @@ const roles = [
 ];
 
 const orders = {
-  shirts: SHIRTS,
-  diets: DIETS,
-  ages: AGES,
-  genders: GENDERS,
+  shirt: SHIRTS,
+  diet: DIETS,
+  age: AGES,
+  gender: GENDERS,
 };
 
 const heatmaps = {};
@@ -68,10 +68,10 @@ export const GET = async () => {
     }
   }
 
-  await setDoc(doc(db, "statistics", "shirts"), heatmaps["shirts"]);
-  await setDoc(doc(db, "statistics", "genders"), heatmaps["genders"]);
-  await setDoc(doc(db, "statistics", "ages"), heatmaps["ages"]);
-  await setDoc(doc(db, "statistics", "diets"), heatmaps["diets"]);
+  await setDoc(doc(db, "statistics", "shirt"), heatmaps["shirt"]);
+  await setDoc(doc(db, "statistics", "genders"), heatmaps["gender"]);
+  await setDoc(doc(db, "statistics", "age"), heatmaps["age"]);
+  await setDoc(doc(db, "statistics", "diet"), heatmaps["diet"]);
 
   return Response.json(heatmaps);
 };

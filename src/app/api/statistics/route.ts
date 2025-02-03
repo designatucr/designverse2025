@@ -14,10 +14,10 @@ const labels: string[] = [
 ];
 
 const orders: Record<string, string[]> = {
-  shirts: SHIRTS,
-  diets: DIETS,
-  ages: AGES,
-  genders: GENDERS,
+  shirt: SHIRTS,
+  diet: DIETS,
+  age: AGES,
+  gender: GENDERS,
 };
 
 const statuses: string[] = ["-1", "0", "1"];
