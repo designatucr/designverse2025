@@ -6,18 +6,9 @@ import {
   Lock,
   Heart,
   HandHeart,
-  Gem,
-  MessageCircleHeart,
-  MessageSquareText,
   Crown,
-  CircleHelp,
-  HeartHandshake,
   Users,
   CircleAlert,
-  MessageSquareShare,
-  MessageSquareShareIcon,
-  MessageSquare,
-  MessageSquarePlus,
   MessagesSquare,
 } from "lucide-react";
 import Select from "@/components/select";
