@@ -5,6 +5,8 @@ import {
   GRADES,
   MAJORS,
   AFFILIATIONS,
+  AGES,
+  DIETS,
 } from "@/data/form/information";
 
 export const schema = z.object({
@@ -14,6 +16,9 @@ export const schema = z.object({
   major: z.enum(MAJORS as [string, ...string[]], {
     required_error: "Please select your major",
   }),
+  age: z.enum(AGES as [string, ...string[]], {
+    required_error: "Please select your age",
+  }),
   grade: z.enum(GRADES as [string, ...string[]], {
     required_error: "Please select your grade",
   }),
@@ -22,6 +27,9 @@ export const schema = z.object({
   }),
   shirt: z.enum(SHIRTS as [string, ...string[]], {
     required_error: "Please select your shirt size",
+  }),
+  diet: z.enum(DIETS as [string, ...string[]], {
+    message: "Please select your dietary restrictions",
   }),
   affiliation: z.enum(Object.values(AFFILIATIONS) as [string, ...string[]], {
     required_error: "Please select your affiliation",

@@ -1,12 +1,12 @@
 import {
   Description,
   RadioInput,
+  SelectInput,
   TermsAndConditions,
   TextInput,
   UploadInput,
 } from "@/types/forms";
-import { GENDERS } from "./information";
-import { SHIRTS } from "./information";
+import { GENDERS, SHIRTS, AGES, DIETS } from "./information";
 import data from "@/data/config";
 
 interface Attributes {
@@ -14,10 +14,12 @@ interface Attributes {
   email: string;
   phone: string;
   gender: string;
+  age: string;
   shirt: string;
   affiliation: "Professor" | "Student" | "Industry";
   title: string;
   photo: string;
+  diet: string;
   requirements: string[];
 }
 
@@ -27,10 +29,12 @@ interface Fields {
   email: TextInput;
   phone: TextInput;
   gender: RadioInput;
+  age: SelectInput;
   shirt: RadioInput;
   affiliation: RadioInput;
   title: TextInput;
   photo: UploadInput;
+  diet: RadioInput;
   requirements: TermsAndConditions;
 }
 
@@ -109,6 +113,17 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
+  age: {
+    input: "select",
+    title: "Age",
+    options: AGES,
+    field: "age",
+    placeholder: "ie. 18",
+    width: 12,
+    required: true,
+    editable: true,
+    searchable: true,
+  },
   shirt: {
     input: "radio",
     text: "Shirt Size",
@@ -150,6 +165,15 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: false,
+    editable: true,
+  },
   requirements: {
     text: "Terms and Conditions",
     input: "terms",
@@ -175,9 +199,11 @@ export const ATTRIBUTES: Attributes = {
   email: "",
   phone: "",
   gender: "",
+  age: "",
   shirt: "",
   affiliation: "Professor",
   title: "",
   photo: "",
+  diet: "",
   requirements: [],
 };
