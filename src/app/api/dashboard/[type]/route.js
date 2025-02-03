@@ -255,39 +255,23 @@ export const PUT = async (req, { params }) => {
           });
 
           updateDoc(doc(db, "statistics", "shirt"), {
-            [`${params.type}`]: {
-              [`${status}.${object.shirt}`]: increment(1),
-            },
-            [`${params.type}`]: {
-              [`0.${object.shirt}`]: increment(1),
-            },
+            [`${params.type}.${status}.${object.shirt}`]: increment(1),
+            [`${params.type}.0.${object.shirt}`]: increment(1),
           });
 
           updateDoc(doc(db, "statistics", "diet"), {
-            [`${params.type}`]: {
-              [`${status}.${object.diet}`]: increment(1),
-            },
-            [`${params.type}`]: {
-              [`0.${object.diet}`]: increment(1),
-            },
+            [`${params.type}.${status}.${object.diet}`]: increment(1),
+            [`${params.type}.0.${object.diet}`]: increment(1),
           });
 
           updateDoc(doc(db, "statistics", "gender"), {
-            [`${params.type}`]: {
-              [`${status}.${object.gender}`]: increment(1),
-            },
-            [`${params.type}`]: {
-              [`0.${object.gender}`]: increment(1),
-            },
+            [`${params.type}.${status}.${object.gender}`]: increment(1),
+            [`${params.type}.0.${object.gender}`]: increment(1),
           });
 
           updateDoc(doc(db, "statistics", "age"), {
-            [`${params.type}`]: {
-              [`${status}.${object.age}`]: increment(1),
-            },
-            [`${params.type}`]: {
-              [`0.${object.age}`]: increment(1),
-            },
+            [`${params.type}.${status}.${object.age}`]: increment(1),
+            [`${params.type}.0.${object.age}`]: increment(1),
           });
         }),
       );
