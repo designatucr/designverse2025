@@ -60,10 +60,11 @@ const Find = () => {
             {getVirtualItems().map(({ index, size, start }) => {
               if (index % 4) return null;
               const row = search.slice(index, index + 4);
+
               return (
                 <div
                   key={`row: ${Math.floor(index / 4)}`}
-                  className="grid w-full grid-cols-4 gap-4 bg-blue-500"
+                  className="grid w-full grid-cols-4 gap-4"
                   style={{
                     height: `${size}px`,
                     transform: `translateY(${start}px)`,
@@ -74,7 +75,7 @@ const Find = () => {
                       key={`column: ${i}`}
                       ref={measureElement}
                       data-index={index + i}
-                      className="gap-4 bg-red-500 py-3"
+                      className="py-4"
                     >
                       <Idea
                         title={title}
