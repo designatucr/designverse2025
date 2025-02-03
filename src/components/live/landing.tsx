@@ -12,7 +12,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work md:min-h-[170vh] lg:min-h-screen"
+      className="relative flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end py-28 font-work md:mb-20 lg:mb-0 xl:py-64"
     >
       <Image
         className="absolute right-0 top-0 w-1/2 lg:w-fit"
@@ -20,7 +20,7 @@ const Landing = () => {
         alt={cloud1}
       />
       <Image
-        className="absolute left-0 top-[8vh] w-1/4 lg:w-fit"
+        className="absolute left-0 top-[8%] w-1/4 lg:w-fit"
         src={cloud2}
         alt={cloud2}
       />
@@ -85,7 +85,7 @@ const Landing = () => {
       </div>
 
       <Image
-        className="absolute top-[43vh] z-0 min-h-full w-full lg:top-[15vh] lg:h-fit"
+        className="absolute top-[40%] z-0 min-h-full w-full lg:top-[15%] lg:h-fit"
         src={sand1}
         alt="sand1"
       />
