@@ -211,54 +211,59 @@ export const PUT = async (req, { params }) => {
   }
   try {
     if (types.has(params.type)) {
-      await Promise.all(
-        objects.map(async (object) => {
-          await updateDoc(doc(db, "users", object.uid), {
-            [`roles.${params.type}`]: status,
-          });
+      objects.map(async (object) => {
+        await updateDoc(doc(db, "users", object.uid), {
+          [`roles.${params.type}`]: status,
+        });
 
-          const id = status === 1 ? "acceptance" : "rejection";
+        const id = status === 1 ? "acceptance" : "rejection";
 
-          const preview =
-            id === "acceptance"
-              ? "You have been accepted!"
-              : "Thank you for applying!";
+        const preview =
+          id === "acceptance"
+            ? "You have been accepted!"
+            : "Thank you for applying!";
 
-          const subject =
-            id === "acceptance"
-              ? "🎉 Congratulations 🎉"
-              : "Application Status Update";
+        const subject =
+          id === "acceptance"
+            ? "🎉 Congratulations 🎉"
+            : "Application Status Update";
 
-          await send({
-            email: object.email,
-            id: id,
-            name: object.name,
-            position: params.type.slice(0, -1),
-            subject: `[${data.name}] ${subject}`,
-            preview: preview,
-          });
+        await send({
+          email: object.email,
+          id: id,
+          name: object.name,
+          position: params.type.slice(0, -1),
+          subject: `[${data.name}] ${subject}`,
+          preview: preview,
+        });
 
+        console.log(`${params.type}.${status}.${object.shirt}`);
+        console.log(`${params.type}.0.${object.shirt}`);
+
+        try {
           updateDoc(doc(db, "statistics", "shirt"), {
             [`${params.type}.${status}.${object.shirt}`]: increment(1),
-            [`${params.type}.0.${object.shirt}`]: decrement(1),
+            [`${params.type}.0.${object.shirt}`]: increment(-1),
           });
 
           updateDoc(doc(db, "statistics", "diet"), {
             [`${params.type}.${status}.${object.diet}`]: increment(1),
-            [`${params.type}.0.${object.diet}`]: decrement(1),
+            [`${params.type}.0.${object.diet}`]: increment(-1),
           });
 
           updateDoc(doc(db, "statistics", "gender"), {
             [`${params.type}.${status}.${object.gender}`]: increment(1),
-            [`${params.type}.0.${object.gender}`]: decrement(1),
+            [`${params.type}.0.${object.gender}`]: increment(-1),
           });
 
           updateDoc(doc(db, "statistics", "age"), {
             [`${params.type}.${status}.${object.age}`]: increment(1),
-            [`${params.type}.0.${object.age}`]: decrement(1),
+            [`${params.type}.0.${object.age}`]: increment(-1),
           });
-        }),
-      );
+        } catch (error) {
+          console.error(error);
+        }
+      });
     }
     return res.json({ message: "OK" }, { status: 200 });
   } catch (err) {
