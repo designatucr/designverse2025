@@ -49,7 +49,7 @@ const Navigation = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <div className="fixed top-2 z-30 m-3 rounded-lg bg-[#3E90B4] px-3 py-2 text-white drop-shadow-xl">
+    <div className="fixed top-2 z-50 m-3 rounded-lg bg-[#3E90B4] px-3 py-2 text-white drop-shadow-xl">
       {isDropdownOpen ? (
         <>
           <ChevronLeft
