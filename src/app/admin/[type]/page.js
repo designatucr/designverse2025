@@ -12,7 +12,7 @@ import Contacts from "@/components/admin/services/contacts/contacts";
 import Participants from "@/components/admin/dashboards/participants";
 import Sponsors from "@/components/admin/dashboards/sponsors";
 import Panelists from "@/components/admin/dashboards/panelists";
-import Statistics from "@/components/admin/services/statistics/statistics";
+import Statistics from "@/components/admin/services/statistics";
 import Teams from "@/components/admin/dashboards/teams";
 import Volunteers from "@/components/admin/dashboards/volunteers";
 import Leads from "@/components/admin/dashboards/leads";

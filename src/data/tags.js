@@ -69,7 +69,7 @@ export const COLORS = {
   marketing: mappings["red"],
   operations: mappings["grayblue"],
   sponsorship: mappings["yellow"],
-  publicRelations: mappings["teal"],
+  "public relations": mappings["teal"],
   software: mappings["purple"],
   leads: mappings["red"],
   directors: mappings["pink"],

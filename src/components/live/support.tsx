@@ -38,7 +38,7 @@ const Support = () => {
     <div className="relative">
       <section
         id="support-us"
-        className="relative flex min-h-[115vh] w-full flex-col items-center justify-start bg-[#3D8AA3] pt-5 md:min-h-[190vh] lg:min-h-[60vh] 2xl:min-h-[40vh]"
+        className="relative flex w-full flex-col items-center justify-start bg-[#3D8AA3] pb-24 pt-12 md:py-32"
       >
         <div className="-mb-10 flex w-11/12 items-center justify-between md:w-8/12">
           <Image src={Bubbles} alt="Bubbles" />
@@ -49,7 +49,7 @@ const Support = () => {
           SUPPORT US
         </p>
 
-        <div className="grid w-8/12 gap-4 font-work lg:grid-cols-3 lg:gap-x-4">
+        <div className="z-30 grid w-8/12 gap-4 font-work lg:grid-cols-3 lg:gap-x-4">
           {support.map(({ title, description, form, link }, index) => (
             <div
               key={index}
@@ -78,7 +78,7 @@ const Support = () => {
       <Image
         src={Shark}
         alt="Shark"
-        className="absolute bottom-[5%] right-12 -z-20 w-1/4 blur-[2px] md:bottom-[30%] md:w-auto lg:right-[10%]"
+        className="absolute bottom-[5%] right-12 w-1/4 blur-[2px] lg:bottom-[15%] xl:bottom-[30%] xl:right-[10%] xl:w-auto"
       />
       <Image src={Layer} alt="Layer" className="-mb-2 w-full bg-[#3D8AA3]" />
     </div>

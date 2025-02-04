@@ -16,7 +16,7 @@ const About = () => {
       <Image
         src={Water}
         alt="Water"
-        className="absolute top-[-2%] z-0 w-screen md:top-[-50px] lg:top-[-8%]"
+        className="absolute top-[-2%] z-0 w-screen md:top-[-50px] lg:top-[-5%]"
       />
       <Image
         src={Bubble}
@@ -27,14 +27,14 @@ const About = () => {
       <Image
         src={Trident}
         alt="Trident"
-        className="absolute bottom-0.5 right-[5%] w-1/5 blur-[3px] md:bottom-[10%] md:right-[12%] md:w-auto md:rotate-0"
+        className="absolute bottom-0.5 right-[5%] w-1/5 blur-[3px] xl:bottom-[10%] xl:right-[12%] xl:w-auto"
       />
       <section
         id="about"
-        className="z-20 flex min-h-[105vh] w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] md:min-h-[135vh] lg:min-h-[105vh] 2xl:min-h-[90vh]"
+        className="z-20 w-full items-start justify-center bg-gradient-to-b from-[#589fc0] to-[#51ADD7] py-32 md:py-96"
       >
-        <div className="z-10 w-10/12 pt-[10vh] lg:pt-[20vh]">
-          <div className="w-full pl-[4vw] text-white lg:w-1/2">
+        <div className="z-10 w-10/12">
+          <div className="-mt-3 w-full pl-[8vw] text-white lg:w-1/2">
             <p className="flex font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
               ABOUT US
             </p>
@@ -64,31 +64,31 @@ const About = () => {
       <Image
         src={Tubes}
         alt="Tubes"
-        className="absolute bottom-[0%] left-[35%] w-1/12 blur-[2px] md:bottom-[2%] md:left-[30%] md:w-auto"
+        className="absolute bottom-[0%] left-[35%] w-1/12 blur-[2px] xl:bottom-[2%] xl:left-[30%] xl:w-auto"
       />
 
       <Image
         src={Rock}
         alt="Rock"
-        className="absolute bottom-[1%] left-[15%] w-12 blur-[2px] md:bottom-[7%] md:left-[15%] md:w-auto"
+        className="absolute bottom-[1%] left-[15%] w-12 blur-[2px] lg:w-auto xl:bottom-[7%] xl:left-[15%]"
       />
 
       <Image
         src={Seaweed}
         alt="Seaweed"
-        className="absolute bottom-[7%] left-[3%] w-1/12 rotate-45 blur-[2px] md:bottom-[8%] md:left-[5%] md:w-auto md:rotate-0"
+        className="absolute bottom-[7%] left-[3%] w-1/12 rotate-45 blur-[2px] lg:w-auto xl:bottom-[8%] xl:left-[5%] xl:rotate-0"
       />
 
       <Image
         src={Shell}
         alt="Shell"
-        className="absolute bottom-[1%] left-[50%] w-1/12 blur-[2px] md:bottom-[7%] md:left-[50%] md:w-auto"
+        className="absolute bottom-[1%] left-[50%] w-1/12 blur-[2px] md:w-auto xl:bottom-[7%]"
       />
 
       <Image
         src={Coral}
         alt="Coral"
-        className="absolute bottom-[2%] left-[65%] w-12 blur-[2px] md:bottom-[9%] md:left-[60%] md:w-auto"
+        className="absolute bottom-[2%] left-[65%] w-12 blur-[2px] md:w-1/5 xl:bottom-[9%] xl:left-[60%] xl:w-auto"
       />
       <Image
         src={Layer1}
