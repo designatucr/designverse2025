@@ -7,7 +7,7 @@ export const FIELDS = {
     input: "description",
     width: 12,
     texts: [
-      `Welcome to ${data.name}. ${data.name} is a ${data.description} hackathon spanning ${
+      `Welcome to ${data.name}. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",

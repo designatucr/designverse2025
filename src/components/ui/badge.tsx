@@ -38,11 +38,11 @@ function Badge({ className, variant, type = "gray", ...props }: BadgeProps) {
     <div
       className={cn(
         badgeVariants({ variant }),
-        className,
+        "border-4 text-black",
         background,
         text,
         hover,
-        "my-2 border-4 text-black",
+        className,
       )}
       {...props}
     />

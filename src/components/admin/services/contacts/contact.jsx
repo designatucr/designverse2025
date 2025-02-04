@@ -88,7 +88,7 @@ const Contact = ({ role, disabled, setDisabled }) => {
         />
 
         <Button onClick={onClick} disabled={status.status === "" || disabled}>
-          copy
+          Copy
         </Button>
       </CardContent>
     </Card>

@@ -10,21 +10,21 @@ interface props {
 const Digits = ({ value, unit }: props) => {
   return (
     <div className="flex flex-col items-center gap-4 last:hidden sm:last:flex">
-      <div className="m-3 mb-0 flex gap-1 lg:!gap-1">
+      <div className="m-2 mb-0 flex gap-1 lg:!gap-1">
         {value
           .toString()
           .padStart(2, "0")
           .split("")
           .map((digit, index) => (
             <div
-              className="flex items-center justify-center rounded-lg bg-white bg-opacity-40 p-3 text-lg font-bold text-white lg:min-w-11 lg:p-3 lg:text-3xl"
+              className="flex items-center justify-center rounded-lg bg-white bg-opacity-40 p-2 text-lg font-bold text-white lg:min-w-11 lg:p-3 lg:text-3xl"
               key={index}
             >
               {digit}
             </div>
           ))}
       </div>
-      <div className="m-2 mt-0 text-xs text-white">{unit}</div>
+      <div className="m-2 mt-0 text-white">{unit}</div>
     </div>
   );
 };
@@ -56,7 +56,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="inline-flex-col inline-block w-full rounded-lg bg-hackathon-green-300 text-center shadow-xl">
+    <div className="inline-flex-col inline-block w-full rounded-lg bg-designverse-primary text-center shadow-xl">
       <div className="m-2 mb-0 font-bold text-white">HACKING ENDS IN</div>
       <div className="inline-flex font-bold">
         {Object.entries(countdown).map(([unit, value], index) => (

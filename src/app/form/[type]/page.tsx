@@ -11,7 +11,6 @@ import Lead from "@/components/form/lead";
 import Ideas from "@/components/form/ideas";
 import ProtectedPage from "@/components/protected";
 import Fault from "@/utils/error";
-import React from "react";
 
 type props = {
   params: { type: string };

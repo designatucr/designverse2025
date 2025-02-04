@@ -13,12 +13,9 @@ const Idea = ({ title, languages, description, contact }: props) => {
     <div className="h-full w-full rounded bg-white p-3">
       <p className="text-lg font-semibold">{title}</p>
       <div className="my-2 flex gap-3">
-        {languages.map((language, index) => (
-          <Badge key={index} className="flex gap-1">
-            <div className="text-hackathon-blue-100" data-cy="hackpack-icon">
-              {TECHSTACKS[language]}
-            </div>
-            {language}
+        {languages.map((technology, index) => (
+          <Badge key={index} type="primary">
+            {technology}
           </Badge>
         ))}
       </div>

@@ -8,7 +8,9 @@ const Status = ({ object, statuses, setState }) => {
       <p>
         Hello <b>{object.name}</b>, your status is currently
       </p>
-      <Badge>{statuses[object.roles[object.form]]}</Badge>
+      <Badge type={object.roles[object.form]} className="my-3 capitalize">
+        {statuses[object.roles[object.form]]}
+      </Badge>
 
       <p data-cy="status-confirmation" className="text-center">
         You have already filled out the form. If you wish to change any
@@ -19,7 +21,9 @@ const Status = ({ object, statuses, setState }) => {
         If you believe that your status is incorrect, please reach out to us
         immediately.
       </p>
-      <Button onClick={() => setState(1)}>Apply</Button>
+      <Button onClick={() => setState(1)} className="my-2">
+        Apply
+      </Button>
     </div>
   );
 };
