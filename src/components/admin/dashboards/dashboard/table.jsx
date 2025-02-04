@@ -101,7 +101,7 @@ const Table = ({
           </TableBody>
         </Datatable>
       </div>
-      <div className="flex w-full items-center justify-end rounded-b-lg bg-white p-4 text-lg">
+      <div className="flex w-full items-center justify-end rounded-b bg-white p-4 text-lg">
         <div className="mx-2">{getRowModel().rows.length} row(s)</div>
         <Link
           href={`/admin/${page}?direction=prev&index=${
