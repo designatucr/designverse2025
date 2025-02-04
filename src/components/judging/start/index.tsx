@@ -22,7 +22,7 @@ interface props {
 
 const Start = ({ id }: props) => {
   return (
-    <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-poppins">
+    <div className="overflow-scroll-y font-poppins flex h-full w-full flex-col items-center">
       <div className="flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
         <p className="m-0 w-full rounded-t bg-hackathon-green-300 px-4 py-4 text-xl font-semibold">
           Team {id} - SUPERNOVA
