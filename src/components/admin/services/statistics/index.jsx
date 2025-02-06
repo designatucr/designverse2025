@@ -38,8 +38,6 @@ const Statistics = () => {
     ),
   }));
 
-  console.log(Object.keys(STATUSES));
-
   return (
     <div className="flex h-full flex-col py-4 font-poppins">
       <Label className="pr-5 text-2xl font-bold">Statistics</Label>
