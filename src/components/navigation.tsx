@@ -57,7 +57,7 @@ const Navigation = () => {
                   </CollapsibleTrigger>
                 </SidebarGroupLabel>
               )}
-              <CollapsibleContent>
+              <CollapsibleContent className="overflow-hidden transition-transform data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
                 <SidebarGroupContent>
                   <SidebarMenu>
                     {subTabs.tabs &&
