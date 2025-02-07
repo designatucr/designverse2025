@@ -44,7 +44,9 @@ const ProtectedPage = async ({ children, restrictions, title }) => {
       <title>{title}</title>
       {navigation && <Navigation />}
       <div className="relative z-0 flex h-screen w-full items-start justify-center overflow-x-hidden bg-hackathon-page">
-        <SidebarTrigger className="absolute left-0 h-10 w-10 scale-125 hover:bg-transparent" />
+        {navigation && (
+          <SidebarTrigger className="absolute left-0 h-10 w-10 scale-125 hover:bg-transparent" />
+        )}
 
         <div className="h-full w-11/12 py-10 md:py-0">{children}</div>
       </div>
