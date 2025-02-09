@@ -35,8 +35,8 @@ const Statistics = () => {
   };
 
   const mappings = {
-    Accepted: 1,
     Pending: 0,
+    Accepted: 1,
     Rejected: 2,
   };
 
@@ -55,7 +55,9 @@ const Statistics = () => {
         <ToggleGroup
           type="single"
           value={value}
-          onValueChange={(option) => setValue(option)}
+          onValueChange={(value) => {
+            if (value) setValue(value);
+          }}
         >
           <ToggleGroupItem value="Pending">Pending</ToggleGroupItem>
           <ToggleGroupItem value="Accepted">Accepted</ToggleGroupItem>
