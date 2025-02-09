@@ -3,7 +3,7 @@ import { useState } from "react";
 import toaster from "@/utils/toaster";
 import { Copy, Link } from "lucide-react";
 import { api } from "@/utils/api";
-import { FaDiscord } from "react-icons/fa";
+import { SiDiscord as Discord } from "@icons-pack/react-simple-icons";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -114,7 +114,7 @@ const Details = ({ team }) => {
 
         <div className="flex flex-col">
           <Label htmlFor="team">Team Members</Label>
-          <div className="flex flex-wrap gap-4 py-2">
+          <div className="flex flex-wrap gap-4 pt-5">
             {details.members.length === 0 &&
               "No Team Members. Invite others to join your team."}
 
@@ -127,7 +127,7 @@ const Details = ({ team }) => {
                   {member.name}
                 </p>
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
-                  <FaDiscord size={20} />
+                  <Discord size={20} />
                   <span>{member.discord}</span>
                 </div>
               </div>

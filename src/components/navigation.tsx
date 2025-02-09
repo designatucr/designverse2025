@@ -65,9 +65,12 @@ const Navigation = () => {
                         <Link key={index} href={tab.link}>
                           <SidebarMenuItem
                             key={index}
-                            className="flex items-center pl-3 text-lg"
+                            className={`${open ? "h-7" : "h-6"} flex items-center pl-3 text-lg`}
                           >
-                            <span className="mr-2">{tab.icon}</span>
+                            <span className={`${!open && "mx-auto"}`}>
+                              {tab.icon}
+                            </span>
+                            {open && <span className="ml-2">{tab.name}</span>}
                             {tab.name}
                           </SidebarMenuItem>
                         </Link>
