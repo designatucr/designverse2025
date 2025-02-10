@@ -1,5 +1,4 @@
 import { LABELS } from "@/data/admin/calendar";
-// import { COLORS } from "@/data/Tags";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
