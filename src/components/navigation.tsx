@@ -18,6 +18,7 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
+  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
 import {
@@ -30,7 +31,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   const tabs = TABS[pathname.split("/")[1]];
-  const { open } = useSidebar();
+  const { open, toggleSidebar } = useSidebar();
 
   return (
     <Sidebar collapsible="icon" className="text-white">
@@ -81,8 +82,25 @@ const Navigation = () => {
           </Collapsible>
         ))}
       </SidebarContent>
-      <SidebarFooter className="mx-auto mb-1 grid grid-cols-4 *:mx-2">
-        <LogIn onClick={() => signOut({ callbackUrl: "/", redirect: true })} />
+      <SidebarFooter className="my-1 flex flex-col p-0 pb-2 pl-1">
+        <span
+          onClick={() => toggleSidebar()}
+          className={`${open ? "h-7 pl-3" : "mx-auto h-6"} flex items-center text-lg hover:cursor-pointer`}
+        >
+          <span className={`${!open && "mx-auto"}`}>
+            <SidebarTrigger className="hover:bg-inherit hover:text-current" />
+          </span>
+          {open && <span className="ml-2">Close Sidebar</span>}
+        </span>
+        <span
+          onClick={() => signOut({ callbackUrl: "/", redirect: true })}
+          className={`${open ? "h-7 pl-3" : "mx-auto h-6"} flex items-center text-lg hover:cursor-pointer`}
+        >
+          <span className={`${!open && "mx-auto"}`}>
+            <LogIn className="mr-1 h-7 p-0.5" />
+          </span>
+          {open && <span className="ml-2">Log Out</span>}
+        </span>
       </SidebarFooter>
     </Sidebar>
   );
