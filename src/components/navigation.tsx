@@ -27,9 +27,9 @@ import {
 } from "./ui/collapsible";
 
 const Navigation = () => {
-  const pathName = usePathname();
+  const pathname = usePathname();
 
-  const tabs = TABS[pathName.split("/")[1]];
+  const tabs = TABS[pathname.split("/")[1]];
   const { open } = useSidebar();
 
   return (
@@ -65,7 +65,7 @@ const Navigation = () => {
                         <Link key={index} href={tab.link}>
                           <SidebarMenuItem
                             key={index}
-                            className={`${open ? "h-7" : "h-6"} flex items-center pl-3 text-lg`}
+                            className={`${open ? "h-7" : "h-6"} flex items-center pl-3 text-lg ${tab.link === pathname && "bg-hackathon-blue-100"}`}
                           >
                             <span className={`${!open && "mx-auto"}`}>
                               {tab.icon}
