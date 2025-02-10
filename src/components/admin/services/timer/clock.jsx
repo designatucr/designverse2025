@@ -18,8 +18,9 @@ const Timer = ({ onRemove }) => {
     if (!edit) return;
 
     const [minutes, seconds] = value.match(/.{2}/g);
-
-    setTotal(parseInt(minutes) * (1000 * 60) + parseInt(seconds) * 1000);
+    if (!isNaN(minutes) && !isNaN(seconds)) {
+      setTotal(parseInt(minutes) * (1000 * 60) + parseInt(seconds) * 1000);
+    }
   };
 
   useEffect(() => {
