@@ -82,7 +82,7 @@ const Navigation = () => {
           </Collapsible>
         ))}
       </SidebarContent>
-      <SidebarFooter className="mb-1 flex flex-col p-0 pb-2 pl-1">
+      <SidebarFooter className="my-1 flex flex-col p-0 pb-2 pl-1">
         <span
           onClick={() => toggleSidebar()}
           className={`${open ? "h-7 pl-3" : "mx-auto h-6"} flex items-center text-lg hover:cursor-pointer`}
@@ -97,7 +97,7 @@ const Navigation = () => {
           className={`${open ? "h-7 pl-3" : "mx-auto h-6"} flex items-center text-lg hover:cursor-pointer`}
         >
           <span className={`${!open && "mx-auto"}`}>
-            <LogIn />
+            <LogIn className="mr-1 h-7 p-0.5" />
           </span>
           {open && <span className="ml-2">Log Out</span>}
         </span>
