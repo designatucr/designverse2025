@@ -79,7 +79,12 @@ const Table = ({
               <>
                 {getRowModel().rows.length === 0 && (
                   <TableRow className="w-full bg-white py-8 text-center">
-                    <TableCell colSpan={12}>{empty}</TableCell>
+                    <TableCell
+                      className="h-[70vh] items-center justify-center"
+                      colSpan={12}
+                    >
+                      {empty}
+                    </TableCell>
                   </TableRow>
                 )}
                 {getRowModel().rows.map(

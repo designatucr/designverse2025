@@ -28,9 +28,9 @@ import {
 } from "./ui/collapsible";
 
 const Navigation = () => {
-  const pathName = usePathname();
+  const pathname = usePathname();
 
-  const tabs = TABS[pathName.split("/")[1]];
+  const tabs = TABS[pathname.split("/")[1]];
   const { open, toggleSidebar } = useSidebar();
 
   return (
@@ -52,7 +52,7 @@ const Navigation = () => {
             <SidebarGroup className="pt-0">
               {open && (
                 <SidebarGroupLabel asChild className="pt-0 text-xl font-bold">
-                  <CollapsibleTrigger>
+                  <CollapsibleTrigger className="text-white">
                     {title}
                     <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
                   </CollapsibleTrigger>
@@ -66,7 +66,7 @@ const Navigation = () => {
                         <Link key={index} href={tab.link}>
                           <SidebarMenuItem
                             key={index}
-                            className={`${open ? "h-7" : "h-6"} flex items-center pl-3 text-lg`}
+                            className={`${open ? "h-7" : "h-6"} flex items-center pl-3 text-lg ${tab.link === pathname && "bg-hackathon-blue-100"}`}
                           >
                             <span className={`${!open && "mx-auto"}`}>
                               {tab.icon}
