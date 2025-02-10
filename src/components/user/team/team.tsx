@@ -3,7 +3,6 @@ import NewTeam from "./new";
 import { getSession } from "@/utils/auth";
 import { fetchTeam } from "@/actions/join";
 import { Label } from "@/components/ui/label";
-import Loading from "@/components/loading";
 
 const Team = async () => {
   const session = await getSession();
