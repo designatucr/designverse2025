@@ -74,7 +74,11 @@ const Table = ({
           </TableHeader>
           <TableBody>
             {loading ? (
-              <Loading />
+              <TableRow>
+                <TableCell colSpan={100} className="py-4 text-center">
+                  <Loading />
+                </TableCell>
+              </TableRow>
             ) : (
               <>
                 {getRowModel().rows.length === 0 && (
