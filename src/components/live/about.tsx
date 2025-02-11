@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Bubble from "@/public/about/bubble.svg";
-import Water from "@/public/about/water.svg";
 import Light from "@/public/about/light.svg";
 import Trident from "@/public/about/trident.svg";
 import Layer1 from "@/public/about/layer_1.svg";
@@ -13,11 +12,6 @@ import Coral from "@/public/about/coral.svg";
 const About = () => {
   return (
     <div className="relative">
-      <Image
-        src={Water}
-        alt="Water"
-        className="absolute top-[-2%] z-0 w-screen md:top-[-50px] lg:top-[-5%]"
-      />
       <Image
         src={Bubble}
         alt="Bubble"
