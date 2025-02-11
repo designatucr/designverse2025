@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Bubble from "@/public/about/bubble.svg";
-import Water from "@/public/about/water.svg";
 import Light from "@/public/about/light.svg";
 import Trident from "@/public/about/trident.svg";
 import Layer1 from "@/public/about/layer_1.svg";
@@ -13,11 +12,6 @@ import Coral from "@/public/about/coral.svg";
 const About = () => {
   return (
     <div className="relative">
-      <Image
-        src={Water}
-        alt="Water"
-        className="absolute top-[-2%] z-0 w-screen md:top-[-50px] lg:top-[-5%]"
-      />
       <Image
         src={Bubble}
         alt="Bubble"
@@ -70,25 +64,25 @@ const About = () => {
       <Image
         src={Rock}
         alt="Rock"
-        className="absolute bottom-[1%] left-[15%] w-12 blur-[2px] lg:w-auto xl:bottom-[7%] xl:left-[15%]"
+        className="absolute bottom-[1%] left-[15%] w-12 blur-[2px] lg:w-auto xl:bottom-[4%] xl:left-[15%]"
       />
 
       <Image
         src={Seaweed}
         alt="Seaweed"
-        className="absolute bottom-[7%] left-[3%] w-1/12 rotate-45 blur-[2px] lg:w-auto xl:bottom-[8%] xl:left-[5%] xl:rotate-0"
+        className="absolute bottom-[7%] left-[3%] w-1/12 rotate-45 blur-[2px] lg:w-auto xl:bottom-[5%] xl:left-[5%] xl:rotate-0"
       />
 
       <Image
         src={Shell}
         alt="Shell"
-        className="absolute bottom-[1%] left-[50%] w-1/12 blur-[2px] md:w-auto xl:bottom-[7%]"
+        className="absolute bottom-[1%] left-[50%] w-1/12 blur-[2px] md:w-auto xl:bottom-[5%]"
       />
 
       <Image
         src={Coral}
         alt="Coral"
-        className="absolute bottom-[2%] left-[65%] w-12 blur-[2px] md:w-1/5 xl:bottom-[9%] xl:left-[60%] xl:w-auto"
+        className="absolute bottom-[2%] left-[65%] w-12 blur-[2px] md:w-1/5 xl:bottom-[7%] xl:left-[60%] xl:w-auto"
       />
       <Image
         src={Layer1}

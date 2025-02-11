@@ -1,7 +1,7 @@
 import Logo from "@/public/logos/primary.svg";
 import cloud1 from "@/public/resources/cloud1.svg";
 import cloud2 from "@/public/resources/cloud2.svg";
-import sand1 from "@/public/resources/sand1.svg";
+import sand2 from "@/public/resources/sand2.svg";
 import Image from "next/image";
 import Countdown from "./countdown";
 import { Button } from "../ui/button";
@@ -85,9 +85,9 @@ const Landing = () => {
       </div>
 
       <Image
-        className="absolute top-[40%] z-0 min-h-full w-full lg:top-[15%] lg:h-fit"
-        src={sand1}
-        alt="sand1"
+        className="absolute top-[45%] z-10 min-h-full w-full lg:top-[30%] lg:h-fit"
+        src={sand2}
+        alt="sand2"
       />
     </section>
   );
