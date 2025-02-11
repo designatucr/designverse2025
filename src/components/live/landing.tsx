@@ -49,7 +49,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            SPONSOR <ExternalLink />
+            SPONSOR US <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
@@ -58,7 +58,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            MENTOR <ExternalLink />
+            BE A MENTOR <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
@@ -67,7 +67,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            VOLUNTEER <ExternalLink />
+            BE A VOLUNTEER <ExternalLink />
           </Link>
         </Button>
         <Button
