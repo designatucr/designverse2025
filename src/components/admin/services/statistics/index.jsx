@@ -71,6 +71,7 @@ const Statistics = () => {
         <>
           <Label className="pr-5 text-xl font-medium capitalize">{key}</Label>
           <Heatmap
+            key={key}
             label={value}
             data={values[mappings[value]]}
             xLabels={labels}
