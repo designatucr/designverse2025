@@ -2,47 +2,47 @@ const mappings = {
   red: {
     background: "bg-hackathon-tags-red-bg",
     text: "text-hackathon-tags-red-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   yellow: {
     background: "bg-hackathon-tags-yellow-bg",
     text: "text-hackathon-tags-yellow-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   green: {
     background: "bg-hackathon-tags-green-bg",
     text: "text-hackathon-tags-green-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   gray: {
     background: "bg-hackathon-tags-gray-bg",
     text: "text-hackathon-tags-gray-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   purple: {
     background: "bg-hackathon-tags-purple-bg",
     text: "text-hackathon-tags-purple-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   grayblue: {
     background: "bg-hackathon-tags-grayblue-bg",
     text: "text-hackathon-tags-grayblue-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   teal: {
     background: "bg-hackathon-tags-teal-bg",
     text: "text-hackathon-tags-teal-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   lightgreen: {
     background: "bg-hackathon-tags-lightgreen-bg",
     text: "text-hackathon-tags-lightgreen-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   pink: {
     background: "bg-hackathon-tags-pink-bg",
     text: "text-hackathon-tags-pink-text",
-    hover: "hover:scale-105 hover:cursor-pointer",
+    hover: "",
   },
   none: {
     background: "",
