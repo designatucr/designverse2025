@@ -72,7 +72,6 @@ const Navigation = () => {
                               {tab.icon}
                             </span>
                             {open && <span className="ml-2">{tab.name}</span>}
-                            {tab.name}
                           </SidebarMenuItem>
                         </Link>
                       ))}
