@@ -1,4 +1,4 @@
-import { Trash2, Pen, Check } from "lucide-react";
+import { Trash2 } from "lucide-react";
 
 type props = {
   edit: boolean;
@@ -8,17 +8,7 @@ type props = {
 const Controls = ({ edit, onRemove }: props) => {
   return (
     <div className="flex gap-4">
-      {edit && (
-        <>
-          <Trash2 onClick={onRemove} className="hover:cursor-pointer" />
-        </>
-      )}
-
-      {!edit && (
-        <>
-          <Trash2 onClick={onRemove} className="hover:cursor-pointer" />
-        </>
-      )}
+      <Trash2 onClick={onRemove} className="hover:cursor-pointer" />
     </div>
   );
 };

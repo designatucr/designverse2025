@@ -100,14 +100,9 @@ const Timer = ({ onRemove }) => {
 
       <div className="mt-4">
         {play && (
-          <Pause
-            onClick={() => pressPause()}
-            className="hover:cursor-pointer"
-          />
+          <Pause onClick={pressPause} className="hover:cursor-pointer" />
         )}
-        {!play && (
-          <Play onClick={() => pressPlay()} className="hover:cursor-pointer" />
-        )}
+        {!play && <Play onClick={pressPlay} className="hover:cursor-pointer" />}
       </div>
 
       <Progress value={(total / (original + total)) * 100} className="mt-4" />
