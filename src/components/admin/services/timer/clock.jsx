@@ -9,13 +9,12 @@ import {
 } from "@/components/ui/input-otp";
 
 const Timer = ({ onRemove }) => {
-  const [edit, setEdit] = useState(true);
   const [play, setPlay] = useState(false);
   const [total, setTotal] = useState(60000);
   const [original, setOriginal] = useState(0);
 
   const onChange = (value) => {
-    if (!edit) return;
+    if (play) return;
 
     const [minutes, seconds] = value.match(/.{2}/g);
     if (!isNaN(minutes) && !isNaN(seconds)) {
@@ -33,13 +32,11 @@ const Timer = ({ onRemove }) => {
     return () => clearInterval(id);
   }, [play, total]);
 
-  const pressPlay = () => {
-    setEdit(false);
+  function pressPlay() {
     setPlay(true);
   };
 
-  const pressPause = () => {
-    setEdit(true);
+  function pressPause() {
     setPlay(false);
   };
 
@@ -55,7 +52,7 @@ const Timer = ({ onRemove }) => {
     <div className="mb-4 flex scroll-m-4 flex-col items-center justify-between rounded bg-white p-4">
       <div className="flex w-full items-center justify-between">
         <input
-          disabled={!edit}
+          disabled={play}
           className="flex-grow bg-transparent pl-2 text-3xl font-semibold outline-none"
           placeholder="Untitled Timer"
         />
@@ -65,7 +62,7 @@ const Timer = ({ onRemove }) => {
       </div>
 
       <InputOTP
-        disabled={!edit}
+        disabled={play}
         maxLength={4}
         onChange={onChange}
         value={minutes + seconds}
