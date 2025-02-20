@@ -5,7 +5,6 @@ import { Trash2, RotateCcw } from "lucide-react";
 import toaster from "@/utils/toaster";
 import Select from "@/components/select";
 import { InputWithClear } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -16,8 +15,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { COLORS } from "@/data/tags";
-import { cn } from "@/utils/tailwind";
+import { Badge } from "@/components/ui/badge";
 
 const Toolbar = ({
   page,
@@ -159,18 +157,14 @@ const Toolbar = ({
     >
       <div className="flex gap-3">
         {tags.map((tag, index) => (
-          <Button
+          <Badge
             key={index}
             onClick={() => onClick(tag.value)}
-            className={cn(
-              COLORS[tag.text]?.background,
-              COLORS[tag.text]?.text,
-              COLORS[tag.text]?.hover,
-              "text-nowrap capitalize",
-            )}
+            type={tag.text}
+            className="text-nowrap hover:cursor-pointer"
           >
             {tag.text}
-          </Button>
+          </Badge>
         ))}
       </div>
 

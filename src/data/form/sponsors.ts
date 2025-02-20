@@ -9,20 +9,16 @@ import {
 import data from "@/data/config";
 
 type Tiers = {
-  bronze: string;
-  silver: string;
-  gold: string;
-  tier4: string;
-  tier5: string;
+  tier1: string;
+  tier2: string;
+  tier3: string;
   other: string;
 };
 
 export const TIERS: Tiers = {
-  bronze: "Bronze",
-  silver: "Silver",
-  gold: "Gold",
-  tier4: "Tier4",
-  tier5: "Tier5",
+  tier1: "Moonlit Tides ($750)",
+  tier2: "Shimmering Seashells ($1000)",
+  tier3: "Mermaid Treasure ($2000)",
   other: "Other",
 };
 
@@ -32,7 +28,11 @@ interface Attributes {
   phone: string;
   company: string;
   position: string;
-  tier: "Bronze" | "Silver" | "Gold" | "Tier4" | "Tier5" | "Other";
+  tier:
+    | "Moonlit Tides ($750)"
+    | "Shimmering Seashells ($1000)"
+    | "Mermaid Treasure ($1000)"
+    | "Other";
   comments: string;
   requirements: string[];
 }
@@ -43,7 +43,7 @@ export const ATTRIBUTES: Attributes = {
   phone: "",
   company: "",
   position: "",
-  tier: "Bronze",
+  tier: "Moonlit Tides ($750)",
   requirements: [],
   comments: "",
 };
@@ -67,17 +67,18 @@ export const FIELDS: Fields = {
     texts: [
       `Welcome to ${
         data.name
-      }. Thank you for being on the Sponsorship team, we appreciate your efforts to help support ${
+      }. Thank you for your interest in sponsoring us. We appreciate your efforts to help ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
         day: "numeric",
         year: "numeric",
       })}.`,
-      `By sponsoring ${data.name}, you help advocate for SPONSOR_REASONS.`,
-      "Sponsorship members are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
+      `All sponsorships are directly allocated towards the planning of this designathon. Your efforts not only help the success of the design community in Riverside, but also provides for the future development of this platform. `,
+      "Previous sponsors have had exposure to student engagement within UCR, were able to extend serviceable marketing, locally provide product support and were provided benefits through their overall involvement within future programming. ",
+      `Sponsors are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.`,
     ],
   },
   name: {
@@ -137,7 +138,7 @@ export const FIELDS: Fields = {
   },
   tier: {
     input: "radio",
-    text: "Sponsorship Tier (check sponsorship packet)",
+    text: "Sponsorship Tier (check sponsorship packet below)",
     options: Object.values(TIERS),
     field: "tier",
     width: 12,
@@ -161,11 +162,11 @@ export const FIELDS: Fields = {
     field: "requirements",
     editable: true,
     options: [
-      "I have read the MLH code of conduct and agree to the terms and conditions listed",
-      "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
-      "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
+      // "I have read the MLH code of conduct and agree to the terms and conditions listed",
+      // "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
+      // "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
-      "I consent to providing a safe space for hackers to learn and grow their interests in computing",
+      "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
       "I understand that failure to comply with guidelines or creating an unsafe space will result in my removal from the event",
       "I understand this is an in person event taking place in UCR and I must attend in person in order to participate",

@@ -5,10 +5,10 @@ import { Text } from "@react-email/components";
 const Confirmation = ({ name, position, preview }) => {
   return (
     <Template name={name} preview={preview}>
-      <Text>
+      <Text className="font-sans text-white">
         Thank you for applying as a <strong>{position}</strong>!
       </Text>
-      <Text>
+      <Text className="font-sans text-white">
         We appreciate your support towards {data.name}. Please keep an eye out
         for future {data.name} emails regarding updates and announcements.
       </Text>

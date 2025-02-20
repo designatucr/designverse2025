@@ -8,9 +8,11 @@ const Rooms = (): React.ReactNode => {
       <div className="p-2" data-cy="rooms-title">
         🚪Hackrooms
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 pl-3">
         {rooms.map((room: string, index: number) => (
-          <Badge key={index}>{room}</Badge>
+          <Badge key={index} type="primary">
+            {room}
+          </Badge>
         ))}
       </div>
     </div>

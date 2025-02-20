@@ -1,6 +1,6 @@
 "use client";
 
-import LOGO from "@/app/favicon.ico";
+import LOGO from "@/public/logos/primary.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { TABS } from "@/data/navigation";
