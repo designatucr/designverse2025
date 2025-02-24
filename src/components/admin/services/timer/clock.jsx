@@ -49,9 +49,10 @@ const Timer = ({ onRemove }) => {
           className="flex-grow bg-transparent pl-2 text-3xl font-semibold outline-none"
           placeholder="Untitled Timer"
         />
-        <div className="flex gap-4">
-          <Trash2 onClick={onRemove} className="hover:cursor-pointer" />
-        </div>
+        <Trash2
+          onClick={onRemove}
+          className="hover:cursor-pointer hover:text-red-500"
+        />
       </div>
 
       <InputOTP
