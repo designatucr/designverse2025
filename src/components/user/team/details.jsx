@@ -84,7 +84,7 @@ const Details = ({ team }) => {
         <CardDescription>Customize your team</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="name">Team Name</Label>
           <Input
             id="name"
@@ -97,7 +97,7 @@ const Details = ({ team }) => {
             }
           />
         </div>
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="team">Team ID</Label>
           <div className="flex items-center gap-4">
             <Input id="team" placeholder={details.id} disabled />
@@ -133,7 +133,7 @@ const Details = ({ team }) => {
           </div>
         </div>
 
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="devpost">Devpost</Label>
           <Input
             id="devpost"
@@ -148,7 +148,7 @@ const Details = ({ team }) => {
           />
         </div>
 
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="github">Github</Label>
           <Input
             id="github"
@@ -163,7 +163,7 @@ const Details = ({ team }) => {
           />
         </div>
 
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="figma">Figma</Label>
           <Input
             id="figma"
