@@ -3,6 +3,7 @@ import { useState } from "react";
 import toaster from "@/utils/toaster";
 import { Copy, Link } from "lucide-react";
 import { api } from "@/utils/api";
+import { SiDiscord as Discord } from "@icons-pack/react-simple-icons";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -183,7 +184,9 @@ const Details = ({ team }) => {
         <Button variant="destructive" onClick={handleLeave}>
           Leave Team
         </Button>
-        <Button onClick={handleSave}>Save Team</Button>
+        <Button onClick={handleSave} className="bg-hackathon-green-400">
+          Save Team
+        </Button>
       </CardFooter>
     </Card>
   );
