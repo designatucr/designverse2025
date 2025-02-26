@@ -78,12 +78,25 @@ const Details = ({ team }) => {
   };
 
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader>
         <CardTitle>Team Details</CardTitle>
         <CardDescription>Customize your team</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
+        <div className="space-y-1.5">
+          <Label htmlFor="name">Team Name</Label>
+          <Input
+            id="name"
+            value={details.name}
+            onChange={(e) =>
+              setDetails({
+                ...details,
+                name: e.target.value,
+              })
+            }
+          />
+        </div>
         <div className="space-y-1.5">
           <Label htmlFor="team">Team ID</Label>
           <div className="flex items-center gap-4">
@@ -100,17 +113,21 @@ const Details = ({ team }) => {
         </div>
 
         <div className="space-y-1.5">
-          <Label htmlFor="name">Team Name</Label>
-          <Input
-            id="name"
-            value={details.name}
-            onChange={(e) =>
-              setDetails({
-                ...details,
-                name: e.target.value,
-              })
-            }
-          />
+          <Label htmlFor="team">Team Members</Label>
+          <div className="flex flex-wrap gap-4 pt-3">
+            {details.members.length === 0 &&
+              "No Team Members. Invite others to join your team."}
+
+            {details.members.map(({ name, discord }, index) => (
+              <div key={index} className="space-y-1 rounded-lg bg-gray-100 p-4">
+                <p className="text-sm font-medium leading-none">{name}</p>
+                <div className="flex items-center space-x-2 text-sm text-gray-600">
+                  <Discord size={20} />
+                  <span>{discord}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="space-y-1.5">
@@ -156,28 +173,6 @@ const Details = ({ team }) => {
               })
             }
           />
-        </div>
-
-        <div className="space-y-1.5">
-          <Label htmlFor="team">Team Members</Label>
-
-          {details.members.length === 0 &&
-            "No Team Members. Invite others to join your team."}
-
-          {details.members.map((member, index) => (
-            <div
-              key={index}
-              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-            >
-              <span className="flex h-2 w-2 translate-y-1 rounded-full bg-black" />
-              <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
-                  {member.name} - {member.discord}
-                </p>
-                <p className="text-muted-foreground text-sm"></p>
-              </div>
-            </div>
-          ))}
         </div>
       </CardContent>
       <CardFooter className="flex justify-between">
