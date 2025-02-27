@@ -78,13 +78,13 @@ const Details = ({ team }) => {
   };
 
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader>
         <CardTitle>Team Details</CardTitle>
         <CardDescription>Customize your team</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="name">Team Name</Label>
           <Input
             id="name"
@@ -97,7 +97,7 @@ const Details = ({ team }) => {
             }
           />
         </div>
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="team">Team ID</Label>
           <div className="flex items-center gap-4">
             <Input id="team" placeholder={details.id} disabled />
@@ -112,17 +112,14 @@ const Details = ({ team }) => {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="space-y-1.5">
           <Label htmlFor="team">Team Members</Label>
-          <div className="flex flex-wrap gap-4 pt-5">
+          <div className="flex flex-wrap gap-4 pt-3">
             {details.members.length === 0 &&
               "No Team Members. Invite others to join your team."}
 
             {details.members.map(({ name, discord }, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-start space-y-1 rounded-lg bg-gray-100 p-4"
-              >
+              <div key={index} className="space-y-1 rounded-lg bg-gray-100 p-4">
                 <p className="text-sm font-medium leading-none">{name}</p>
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <Discord size={20} />
@@ -133,7 +130,7 @@ const Details = ({ team }) => {
           </div>
         </div>
 
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="devpost">Devpost</Label>
           <Input
             id="devpost"
@@ -148,7 +145,7 @@ const Details = ({ team }) => {
           />
         </div>
 
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="github">Github</Label>
           <Input
             id="github"
@@ -163,7 +160,7 @@ const Details = ({ team }) => {
           />
         </div>
 
-        <div className="flex flex-col space-y-1.5">
+        <div className="space-y-1.5">
           <Label htmlFor="figma">Figma</Label>
           <Input
             id="figma"
