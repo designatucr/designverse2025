@@ -13,7 +13,6 @@ interface digitProps {
 }
 
 const Digits = ({ value, unit, classNames }: digitProps) => {
-  console.log(classNames);
   return (
     <div className="flex flex-col items-center gap-4 last:hidden sm:last:flex">
       <div className="m-3 mb-0 flex gap-1 lg:!gap-1">
