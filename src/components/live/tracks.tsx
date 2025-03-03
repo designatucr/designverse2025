@@ -3,13 +3,14 @@ import Column from "@/public/tracks/column.svg";
 import Trident from "@/public/tracks/trident.svg";
 import Shells from "@/public/tracks/shells.svg";
 import Coral from "@/public/tracks/coral.svg";
+import Angler from "@/public/tracks/angler.svg";
 
 const tracks = [
   {
     image: Column,
     title: "Atlantis Adventure",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
+      "Explore the depths of your creativity using fundamental Design Principles!",
     width: 50,
     height: 100,
   },
@@ -17,7 +18,7 @@ const tracks = [
     image: Trident,
     title: "Visionary Voyage",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
+      "Discover the intersection between UI and UX in a real-world context, merging aesthetics with functionality!",
     width: 100,
     height: 100,
   },
@@ -25,7 +26,7 @@ const tracks = [
     image: Shells,
     title: "Waves of Change",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
+      "Center your product around environmental awareness through inclusive and eco-friendly design practices!",
     width: 150,
     height: 100,
   },
@@ -33,8 +34,16 @@ const tracks = [
     image: Coral,
     title: "Tidal Testing",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus porttitor sem",
+      "Put your skills to the test to prototype designs that enhance user experience!",
     width: 150,
+    height: 100,
+  },
+  {
+    image: Angler,
+    title: "Deep Sea Research", // #DeepSeek
+    description:
+      "Build a compelling interface using fundamental User Research Principles, centering on empathetic design!",
+    width: 200,
     height: 100,
   },
 ];
