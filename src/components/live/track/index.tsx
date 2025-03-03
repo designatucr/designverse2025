@@ -14,6 +14,7 @@ const colors = [
   { primary: "bg-[#E3989A]", secondary: "bg-[#FFD0D1]" },
   { primary: "bg-[#82BF8A]", secondary: "bg-[#EFFFD0]" },
   { primary: "bg-[#DAB983]", secondary: "bg-[#FFF7C3]" },
+  { primary: "bg-[#08898F]", secondary: "bg-[#44BBC1]" },
 ];
 
 const Track = ({ index, image, title, text, width, height }: props) => {
