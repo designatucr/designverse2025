@@ -30,6 +30,7 @@ module.exports = {
         hackathon: {
           "blue-100": "#38A3A5",
           "blue-200": "#22577A",
+          "blue-300": "#3D859D",
           "green-100": "#E7F7E9",
           "green-200": "#80ED99",
           "green-300": "#57CC99",
