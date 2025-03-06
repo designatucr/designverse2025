@@ -38,13 +38,7 @@ interface Fields {
   requirements: TermsAndConditions;
 }
 
-interface Affiliations {
-  professor: string;
-  student: string;
-  industry: string;
-}
-
-export const AFFILIATIONS: Affiliations = {
+export const AFFILIATIONS: Record<string, string> = {
   professor: "Professor",
   student: "Student",
   industry: "Industry",
