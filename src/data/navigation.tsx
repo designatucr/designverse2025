@@ -180,16 +180,16 @@ export const TABS: Tabs = {
           newTab: false,
         },
         {
-          name: "Devpost",
-          link: data.devpost,
-          icon: <Code className={iconStyle} />,
-          newTab: true,
-        },
-        {
           name: "Website",
           link: "/",
           icon: <Globe className={iconStyle} />,
           newTab: false,
+        },
+        {
+          name: "Devpost",
+          link: data.devpost,
+          icon: <Code className={iconStyle} />,
+          newTab: true,
         },
         {
           name: "Instagram",
@@ -263,16 +263,16 @@ export const TABS: Tabs = {
       expand: true,
       tabs: [
         {
-          name: "Devpost",
-          link: data.devpost,
-          icon: <Code className={iconStyle} />,
-          newTab: true,
-        },
-        {
           name: "Website",
           link: "/",
           icon: <Globe className={iconStyle} />,
           newTab: false,
+        },
+        {
+          name: "Devpost",
+          link: data.devpost,
+          icon: <Code className={iconStyle} />,
+          newTab: true,
         },
         {
           name: "Instagram",
