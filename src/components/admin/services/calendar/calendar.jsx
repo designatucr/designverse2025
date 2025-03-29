@@ -92,7 +92,7 @@ const Calendar = () => {
           const bg =
             new Date(event).toLocaleDateString() ==
             new Date().toLocaleDateString()
-              ? "!bg-hackathon-green-100"
+              ? "!bg-hackathon-calendar-today"
               : "!bg-white";
           return {
             className: bg,

@@ -17,17 +17,32 @@ module.exports = {
       },
       colors: {
         hackathon: {
+          primary: "#22577A",
           "blue-100": "#38A3A5",
-          "blue-200": "#22577A",
           "green-100": "#E7F7E9",
-          "green-200": "#80ED99",
           "green-300": "#57CC99",
-          "green-400": "#3CB97A",
-          "yellow-100": "#FFCF55",
           "gray-100": "#E7E7E7",
           "gray-200": "#9ea4af",
           "gray-300": "#525252",
           page: "#F5F5F5",
+          stats: {
+            pending: "#FFCF55",
+            accepted: "#80ED99",
+            rejected: "#F07167",
+          },
+          table: {
+            pending: "#FFF0BB",
+            accepted: "#CFEDE9",
+            rejected: "#FFE8E2",
+            selected: "#E7F7E9",
+          },
+          calendar: {
+            today: "#E7F7E9",
+          },
+          timer: {
+            add: "#0E1729",
+            clear: "#EF4444",
+          },
           tags: {
             "red-bg": "#FFE9E2",
             "red-text": "#F07167",

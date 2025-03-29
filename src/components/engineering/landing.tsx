@@ -9,7 +9,7 @@ const Landing = () => {
       <div className="ml-0 w-9/12 md:ml-12 md:w-5/12">
         <div className="mb-6 border-l-8 border-hackathon-blue-100 px-5 text-hackathon-green-300">
           <title>Engineering | Hackathon Template</title>
-          <div className="mb-4 text-3xl font-bold text-hackathon-blue-200 md:text-5xl">
+          <div className="mb-4 text-3xl font-bold text-hackathon-primary md:text-5xl">
             Hackathon Website
           </div>
           <p className="text-xl">

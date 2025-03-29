@@ -10,7 +10,7 @@ const Navigation = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="fixed top-0 z-10 w-screen text-2xl text-white">
-      <div className="flex w-full items-center justify-between bg-hackathon-blue-200 px-4 py-4">
+      <div className="flex w-full items-center justify-between bg-hackathon-primary px-4 py-4">
         <div className="flex gap-2">
           <Image src={Logo} className="w-8" alt="Logo" />
           <Link href="/engineering">Hackathon Engineering</Link>
@@ -39,7 +39,7 @@ const Navigation = () => {
             href={tab.link}
             className={
               show
-                ? "flex w-full justify-center bg-hackathon-blue-200 py-2 text-center active:text-white/50"
+                ? "flex w-full justify-center bg-hackathon-primary py-2 text-center active:text-white/50"
                 : "hidden"
             }
           >

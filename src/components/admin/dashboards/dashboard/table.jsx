@@ -36,7 +36,7 @@ const Table = ({
     <>
       <div className="flex h-[75vh] flex-col justify-between overflow-y-scroll bg-white">
         <Datatable>
-          <TableHeader className="rounded-t bg-hackathon-blue-200 text-white">
+          <TableHeader className="rounded-t bg-hackathon-primary text-white">
             {getHeaderGroups().map(({ headers, id }) => (
               <TableRow key={id}>
                 {headers.map(({ id, column, getContext }) => (
@@ -96,7 +96,7 @@ const Table = ({
                     <>
                       <TableRow
                         key={id}
-                        className={`${getIsSelected() && "bg-hackathon-green-100"}`}
+                        className={`${getIsSelected() && "bg-hackathon-table-selected"}`}
                       >
                         {getVisibleCells().map(({ id, column, getContext }) => (
                           <TableCell key={id}>

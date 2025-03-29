@@ -20,7 +20,7 @@ export const COLORS = {
     border: "border-0",
   },
   blue: {
-    bg: "bg-hackathon-blue-200",
+    bg: "bg-hackathon-primary",
     text: "text-white",
     border: "border-0",
   },

@@ -6,7 +6,7 @@ export const Hackathons = () => {
   return (
     <div className="text-center md:text-left">
       <title>Engineering | Hackathons at UCR</title>
-      <div className="flex justify-center pb-4 pt-6 text-4xl font-bold text-hackathon-blue-200 md:my-10 md:text-5xl">
+      <div className="flex justify-center pb-4 pt-6 text-4xl font-bold text-hackathon-primary md:my-10 md:text-5xl">
         Hackathons at UCR
       </div>
       {HackathonsData.map((data, index) => (
@@ -32,7 +32,7 @@ export const Hackathons = () => {
             </div>
             <div className="text-xl md:text-2xl">{data.text}</div>
             <Link
-              className="mb-4 w-fit rounded bg-hackathon-green-400 px-4 py-1 text-lg text-white"
+              className="bg-hackathon-green-400 mb-4 w-fit rounded px-4 py-1 text-lg text-white"
               href="/"
             >
               Details
@@ -47,7 +47,7 @@ export const Hackathons = () => {
           />
         </div>
       ))}
-      <div className="h-52 w-full bg-hackathon-blue-200" />
+      <div className="h-52 w-full bg-hackathon-primary" />
     </div>
   );
 };

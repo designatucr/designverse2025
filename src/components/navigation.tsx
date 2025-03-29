@@ -66,7 +66,7 @@ const Navigation = () => {
                         <Link key={index} href={tab.link}>
                           <SidebarMenuItem
                             key={index}
-                            className={`${open ? "h-7" : "h-6"} flex items-center pl-3 text-lg ${tab.link === pathname && "bg-hackathon-blue-100"} rounded`}
+                            className={`${open ? "h-7" : "h-6"} flex items-center pl-3 text-lg ${tab.link === pathname && "bg-sidebar-selected"} rounded`}
                           >
                             <span className={`${!open && "mx-auto"}`}>
                               {tab.icon}
