@@ -3,6 +3,7 @@ import { db } from "@/utils/firebase";
 import {
   doc,
   updateDoc,
+  setDoc,
   collection,
   getDocs,
   getDoc,
@@ -60,6 +61,16 @@ export const POST = async (req, { params }) => {
         timestamp: Timestamp.now(),
         [`roles.${params.type}`]: 0,
       });
+
+      if (params.type === "participants") {
+        setDoc(doc(db, "resumes", user.id), {
+          name: body["name"],
+          phone: body["phone"],
+          school: body["school"],
+          grade: body["grade"],
+          resume: body["resume"],
+        });
+      }
 
       updateDoc(doc(db, "statistics", "shirt"), {
         [`${params.type}.0.${element.shirt}`]: increment(1),

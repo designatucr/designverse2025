@@ -92,7 +92,6 @@ export const ATTRIBUTES: attributes = {
     "gender",
     "shirt",
     "diet",
-    "resume",
     "name",
     "email",
     "roles",
