@@ -1,5 +1,5 @@
 import ProtectedPage from "@/components/protected";
-import Resources from "@/components/user/resources/resources";
+import Resources from "@/components/resources/resources";
 
 const Page = () => {
   return (

@@ -1,3 +1,2 @@
-import Resources from "@/components/user/resources/resources";
-const Page = () => <Resources />;
-export default Page;
+import Resources from "@/components/resources/resources";
+export default Resources;

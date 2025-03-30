@@ -1,6 +1,6 @@
 "use client";
 import { HACKPACKS } from "@/data/user/hackpacks";
-import Toolbar from "../toolbar";
+import Toolbar from "../user/toolbar";
 import Hackpack from "./hackpack";
 import { useState } from "react";
 import { Label } from "@/components/ui/label";
