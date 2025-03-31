@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Mock from "@/public/team/stanley.jpg";
+import Mock from "@/public/team/stanley.webp";
 
 const judges = [
   {
