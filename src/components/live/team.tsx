@@ -39,7 +39,7 @@ const Team = () => {
         ))}
       </div>
 
-      <div className="my-16 grid w-11/12 grid-cols-5 gap-16">
+      <div className="my-16 grid grid-cols-5 gap-16">
         {first.map(({ image, profile, name, position }, index) => (
           <Link
             href={profile}
