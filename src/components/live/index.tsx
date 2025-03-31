@@ -7,8 +7,7 @@ import Support from "./support";
 import Schedule from "./schedule";
 import Tracks from "./tracks";
 // import Sponsors from "./sponsors";
-// import Team from "./team";
-// import Committees from "./committees";
+import Team from "./team";
 // import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
@@ -26,8 +25,7 @@ const Live = () => {
       <Resources />
       {/* <Sponsors /> */}
       {/* <Judges /> */}
-      {/* <Team /> */}
-      {/* <Committees /> */}
+      <Team />
       <FAQ />
       <Footer />
     </>

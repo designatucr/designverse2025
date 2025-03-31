@@ -3,10 +3,8 @@ import Dribble from "@/public/resources/dribble.webp";
 import Miro from "@/public/resources/miro.webp";
 import Image from "next/image";
 import Link from "next/link";
-import Castle from "@/public/resources/castle.svg";
 import Turtle from "@/public/resources/turtle.svg";
 import Bubbles from "@/public/resources/bubbles.svg";
-import Layer from "@/public/resources/layer.svg";
 
 const resources = [
   {
@@ -69,15 +67,7 @@ const Resources = () => {
             alt="Bubbles"
             className="absolute left-8 top-0 w-1/12 md:w-auto lg:left-20"
           />
-          <div className="flex w-full flex-col items-center justify-center pt-20">
-            <Image src={Castle} alt="Castle" className="mt-8" />
 
-            <Image
-              src={Layer}
-              alt="Layer"
-              className="left-0 -mt-[18%] w-screen"
-            />
-          </div>
           <Image
             src={Turtle}
             alt="Turtle"

@@ -10,6 +10,7 @@ import {
   Ship,
   CircleHelp,
   Calendar,
+  CupSoda,
 } from "lucide-react";
 
 const items = [
@@ -37,6 +38,11 @@ const items = [
     name: "Resources",
     link: "/#resources",
     icon: <Fish />,
+  },
+  {
+    name: "Team",
+    link: "/#team",
+    icon: <CupSoda />,
   },
   {
     name: "FAQ",
