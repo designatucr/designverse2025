@@ -21,7 +21,7 @@ import { AUTH } from "@/data/admin/dashboard";
 
 export const POST = async (req) => {
   const res = NextResponse;
-  const { auth } = await "authenticate"(AUTH.POST);
+  const { auth } = await authenticate(AUTH.POST);
 
   if (auth !== 200) {
     return res.json(
