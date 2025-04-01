@@ -1,5 +1,5 @@
 "use client";
-import { TAGS, COLUMNS, SUBCOLUMNS } from "@/data/admin/resumes";
+import { TAGS, COLUMNS } from "@/data/admin/resumes";
 import { STATUSES } from "@/data/statuses";
 import Table from "./dashboard/dashboard";
 import { SearchParams } from "@/types/dashboard";
@@ -15,7 +15,7 @@ const Resumes = ({ searchParams }: props) => {
         searchParams={searchParams}
         title="Resumes"
         columns={COLUMNS}
-        subcolumns={SUBCOLUMNS}
+        subcolumns={[]}
         tags={TAGS}
         statuses={STATUSES}
       />

@@ -18,6 +18,7 @@ import {
   endBefore,
   orderBy,
   limitToLast,
+  deleteDoc,
 } from "firebase/firestore";
 import { authenticate } from "@/utils/auth";
 import { AUTH, ATTRIBUTES } from "@/data/admin/dashboard";
@@ -303,6 +304,9 @@ export const DELETE = async (req, { params }) => {
           await updateDoc(doc(db, "users", object), {
             [`roles.${params.type}`]: deleteField(),
           });
+          if (params.type === "participants") {
+            await deleteDoc(doc(db, "resumes", object));
+          }
           await updateDoc(doc(db, "statistics", "statistics"), {
             [`${params.type}.${status}`]: increment(-1),
           });

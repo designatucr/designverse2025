@@ -61,6 +61,26 @@ export const COLUMNS: (ColumnDef<Resume, string> & {
       </div>
     ),
   },
+  {
+    accessorKey: "school",
+    header: "School",
+    enableColumnFilter: true,
+    filterFn: "includesString",
+    searchable: true,
+    cell: (props: CellContext<Resume, Resume["school"]>) => (
+      <div>{props.getValue()}</div>
+    ),
+  },
+  {
+    accessorKey: "grade",
+    header: "Grade",
+    enableColumnFilter: true,
+    filterFn: "includesString",
+    searchable: true,
+    cell: (props: CellContext<Resume, Resume["grade"]>) => (
+      <div>{props.getValue()}</div>
+    ),
+  },
   generateStatus(STATUSES),
   {
     accessorKey: "resume",
@@ -71,14 +91,13 @@ export const COLUMNS: (ColumnDef<Resume, string> & {
           resume,
           name,
         }));
-
         const zip = new JSZip();
-        const folder = zip.folder("photos");
+        const folder = zip.folder("resumes");
 
         if (folder) {
           resumes.forEach(({ resume, name }) => {
-            //   const src = photo.split(",")[1];
-            folder.file(`${name.replace(" ", "_")}.pdf`, resume, {
+            const src = resume.split(",")[1];
+            folder.file(`${name.replace(" ", "_")}.pdf`, src, {
               base64: true,
             });
           });
@@ -110,40 +129,6 @@ export const COLUMNS: (ColumnDef<Resume, string> & {
         title={props.row.getValue("name")}
         type="resume"
       />
-    ),
-  },
-];
-
-export const SUBCOLUMNS = [
-  generateSelect(),
-  {
-    accessorKey: "school",
-    header: "School",
-    enableColumnFilter: true,
-    filterFn: "includesString",
-    searchable: true,
-    cell: (props: CellContext<Resume, Resume["school"]>) => (
-      <div>{props.getValue()}</div>
-    ),
-  },
-  {
-    accessorKey: "grade",
-    header: "Grade",
-    enableColumnFilter: true,
-    filterFn: "includesString",
-    searchable: true,
-    cell: (props: CellContext<Resume, Resume["grade"]>) => (
-      <div>{props.getValue()}</div>
-    ),
-  },
-  {
-    accessorKey: "resume",
-    header: "Resume",
-    enableColumnFilter: false,
-    filterFn: "includesString",
-    searchable: false,
-    cell: (props: CellContext<Resume, Resume["resume"]>) => (
-      <div>{props.getValue()}</div>
     ),
   },
 ];
