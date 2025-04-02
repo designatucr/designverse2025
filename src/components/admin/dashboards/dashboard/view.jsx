@@ -50,7 +50,7 @@ const View = ({ title, src, type }) => {
         onClick={() =>
           download(
             src,
-            `${title.replace(" ", "_")}.${type === "photo" ? png : "pdf"}`,
+            `${title.replace(" ", "_")}.${type === "photo" ? "png" : "pdf"}`,
           )
         }
       />
