@@ -287,7 +287,7 @@ export const PUT = async (req, { params }) => {
 export const DELETE = async (req, { params }) => {
   const res = NextResponse;
   const { auth, message } = await authenticate(AUTH.DELETE);
-  const objects = req.nextUrl.searchParams.get("remove").split(",");
+  const { objects } = await req.json();
 
   if (auth !== 200) {
     return res.json(
@@ -299,16 +299,28 @@ export const DELETE = async (req, { params }) => {
     if (types.has(params.type)) {
       await Promise.all(
         objects.map(async (object) => {
-          const snapshot = await getDoc(doc(db, "users", object));
+          const snapshot = await getDoc(doc(db, "users", object.uid));
           const status = snapshot.data().roles[params.type];
-          await updateDoc(doc(db, "users", object), {
+          await updateDoc(doc(db, "users", object.uid), {
             [`roles.${params.type}`]: deleteField(),
           });
           if (params.type === "participants") {
-            await deleteDoc(doc(db, "resumes", object));
+            await deleteDoc(doc(db, "resumes", object.uid));
           }
-          await updateDoc(doc(db, "statistics", "statistics"), {
-            [`${params.type}.${status}`]: increment(-1),
+          updateDoc(doc(db, "statistics", "shirt"), {
+            [`${params.type}.${status}.${object.shirt}`]: increment(-1),
+          });
+
+          updateDoc(doc(db, "statistics", "diet"), {
+            [`${params.type}.${status}.${object.diet}`]: increment(-1),
+          });
+
+          updateDoc(doc(db, "statistics", "gender"), {
+            [`${params.type}.${status}.${object.gender}`]: increment(-1),
+          });
+
+          updateDoc(doc(db, "statistics", "age"), {
+            [`${params.type}.${status}.${object.age}`]: increment(-1),
           });
         }),
       );

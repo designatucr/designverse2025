@@ -78,7 +78,10 @@ const Toolbar = ({
     setData(keep);
     api({
       method: "DELETE",
-      url: `/api/dashboard/${page}?remove=${ids.join(",")}`,
+      url: `/api/dashboard/${page}`,
+      body: {
+        objects: rows,
+      },
     }).then(() => {
       toaster("Successfully Deleted", "success");
       toggleAllRowsSelected(false);
