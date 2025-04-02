@@ -131,9 +131,10 @@ export const COLUMNS: (ColumnDef<Judge, string> & {
       return (
         <div className="flex">
           Photo
-          <div className="text-hackathon-gray-200 hover:cursor-pointer hover:opacity-50">
-            <Download onClick={downloadZip} />
-          </div>
+          <Download
+            onClick={downloadZip}
+            className="text-hackathon-gray-200 hover:cursor-pointer hover:opacity-50"
+          />
         </div>
       );
     },
