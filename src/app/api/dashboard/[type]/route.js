@@ -301,7 +301,7 @@ export const DELETE = async (req, { params }) => {
         objects.map(async ({ uid, shirt, diet, gender, age }) => {
           const snapshot = await getDoc(doc(db, "users", uid));
           const status = snapshot.data().roles[params.type];
-          await updateDoc(doc(db, "users", object.uid), {
+          await updateDoc(doc(db, "users", uid), {
             [`roles.${params.type}`]: deleteField(),
           });
           if (params.type === "participants") {
