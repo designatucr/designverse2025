@@ -1,5 +1,6 @@
 import { api } from "@/utils/api";
 import { Event } from "@/types/calendar";
+
 export const getEvents = async () => {
   const { items } = await api({
     method: "GET",
