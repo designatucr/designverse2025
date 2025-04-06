@@ -19,9 +19,4 @@ export const QUESTIONS: QuestionAnswer[] = [
     answer:
       "Attend weekly meetings for full onboarding. You can clone the repo, install necesssary packages with `npm i`(download node.js first). You would need to reach out to a swe lead for repo secrets file. Follow the steps on the readme for more.",
   },
-  {
-    question: "How did we build out this robust system with so many services?",
-    answer:
-      "Check out `/engineering` to read up on the different technologies we used and the challenges we solved!",
-  },
 ];
