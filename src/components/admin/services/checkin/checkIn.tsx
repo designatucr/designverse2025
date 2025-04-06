@@ -8,9 +8,16 @@ import { getEvents, getUser } from "./actions";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { GoogleEvent } from "@/types/calendar";
+
+interface CheckInPayload {
+  uid: string;
+  event: string;
+  name: string;
+}
 
 const CheckIn = () => {
-  const [event, setEvent] = useState({ name: "No events" });
+  const [event, setEvent] = useState<GoogleEvent | null>(null);
   const [code, setCode] = useState("");
   const queryClient = useQueryClient();
 
@@ -21,21 +28,21 @@ const CheckIn = () => {
   });
 
   const mutation = useMutation({
-    mutationFn: (body) =>
+    mutationFn: (body: CheckInPayload) =>
       api({
         method: "PUT",
         url: "/api/checkin",
         body,
       }),
     onSuccess: () => {
-      toaster(`Checked in for ${event.name}`, "success");
+      toaster(`Checked in for ${event?.summary}`, "success");
     },
     onError: (error) => {
-      toaster("Error checking in!", error);
+      toaster(`Error checking in! ${error}`, "error");
     },
   });
 
-  const setResult = (result) => {
+  const setResult = (result: string) => {
     if (result !== code) {
       setCode(result);
       toaster("QR Code Scanned", "success");
@@ -43,7 +50,7 @@ const CheckIn = () => {
   };
 
   const handleCheckIn = () => {
-    if (event.name === "No events") {
+    if (event?.summary === "No events") {
       toaster("Please select an event!", "error");
       return;
     }
@@ -56,8 +63,8 @@ const CheckIn = () => {
 
     const delta =
       process.env.NODE_ENV === "development"
-        ? Math.round(new Date() - new Date(date)) / 1000
-        : Math.round(new Date() - new Date(date));
+        ? Math.round(new Date().getTime() - new Date(date).getTime()) / 1000
+        : Math.round(new Date().getTime() - new Date(date).getTime());
 
     if (delta < 5000) {
       queryClient
@@ -67,10 +74,18 @@ const CheckIn = () => {
           staleTime: 0,
         })
         .then((userData) => {
+          if (event === null) {
+            toaster("No Event Selected!", "error");
+            return;
+          }
           if (userData.includes(event.id)) {
             toaster("Already Checked In!", "error");
           } else {
-            mutation.mutate({ uid: userId, event: event.id, name: event.name });
+            mutation.mutate({
+              uid: userId,
+              event: event.id,
+              name: event.summary,
+            });
           }
         })
         .catch((_) => {
@@ -89,11 +104,17 @@ const CheckIn = () => {
         <div className="flex w-full flex-col gap-3 overflow-hidden py-3">
           {events && (
             <Select
-              items={events}
+              items={events.map((event: GoogleEvent) => ({
+                ...event,
+                name: event.summary,
+              }))}
               user={event}
               setUser={setEvent}
               placeholder="Select Events"
               userFn={(event) => setEvent(event)}
+              field={null}
+              title={null}
+              required={null}
             />
           )}
           <Scanner setResult={setResult} />

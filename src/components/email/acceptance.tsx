@@ -1,5 +1,5 @@
 import data from "@/data/config";
-import Template from "./template.jsx";
+import Template from "./template";
 import { Button, Section, Text } from "@react-email/components";
 
 interface props {

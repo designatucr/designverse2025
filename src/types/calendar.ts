@@ -1,6 +1,7 @@
 import { EventTypes } from "@/data/admin/calendar";
 
 export type GoogleEvent = {
+  id: string;
   description: string;
   end: {
     dateTime: string;

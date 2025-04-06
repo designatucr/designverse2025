@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Toolbar from "./Toolbar.jsx";
-import Event from "./Event.jsx";
+import Toolbar from "./Toolbar";
+import Event from "./Event";
 import { Label } from "@/components/ui/label";
 import data from "@/data/config";
 import { GoogleEvent } from "@/types/calendar.js";

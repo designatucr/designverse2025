@@ -1,4 +1,4 @@
-import { fetchTeam } from "./actions";
+import { fetchTeam } from "../actions/fetchTeam";
 import Invite from "./invite";
 
 interface props {
