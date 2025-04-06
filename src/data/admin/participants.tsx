@@ -42,7 +42,10 @@ export const COLUMNS: (ColumnDef<Participant> & Column)[] = [
     searchable: true,
     cell: ({ row }) => (
       <div
-        onClick={row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
         {row.getValue("name")}
@@ -57,7 +60,10 @@ export const COLUMNS: (ColumnDef<Participant> & Column)[] = [
     searchable: true,
     cell: ({ row }) => (
       <div
-        onClick={row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
         {row.getValue("email")}
@@ -72,7 +78,10 @@ export const COLUMNS: (ColumnDef<Participant> & Column)[] = [
     searchable: true,
     cell: ({ row }) => (
       <div
-        onClick={row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
         {row.getValue("discord")}
@@ -87,7 +96,10 @@ export const COLUMNS: (ColumnDef<Participant> & Column)[] = [
     searchable: true,
     cell: ({ row }) => (
       <div
-        onClick={row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
         {row.getValue("team")}
@@ -102,7 +114,10 @@ export const COLUMNS: (ColumnDef<Participant> & Column)[] = [
     searchable: true,
     cell: ({ row }) => (
       <div
-        onClick={row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
         {row.getValue("shirt")}
