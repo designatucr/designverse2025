@@ -74,13 +74,13 @@ const Table = ({
     <>
       <div className="bg-white">
         <Datatable
-          className="relative grid h-[75vh] overflow-y-scroll bg-white"
+          className="relative grid max-h-[75vh] overflow-y-scroll bg-white"
           ref={tableContainerRef}
           onScroll={(e) => {
             fetchMoreOnBottomReached(e.currentTarget);
           }}
         >
-          <TableHeader className="sticky top-0 z-10 grid h-fit rounded-t bg-hackathon-blue-200 text-white">
+          <TableHeader className="sticky top-0 z-10 grid rounded-t bg-hackathon-blue-200 text-white">
             {getHeaderGroups().map(({ headers, id }) => (
               <TableRow key={id} className="flex w-full justify-between">
                 {headers.map(({ id, column, getContext, getSize }) => (
@@ -118,11 +118,11 @@ const Table = ({
             ))}
           </TableHeader>
           <TableBody
-            className="relative top-0 grid"
+            className="relative grid min-h-[70vh]"
             style={{
               height:
-                loading || isRefetching
-                  ? "400px"
+                loading || isRefetching || rows.length === 0
+                  ? "100%"
                   : `${rowVirtualizer.getTotalSize()}px`,
             }}
           >
@@ -135,7 +135,7 @@ const Table = ({
             ) : (
               <>
                 {rows.length === 0 && (
-                  <TableRow className="w-full bg-white py-8 text-center">
+                  <TableRow className="w-full bg-white text-center">
                     <TableCell
                       className="items-center justify-center"
                       colSpan={12}
