@@ -234,7 +234,7 @@ const Questions = ({
           )}
         </div>
       ))}
-      {/* <div>
+      <div>
         <p className="mt-3 font-semibold">Resources</p>
         <Link
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
@@ -260,7 +260,7 @@ const Questions = ({
           MLH Contest Terms and Conditions
           <SquareArrowOutUpRight className="mx-2" size={15} />
         </Link>
-      </div> */}
+      </div>
 
       <div className="flex justify-center">
         <Button onClick={handleSubmit} disabled={loading}>
