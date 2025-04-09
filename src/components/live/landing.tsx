@@ -14,6 +14,20 @@ const Landing = () => {
       id="home"
       className="relative flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end py-28 font-work md:mb-20 lg:mb-0 xl:py-64"
     >
+      <Link
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="z-1 absolute right-3 top-0 z-50 w-12 cursor-pointer md:w-28 lg:right-10"
+      >
+        <Image
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
+          alt="Major League Hacking 2025 Hackathon Season"
+          className="w-full cursor-pointer"
+          width={100}
+          height={100}
+        />
+      </Link>
       <Image
         className="absolute right-0 top-0 w-1/2 lg:w-fit"
         src={cloud1}
