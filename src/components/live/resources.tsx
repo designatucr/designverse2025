@@ -67,15 +67,7 @@ const Resources = () => {
             alt="Bubbles"
             className="absolute left-8 top-0 w-1/12 md:w-auto lg:left-20"
           />
-          <div className="flex w-full flex-col items-center justify-center">
-            <Image src={Castle} alt="Castle" className="mt-8 blur-[2px]" />
 
-            <Image
-              src={Layer}
-              alt="Layer"
-              className="left-0 z-[50] -mt-[20%] w-screen blur-[2px]"
-            />
-          </div>
           <Image
             src={Turtle}
             alt="Turtle"
