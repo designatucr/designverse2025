@@ -37,18 +37,18 @@ const Schedule = async () => {
     <div className="relative">
       <section
         id="schedule"
-        className="flex min-h-[80vh] flex-col items-center justify-start bg-[#3D859D] p-2 text-white md:p-8"
+        className="flex flex-col items-center justify-start bg-[#3D859D] py-40 text-white"
       >
         <div className="-mb-10 flex w-full items-center justify-between md:w-8/12">
           <Image
             src={BubblesLeft}
             alt="BubblesLeft"
-            className="w-1/4 md:w-auto"
+            className="w-1/4 pl-1 md:w-auto"
           />
           <Image
             src={BubblesRight}
             alt="BubblesRight"
-            className="w-1/4 md:w-auto"
+            className="w-1/4 pr-1 md:w-auto"
           />
         </div>
 

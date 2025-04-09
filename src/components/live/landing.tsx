@@ -1,7 +1,7 @@
 import Logo from "@/public/logos/primary.svg";
 import cloud1 from "@/public/resources/cloud1.svg";
 import cloud2 from "@/public/resources/cloud2.svg";
-import sand1 from "@/public/resources/sand1.svg";
+import sand2 from "@/public/resources/sand2.svg";
 import Image from "next/image";
 import Countdown from "./countdown";
 import { Button } from "../ui/button";
@@ -12,7 +12,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end font-work md:min-h-[170vh] lg:min-h-screen"
+      className="relative flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-designverse-gradients-landing-start via-designverse-gradients-landing-via to-designverse-gradients-landing-end py-28 font-work md:mb-20 lg:mb-0 xl:py-64"
     >
       <Image
         className="absolute right-0 top-0 w-1/2 lg:w-fit"
@@ -20,7 +20,7 @@ const Landing = () => {
         alt={cloud1}
       />
       <Image
-        className="absolute left-0 top-[8vh] w-1/4 lg:w-fit"
+        className="absolute left-0 top-[8%] w-1/4 lg:w-fit"
         src={cloud2}
         alt={cloud2}
       />
@@ -42,14 +42,14 @@ const Landing = () => {
         <Countdown />
       </div>
 
-      <div className="z-20 grid grid-cols-3 gap-3">
+      <div className="z-20 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
           <Link
             href="/form/sponsor"
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            SPONSOR <ExternalLink />
+            SPONSOR US <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
@@ -58,7 +58,7 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            MENTOR <ExternalLink />
+            BE A MENTOR <ExternalLink />
           </Link>
         </Button>
         <Button asChild className="rounded-full bg-[#4B8AC3] px-8">
@@ -67,12 +67,12 @@ const Landing = () => {
             className="flex gap-2 text-xl"
             target="_blank"
           >
-            VOLUNTEER <ExternalLink />
+            BE A VOLUNTEER <ExternalLink />
           </Link>
         </Button>
         <Button
           asChild
-          className="cols-span-3 col-start-2 grid-cols-subgrid rounded-full bg-[#406F82] px-8 py-6"
+          className="sm:cols-span-3 rounded-full bg-[#406F82] px-8 py-6 sm:col-start-2 sm:grid-cols-subgrid"
         >
           <Link
             href="/form/participant"
@@ -85,9 +85,9 @@ const Landing = () => {
       </div>
 
       <Image
-        className="absolute top-[43vh] z-0 min-h-full w-full lg:top-[15vh] lg:h-fit"
-        src={sand1}
-        alt="sand1"
+        className="absolute top-[45%] z-10 min-h-full w-full lg:top-[30%] lg:h-fit"
+        src={sand2}
+        alt="sand2"
       />
     </section>
   );

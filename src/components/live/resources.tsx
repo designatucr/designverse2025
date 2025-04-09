@@ -3,10 +3,8 @@ import Dribble from "@/public/resources/dribble.webp";
 import Miro from "@/public/resources/miro.webp";
 import Image from "next/image";
 import Link from "next/link";
-import Castle from "@/public/resources/castle.svg";
 import Turtle from "@/public/resources/turtle.svg";
 import Bubbles from "@/public/resources/bubbles.svg";
-import Layer from "@/public/resources/layer.svg";
 
 const resources = [
   {
@@ -37,7 +35,7 @@ const Resources = () => {
     <div className="relative">
       <section
         id="resources"
-        className="flex min-h-[100vh] flex-col items-center justify-start bg-[#3D859D] text-white"
+        className="flex flex-col items-center justify-start bg-[#3D859D] text-white md:pt-32"
       >
         <p className="flex pb-3 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
           RESOURCES
@@ -75,7 +73,7 @@ const Resources = () => {
             <Image
               src={Layer}
               alt="Layer"
-              className="left-0 -mt-[20%] w-screen z-[50] blur-[2px]"
+              className="left-0 z-[50] -mt-[20%] w-screen blur-[2px]"
             />
           </div>
           <Image

@@ -13,7 +13,6 @@ const Toolbar = ({ data, setSearch }: props) => {
   const [inputValue, setInputValue] = useState("");
   const onChange = (value: string) => {
     setInputValue(value);
-
     if (value === "") {
       setSearch(data);
     } else {

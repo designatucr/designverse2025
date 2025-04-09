@@ -15,7 +15,7 @@ import Fish3 from "@/public/footer/fish3.svg";
 
 const Footer = () => {
   return (
-    <div className="relative lg:mt-[15vh]">
+    <div className="relative">
       <Image
         src={Fish1}
         alt="Fish1"
@@ -38,7 +38,7 @@ const Footer = () => {
         className="absolute bottom-[95%] w-full blur-[2px]"
       />
 
-      <div className="flex min-h-[20vh] flex-col items-center justify-center gap-4 bg-[#081c28] p-8 text-white">
+      <div className="flex flex-col items-center justify-center gap-4 bg-[#081c28] py-5 text-white">
         <Image src={logo} width={100} alt="DesignVerse Short logo" />
         <div className="flex items-center justify-center gap-4">
           <Link href={`mailto:${data.email}`}>
