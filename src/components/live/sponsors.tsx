@@ -6,8 +6,8 @@ import Notion from "@/public/sponsors/notion.webp";
 import RaisingCanes from "@/public/sponsors/raising_canes.webp";
 import Redbull from "@/public/sponsors/redbull.webp";
 import Snapchat from "@/public/sponsors/snapchat.webp";
-import fish1 from "@/public/sponsors/fish1.svg";
-import fish2 from "@/public/sponsors/fish2.svg";
+import Fish1 from "@/public/sponsors/fish1.svg";
+import Fish2 from "@/public/sponsors/fish2.svg";
 
 const sponsorships = [
   {
@@ -57,13 +57,13 @@ const Sponsors = () => {
         ))}
       </div>
       <Image
-        src={fish1}
-        alt="fish1"
-        className="absolute bottom-0 left-0 blur-[2px]"
+        src={Fish1}
+        alt="Fish1"
+        className="absolute -bottom-6 2xl:bottom-0 left-0 blur-[2px]"
       />
       <Image
-        src={fish2}
-        alt="fish2"
+        src={Fish2}
+        alt="Fish2"
         className="absolute right-6 top-6 blur-[2px]"
       />
     </div>
