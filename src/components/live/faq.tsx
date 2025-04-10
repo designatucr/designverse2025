@@ -15,7 +15,7 @@ const FAQ = () => {
       <Image
         src={Angelfish}
         alt="Angelfish"
-        className="absolute -top-[2%] right-8 w-2/12 blur-[2px] md:top-0 md:w-auto lg:right-20"
+        className="absolute -top-[2%] right-8 z-50 w-2/12 blur-[2px] md:top-0 md:w-auto lg:right-20"
       />
 
       <Image

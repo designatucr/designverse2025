@@ -2,6 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Layer from "@/public/resources/layer.svg";
 import Castle from "@/public/resources/castle.svg";
+import Seaweed from "@/public/resources/seaweed.svg";
+import Layer3 from "@/public/resources/layer_3.svg";
+import Coral from "@/public/resources/coral.svg";
+import Star from "@/public/resources/star.svg";
 import { committees, directors, first, leads } from "@/data/team";
 
 const Team = () => {
@@ -98,9 +102,33 @@ const Team = () => {
         ))}
       </div>
 
-      <div className="flex w-full flex-col items-center justify-center pt-20">
-        <Image src={Castle} alt="Castle" className="mt-8 blur-[2px]" />
-        <Image src={Layer} alt="Layer" className="!z-10 -mt-[20%] w-screen" />
+      <div className="relative flex w-full flex-col items-center justify-center pt-20">
+        <Image
+          src={Castle}
+          alt="Castle"
+          className="z-20 mt-8 w-7/12 blur-[2px] md:w-auto"
+        />
+        <Image
+          src={Layer3}
+          alt="Layer3"
+          className="z-10 -mt-[24%] w-screen blur-[2px] md:-mt-[24%]"
+        />
+        <Image src={Layer} alt="Layer" className="z-30 -mt-[20%] w-screen" />
+        <Image
+          src={Seaweed}
+          alt="Seaweed"
+          className="absolute bottom-[18%] right-[7%] w-1/12 blur-[2px] md:bottom-[21%] md:right-[7%] md:w-auto 2xl:bottom-[30%] 2xl:right-[15%]"
+        />
+        <Image
+          src={Coral}
+          alt="Coral"
+          className="absolute bottom-[17%] left-[3%] z-20 w-2/12 blur-[2px] md:bottom-[20%] md:w-auto 2xl:bottom-[28%]"
+        />
+        <Image
+          src={Star}
+          alt="Star"
+          className="absolute bottom-[8%] left-[22%] z-40 w-1/12 blur-[2px] md:bottom-[12%] md:left-[24%] md:w-auto 2xl:bottom-[17%] 2xl:left-[31.5%]"
+        />
       </div>
     </section>
   );
