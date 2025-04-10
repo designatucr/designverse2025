@@ -99,9 +99,8 @@ const Team = () => {
       </div>
 
       <div className="flex w-full flex-col items-center justify-center pt-20">
-        <Image src={Castle} alt="Castle" className="mt-8" />
-
-        <Image src={Layer} alt="Layer" className="left-0 -mt-[18%] w-screen" />
+        <Image src={Castle} alt="Castle" className="mt-8 blur-[2px]" />
+        <Image src={Layer} alt="Layer" className="!z-10 -mt-[20%] w-screen" />
       </div>
     </section>
   );
