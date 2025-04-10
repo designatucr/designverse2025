@@ -71,7 +71,7 @@ const Resources = () => {
           <Image
             src={Turtle}
             alt="Turtle"
-            className="absolute right-8 top-0 w-1/4 md:w-auto lg:right-20"
+            className="absolute right-8 top-0 w-1/4 blur-[2px] md:w-auto lg:right-20"
           />
         </div>
       </section>
