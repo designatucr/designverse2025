@@ -6,6 +6,8 @@ import Seaweed from "@/public/resources/seaweed.svg";
 import Layer3 from "@/public/resources/layer_3.svg";
 import Coral from "@/public/resources/coral.svg";
 import Star from "@/public/resources/star.svg";
+import Turtle2 from "@/public/resources/turtle2.svg";
+import Bubbles2 from "@/public/resources/bubbles2.svg";
 import { committees, directors, first, leads } from "@/data/team";
 
 const Team = () => {
@@ -89,7 +91,7 @@ const Team = () => {
         COMMITTEE MEMBERS
       </p>
 
-      <div className="grid grid-cols-1 gap-16 text-center text-white md:grid-cols-3">
+      <div className="relative grid grid-cols-1 gap-16 text-center text-white md:grid-cols-3">
         {committees.map(({ team, members }, index) => (
           <div key={index}>
             <p className="text-2xl font-bold">{team}</p>
@@ -100,6 +102,16 @@ const Team = () => {
             ))}
           </div>
         ))}
+        <Image
+          src={Turtle2}
+          alt="Turtle2"
+          className="absolute bottom-[-20%] right-[-50%] w-7/12 blur-[2px] md:bottom-[-40%] md:right-[-40%] md:w-auto 2xl:right-[-70%]"
+        />
+        <Image
+          src={Bubbles2}
+          alt="Bubbles2"
+          className="absolute bottom-[-20%] left-[-40%] w-3/12 blur-[2px] md:bottom-[-40%] md:left-[-20%] md:w-auto 2xl:left-[-40%]"
+        />
       </div>
 
       <div className="relative flex w-full flex-col items-center justify-center pt-20">

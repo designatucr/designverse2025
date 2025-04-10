@@ -59,7 +59,7 @@ const Sponsors = () => {
       <Image
         src={Fish1}
         alt="Fish1"
-        className="absolute -bottom-6 left-0 blur-[2px] 2xl:bottom-0"
+        className="absolute -bottom-[20%] left-0 blur-[2px] 2xl:bottom-0"
       />
       <Image
         src={Fish2}
