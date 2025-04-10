@@ -11,6 +11,7 @@ export type EventTypes =
   | "marketing"
   | "operations"
   | "sponsorship"
+  | "publicRelations"
   | "recruitment"
   | "software"
   | "uiux"
@@ -91,5 +92,15 @@ export const LABELS: Record<EventTypes, types> = {
     color: "yellow",
     background: "!bg-hackathon-tags-yellow-text",
     type: "hackathon",
+  },
+  other: {
+    color: "gray",
+    background: "!bg-hackathon-tags-gray-text",
+    type: "leads",
+  },
+  recruitment: {
+    color: "teal",
+    background: "!bg-hackathon-tags-teal-text",
+    type: "leads",
   },
 };
