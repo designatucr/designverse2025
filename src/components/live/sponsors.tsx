@@ -3,9 +3,9 @@ import Link from "next/link";
 import Adobe from "@/public/sponsors/adobe.webp";
 import Doordash from "@/public/sponsors/doordash.webp";
 import Notion from "@/public/sponsors/notion.webp";
-import RaisingCanes from "@/public/sponsors/raising_canes.jpg";
-import Redbull from "@/public/sponsors/redbull.png";
-import Snapchat from "@/public/sponsors/snapchat.png";
+import RaisingCanes from "@/public/sponsors/raising_canes.webp";
+import Redbull from "@/public/sponsors/redbull.webp";
+import Snapchat from "@/public/sponsors/snapchat.webp";
 
 const sponsorships = [
   {
