@@ -1,5 +1,5 @@
 import View from "@/components/admin/dashboards/dashboard/view";
-import { AFFILIATIONS } from "../form/information";
+import { AFFILIATIONS } from "../form/judge";
 import { generateAffiliation, generateSelect, generateStatus } from "./columns";
 import { STATUSES } from "@/data/statuses";
 import JSZip from "jszip";

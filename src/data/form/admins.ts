@@ -61,7 +61,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for being on the organizing team, we appreciate your efforts to help support ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -69,7 +69,7 @@ export const FIELDS: Fields = {
         year: "numeric",
       })}.`,
       "Admins are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
-      "Note: Admins are not permitted to become participants for the hackathon.",
+      "Note: Admins are not permitted to become participants for the designathon.",
     ],
   },
   name: {
@@ -185,7 +185,7 @@ export const FIELDS: Fields = {
       "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
       "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
-      "I consent to providing a safe space for hackers to learn and grow their interests in computing",
+      "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
       "I understand that failure to comply with guidelines or creating an unsafe space will result in my removal from the event",
       "I understand this is an in person event taking place in UCR and I must attend in person in order to participate",

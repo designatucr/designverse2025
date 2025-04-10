@@ -47,7 +47,7 @@ export const LABELS: Record<EventTypes, types> = {
     background: "!bg-hackathon-tags-purple-text",
     type: "leads",
   },
-  recruitment: {
+  publicRelations: {
     color: "teal",
     background: "!bg-hackathon-tags-teal-text",
     type: "leads",
@@ -58,18 +58,13 @@ export const LABELS: Record<EventTypes, types> = {
     type: "leads",
   },
   uiux: {
-    color: "lightgreen",
-    background: "!bg-hackathon-tags-lightgreen-text",
+    color: "green",
+    background: "!bg-hackathon-tags-green-text",
     type: "leads",
   },
   leads: {
     color: "red",
     background: "!bg-hackathon-tags-red-text",
-    type: "leads",
-  },
-  other: {
-    color: "gray",
-    background: "!bg-hackathon-tags-gray-text",
     type: "leads",
   },
   workshop: {
