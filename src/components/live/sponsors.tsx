@@ -1,46 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
-import Mock from "@/public/team/andrew.webp";
+import Adobe from "@/public/sponsors/adobe.webp";
+import Doordash from "@/public/sponsors/doordash.webp";
+import Notion from "@/public/sponsors/notion.webp";
+import RaisingCanes from "@/public/sponsors/raising_canes.jpg";
+import Redbull from "@/public/sponsors/redbull.png";
+import Snapchat from "@/public/sponsors/snapchat.png";
 
 const sponsorships = [
   {
-    logo: Mock,
-    link: "https://open.spotify.com/track/4LwOrnuxJwR7C5Sw4liY4Z?si=2b1d61dec147420e",
+    logo: Adobe,
+    link: "https://www.adobe.com",
   },
   {
-    logo: Mock,
-    link: "https://open.spotify.com/track/4LwOrnuxJwR7C5Sw4liY4Z?si=2b1d61dec147420e",
+    logo: Doordash,
+    link: "https://www.doordash.com",
   },
   {
-    logo: Mock,
-    link: "https://open.spotify.com/track/4LwOrnuxJwR7C5Sw4liY4Z?si=2b1d61dec147420e",
+    logo: Notion,
+    link: "https://www.notion.com",
   },
   {
-    logo: Mock,
-    link: "https://open.spotify.com/track/4LwOrnuxJwR7C5Sw4liY4Z?si=2b1d61dec147420e",
+    logo: RaisingCanes,
+    link: "https://www.raisingcanes.com/home/",
   },
   {
-    logo: Mock,
-    link: "https://open.spotify.com/track/4LwOrnuxJwR7C5Sw4liY4Z?si=2b1d61dec147420e",
+    logo: Redbull,
+    link: "https://www.redbull.com/us-en",
   },
   {
-    logo: Mock,
-    link: "https://open.spotify.com/track/4LwOrnuxJwR7C5Sw4liY4Z?si=2b1d61dec147420e",
-  },
-  {
-    logo: Mock,
-    link: "https://open.spotify.com/track/4LwOrnuxJwR7C5Sw4liY4Z?si=2b1d61dec147420e",
+    logo: Snapchat,
+    link: "https://www.snapchat.com",
   },
 ];
 
 const Sponsors = () => {
   return (
-    <div className="z-[10] flex h-[70vh] flex-col items-center justify-start bg-[#2C6273]">
-      <p className="mt-5 flex font-sora text-3xl font-bold text-white lg:mb-8 lg:mt-0 lg:text-5xl">
-        SPONSORSHIPS
+    <div className="z-[10] flex h-[70vh] flex-col items-center justify-start bg-[#3D859D]">
+      <p className="mt-8 flex font-sora text-3xl font-bold text-white lg:mb-8 lg:mt-32 lg:text-5xl">
+        SPONSORS
       </p>
-
-      <div className="grid grid-cols-4 gap-16">
+      <div className="flex w-9/12 flex-wrap justify-center gap-16">
         {sponsorships.map(({ logo, link }, index) => (
           <Link href={link} key={index}>
             <Image
@@ -48,7 +48,8 @@ const Sponsors = () => {
               alt="Sponsor Logo"
               width={200}
               height={200}
-              className="aspect-square rounded-full hover:scale-110"
+              className="aspect-square rounded-full bg-white hover:scale-110"
+              objectFit="contain"
             />
           </Link>
         ))}
