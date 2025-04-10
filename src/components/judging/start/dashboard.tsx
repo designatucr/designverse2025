@@ -1,3 +1,4 @@
+"use client";
 import {
   Accordion,
   AccordionItem,
@@ -8,7 +9,23 @@ import Link from "next/link";
 import { Label } from "@/components/ui/label";
 import { Pencil } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { api } from "@/utils/api";
+import { useQuery } from "@tanstack/react-query";
+import Loading from "@/components/loading";
+
+type Round = { name: string; affiliation: string; uid: "string" };
 const Dashboard = () => {
+  const fetchRounds = async () => {
+    const { items } = await api({ url: "/api/judging/start", method: "GET" });
+    return items;
+  };
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["rounds"],
+    queryFn: fetchRounds,
+  });
+
+  if (isLoading) return <Loading />;
   return (
     <div className="w-full">
       <Label className="pr-5 text-2xl font-bold">Judging</Label>
@@ -17,32 +34,59 @@ const Dashboard = () => {
         collapsible
         className="w-full rounded-md border-black/20 bg-hackathon-blue-200 text-white"
       >
-        <AccordionItem value="item-1" className="w-full">
-          <div className="text-md flex w-full flex-row items-center justify-between px-2">
-            <AccordionTrigger hidden>ROUND 1 - TEAM 1</AccordionTrigger>
-            <Link
-              href="/judge/start/1"
-              className="text-md flex flex-row items-center justify-between gap-2 rounded-md bg-hackathon-tags-gray-bg px-2 py-1 text-hackathon-tags-gray-text"
+        {data.rounds.map((round: Round[], index: number) => {
+          const current = round[0];
+          if (!current)
+            return (
+              <AccordionItem
+                value={`empty-${index}`}
+                key={index}
+                className="w-full bg-hackathon-gray-200 p-2"
+              >
+                Round {index} - No Team
+              </AccordionItem>
+            );
+          const team = current.name.split(":");
+          const table = team[0];
+          const name = team[1];
+          return (
+            <AccordionItem
+              value={index.toString()}
+              key={index}
+              className="w-full"
             >
-              <Pencil size={20} />
-              <div className="text-md">edit</div>
-            </Link>
-          </div>
-          <AccordionContent className="bg-white p-2 text-black">
-            <div className="flex flex-row justify-between text-2xl text-hackathon-blue-100">
-              <div className="font-bold">IMPLEMENTATION</div>
-              <Badge type="accept">4/5</Badge>
-            </div>
-            <div>
-              <div className="text-lg font-bold">
-                Describe the complexity of the project.
+              <div className="text-md flex w-full flex-row items-center justify-between px-2">
+                <AccordionTrigger hidden>
+                  Round {index} - {name}
+                </AccordionTrigger>
+                <div className="flex flex-row gap-2">
+                  <Badge>Table {table}</Badge>
+                  <Link
+                    href={`/judge/start/${round[0]?.uid}`}
+                    className="text-md flex flex-row items-center justify-between gap-2 rounded-md bg-hackathon-tags-gray-bg px-2 py-1 text-black"
+                  >
+                    <Pencil size={20} />
+                    <div className="text-xs font-semibold">edit</div>
+                  </Link>
+                </div>
               </div>
-              <div className="text-black/50">
-                The technical execution of this project was pretty good!
-              </div>
-            </div>
-          </AccordionContent>
-        </AccordionItem>
+              <AccordionContent className="bg-white p-2 text-black">
+                <div className="flex flex-row justify-between text-2xl text-hackathon-blue-100">
+                  <div className="font-bold">IMPLEMENTATION</div>
+                  <Badge type="accept">4/5</Badge>
+                </div>
+                <div>
+                  <div className="text-lg font-bold">
+                    Describe the complexity of the project.
+                  </div>
+                  <div className="text-black/50">
+                    The technical execution of this project was pretty good!
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          );
+        })}
       </Accordion>
     </div>
   );
