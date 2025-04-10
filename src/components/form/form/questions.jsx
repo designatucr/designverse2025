@@ -2,7 +2,6 @@ import Select from "@/components/select";
 import Checkbox from "@/components/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import Upload from "@/components/form/form/upload";
-import toaster from "@/utils/toaster";
 import Link from "next/link";
 import { SquareArrowOutUpRight } from "lucide-react";
 import data from "@/data/config";
@@ -22,41 +21,6 @@ const Questions = ({
   setState,
   packet = false,
 }) => {
-  const handleSubmit = () => {
-    setLoading(true);
-
-    if (
-      Object.entries(fields).some(
-        ([key, value]) =>
-          value.required &&
-          (!object[key] ||
-            object[key] === "" ||
-            object[key].includes("Invalid")),
-      )
-    ) {
-      toaster("Please complete all required fields!", "error");
-      setLoading(false);
-      return;
-    }
-    if (
-      fields.requirements &&
-      fields.requirements.options.some(
-        (requirement) => !object.requirements.includes(requirement),
-      )
-    ) {
-      toaster("Please agree to all the terms!", "error");
-      setLoading(false);
-      return;
-    }
-    if (fields.availability && object.availability.length === 0) {
-      toaster("Please select at least one available time!", "error");
-      setLoading(false);
-      return;
-    }
-
-    onSubmit(setLoading, setState);
-  };
-
   const handleClick = (option, field) => {
     setObject({
       ...object,
@@ -208,7 +172,6 @@ const Questions = ({
                 </Label>
               </div>
               <Textarea
-                data-cy={`${field.title}-textarea`}
                 className="border-1 w-full resize-none border border-black pl-3 placeholder:text-hackathon-gray-200 focus:outline-none"
                 maxLength={500}
                 value={object[field.name]}
@@ -263,7 +226,10 @@ const Questions = ({
       </div>
 
       <div className="flex justify-center">
-        <Button onClick={handleSubmit} disabled={loading}>
+        <Button
+          onClick={() => onSubmit(setLoading, setState)}
+          disabled={loading}
+        >
           Submit
         </Button>
       </div>

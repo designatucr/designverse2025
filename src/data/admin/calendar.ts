@@ -4,23 +4,30 @@ interface types {
   type: string;
 }
 
-export interface label {
-  directors: types;
-  marketing: types;
-  operations: types;
-  publicRelations: types;
-  sponsorship: types;
-  software: types;
-  uiux: types;
-  leads: types;
-  workshop: types;
-  general: types;
-  food: types;
-  social: types;
-  activities: types;
-}
+export type EventTypes =
+  | "all"
+  | "other"
+  | "directors"
+  | "marketing"
+  | "operations"
+  | "sponsorship"
+  | "publicRelations"
+  | "recruitment"
+  | "software"
+  | "uiux"
+  | "leads"
+  | "workshop"
+  | "general"
+  | "food"
+  | "social"
+  | "activities";
 
-export const LABELS: label = {
+export const LABELS: Record<EventTypes, types> = {
+  all: {
+    color: "red",
+    background: "!bg-hackathon-tags-red-text",
+    type: "leads",
+  },
   directors: {
     color: "red",
     background: "!bg-hackathon-tags-red-text",
@@ -85,5 +92,15 @@ export const LABELS: label = {
     color: "yellow",
     background: "!bg-hackathon-tags-yellow-text",
     type: "hackathon",
+  },
+  other: {
+    color: "gray",
+    background: "!bg-hackathon-tags-gray-text",
+    type: "leads",
+  },
+  recruitment: {
+    color: "teal",
+    background: "!bg-hackathon-tags-teal-text",
+    type: "leads",
   },
 };

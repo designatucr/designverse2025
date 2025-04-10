@@ -3,10 +3,6 @@ import "./globals.css";
 // eslint-disable-next-line camelcase
 import { Work_Sans } from "next/font/google";
 import { Sora } from "next/font/google";
-import Providers from "@/components/providers";
-import { Toaster } from "react-hot-toast";
-import { getServerSession } from "next-auth";
-import { options } from "@/utils/auth";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -32,19 +28,12 @@ type Props = {
 };
 
 const RootLayout = async ({ children }: Props) => {
-  const session = await getServerSession(options);
-
   return (
     <html lang="en" className="h-full">
       <body
         className={`${workSans.variable} ${sora.variable} flex h-full flex-col lg:flex-row`}
       >
-        <div className="flex h-full w-full">
-          <Providers session={session}>
-            <Toaster />
-            {children}
-          </Providers>
-        </div>
+        <div className="flex h-full w-full">{children}</div>
       </body>
     </html>
   );
