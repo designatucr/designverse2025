@@ -75,7 +75,7 @@ const Dashboard = () => {
                   </Link>
                 </div>
               </div>
-              <AccordionContent className="bg-white p-2 text-black">
+              <AccordionContent className="flex flex-col gap-4 bg-white p-2 text-black">
                 {QUESTIONS.map((question, index) => (
                   <div key={index}>
                     <div className="flex flex-row justify-between text-2xl text-hackathon-blue-100">
