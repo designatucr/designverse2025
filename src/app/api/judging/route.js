@@ -130,7 +130,7 @@ export const PUT = async (req) => {
     );
   }
 
-  const { teams, judgesCopy } = await req.json();
+  const { teams, judges } = await req.json();
 
   try {
     await Promise.all(
@@ -144,7 +144,7 @@ export const PUT = async (req) => {
     );
 
     await Promise.all(
-      judgesCopy.map(async (object) => {
+      judges.map(async (object) => {
         const rounds = JSON.stringify(object.rounds);
         await updateDoc(doc(db, "users", object.uid), {
           rounds: rounds,

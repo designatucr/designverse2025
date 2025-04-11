@@ -121,7 +121,7 @@ const Toolbar = ({
     api({
       method: "PUT",
       url: "/api/judging",
-      body: { teams, judgesCopy },
+      body: { teams, judges: judgesCopy },
     }).then(() => toaster("Rounds Saved!", "success"));
 
     setInput({

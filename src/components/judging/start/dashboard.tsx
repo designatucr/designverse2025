@@ -43,11 +43,11 @@ const Dashboard = () => {
                 key={index}
                 className="w-full bg-hackathon-gray-200 p-2"
               >
-                Round {index} - No Team
+                R{index + 1} - No Team
               </AccordionItem>
             );
           const team = current.name.split(":");
-          const table = team[0];
+          const table = Number(team[0]);
           const name = team[1];
           return (
             <AccordionItem
@@ -55,18 +55,17 @@ const Dashboard = () => {
               key={index}
               className="w-full"
             >
-              <div className="text-md flex w-full flex-row items-center justify-between px-2">
-                <AccordionTrigger hidden>
-                  Round {index} - {name}
+              <div className="text-md flex w-full flex-row items-center justify-between px-2 text-left">
+                <AccordionTrigger hidden className="wrap text-left">
+                  R{index + 1} - {name}
                 </AccordionTrigger>
-                <div className="flex flex-row gap-2">
-                  <Badge>Table {table}</Badge>
+                <div className="flex shrink-0 flex-row gap-2">
+                  <Badge className="whitespace-nowrap">{table}</Badge>
                   <Link
                     href={`/judge/start/${round[0]?.uid}`}
                     className="text-md flex flex-row items-center justify-between gap-2 rounded-md bg-hackathon-tags-gray-bg px-2 py-1 text-black"
                   >
                     <Pencil size={20} />
-                    <div className="text-xs font-semibold">edit</div>
                   </Link>
                 </div>
               </div>
