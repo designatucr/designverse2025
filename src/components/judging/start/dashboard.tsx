@@ -56,10 +56,15 @@ const Dashboard = () => {
               className="w-full"
             >
               <div className="text-md flex w-full flex-row items-center justify-between px-2 text-left">
-                <AccordionTrigger hidden className="wrap text-left">
-                  R{index + 1} - {name}
-                </AccordionTrigger>
-                <div className="flex shrink-0 flex-row gap-2">
+                <div className="min-w-0 flex-1">
+                  <AccordionTrigger
+                    hidden
+                    className="block min-w-0 flex-1 truncate text-left hover:no-underline"
+                  >
+                    R{index + 1} - {name}
+                  </AccordionTrigger>
+                </div>
+                <div className="flex flex-row gap-2">
                   <Badge className="whitespace-nowrap">{table}</Badge>
                   <Link
                     href={`/judge/start/${round[0]?.uid}`}
