@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { api } from "@/utils/api";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/loading";
+import { QUESTIONS } from "@/data/judge/form";
 
 type Round = { name: string; affiliation: string; uid: "string" };
 const Dashboard = () => {
@@ -75,18 +76,24 @@ const Dashboard = () => {
                 </div>
               </div>
               <AccordionContent className="bg-white p-2 text-black">
-                <div className="flex flex-row justify-between text-2xl text-hackathon-blue-100">
-                  <div className="font-bold">IMPLEMENTATION</div>
-                  <Badge type="accept">4/5</Badge>
-                </div>
-                <div>
-                  <div className="text-lg font-bold">
-                    Describe the complexity of the project.
+                {QUESTIONS.map((question, index) => (
+                  <div key={index}>
+                    <div className="flex flex-row justify-between text-2xl text-hackathon-blue-100">
+                      <div className="font-bold">
+                        {question.title.toUpperCase()}
+                      </div>
+                      <Badge type="accept">{question.rating}/5</Badge>
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold">
+                        {question.question}
+                      </div>
+                      <div className="text-black/50">
+                        The technical execution of this project was pretty good!
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-black/50">
-                    The technical execution of this project was pretty good!
-                  </div>
-                </div>
+                ))}
               </AccordionContent>
             </AccordionItem>
           );
