@@ -14,7 +14,17 @@ import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/loading";
 import { QUESTIONS } from "@/data/judge/form";
 
-type Round = { name: string; affiliation: string; uid: "string" };
+type Round = {
+  name: string;
+  affiliation: string;
+  uid: "string";
+  feedback?: {
+    implementation: { rating: number; comment: string };
+    idea: { rating: number; comment: string };
+    design: { rating: number; comment: string };
+    tracks?: string[];
+  };
+};
 const Dashboard = () => {
   const fetchRounds = async () => {
     const { items } = await api({ url: "/api/judging/start", method: "GET" });
@@ -68,7 +78,7 @@ const Dashboard = () => {
                 <div className="flex flex-row gap-2">
                   <Badge className="whitespace-nowrap">{table}</Badge>
                   <Link
-                    href={`/judge/start/${round[0]?.uid}`}
+                    href={`/judge/start/${round[0]?.uid}?name=${name}&round=${index + 1}&table=${table}`}
                     className="text-md flex flex-row items-center justify-between gap-2 rounded-md bg-hackathon-tags-gray-bg px-2 py-1 text-black"
                   >
                     <Pencil size={20} />
@@ -76,7 +86,7 @@ const Dashboard = () => {
                 </div>
               </div>
               <AccordionContent className="flex flex-col gap-4 bg-white p-2 text-black">
-                {QUESTIONS.map((question, index) => (
+                {/* {QUESTIONS.map((question, index) => (
                   <div key={index}>
                     <div className="flex flex-row justify-between text-2xl text-hackathon-blue-100">
                       <div className="font-bold">
@@ -93,7 +103,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                ))}
+                ))} */}
               </AccordionContent>
             </AccordionItem>
           );
