@@ -12,7 +12,6 @@ import { Badge } from "@/components/ui/badge";
 import { api } from "@/utils/api";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/loading";
-import { QUESTIONS } from "@/data/judge/form";
 
 type Round = {
   name: string;

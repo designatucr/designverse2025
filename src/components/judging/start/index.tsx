@@ -3,8 +3,6 @@ import { useState } from "react";
 import Form from "./form";
 import { submit } from "@/utils/form";
 import { schema } from "@/schemas/judging";
-import { api } from "@/utils/api";
-import toaster from "@/utils/toaster";
 import { FIELDS } from "@/data/judge/form";
 interface props {
   id: string;
@@ -37,20 +35,6 @@ const Start = ({ id, name, round, table }: props) => {
       setState,
     });
   };
-  // const onSubmit = async () => {
-  //   try {
-  //     const result = await api({
-  //       method: "PUT",
-  //       url: "/api/judging/start",
-  //       body: form,
-  //     });
-  //     console.log("✅ Success:", result);
-  //     toaster("Submitted successfully!", "success");
-  //   } catch (err) {
-  //     console.error("❌ API Error:", err);
-  //     toaster("Something went wrong", "error");
-  //   }
-  // };
   return (
     <Form
       fields={FIELDS}

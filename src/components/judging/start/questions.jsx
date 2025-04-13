@@ -24,7 +24,6 @@ const Questions = ({
   loading,
   setLoading,
 }) => {
-  console.log(fields);
   return (
     <div className="grid grid-cols-1 gap-3">
       {Object.values(fields).map((field, index) => (
@@ -34,6 +33,7 @@ const Questions = ({
               <div className="grid grid-cols-2 gap-2">
                 {field.options.map((option, i) => (
                   <div
+                    key={i}
                     className={`mb-2 flex items-center rounded-lg p-1 text-sm text-slate-600 ${
                       object[field.field]?.includes(option)
                         ? "bg-hackathon-green-300"

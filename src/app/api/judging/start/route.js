@@ -46,15 +46,12 @@ export const PUT = async (req) => {
 
   try {
     const { teamId, round, tracks, implementation, idea, design } = body;
-    console.log(body);
     const roundIndex = parseInt(round) - 1;
 
     const snapshot = await getDoc(doc(db, "teams", teamId));
 
     const { rounds } = snapshot.data();
     const updatedRounds = JSON.parse(rounds);
-    console.log(updatedRounds);
-    console.log(roundIndex);
 
     updatedRounds[roundIndex] = updatedRounds[roundIndex].map((judge) =>
       judge.uid === user.id
@@ -69,12 +66,6 @@ export const PUT = async (req) => {
           }
         : judge,
     );
-    console.log(
-      "✅ Updated Rounds:",
-      JSON.stringify(updatedRounds[roundIndex], null, 2),
-    );
-
-    console.log(rounds);
 
     await updateDoc(doc(db, "teams", teamId), {
       rounds: JSON.stringify(updatedRounds),

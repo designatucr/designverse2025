@@ -1,4 +1,4 @@
-import { CheckboxInput, SliderInput, TextInput } from "@/types/forms";
+import { CheckboxInput, SliderInput } from "@/types/forms";
 
 const TRACKS = ["Beginner", "Sustainable", "Women", "Data", "UI/UX"];
 
