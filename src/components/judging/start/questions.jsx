@@ -79,6 +79,7 @@ const Questions = ({
               <Slider
                 defaultValue={[object[field.field]?.rating || 0]}
                 max={5}
+                min={1}
                 step={1}
                 onValueChange={(value) =>
                   setObject({
@@ -91,13 +92,11 @@ const Questions = ({
                 }
               />
               <div className="mb-2 flex justify-between text-xs">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <div key={num}>{num}</div>
+                ))}
               </div>
-              <div className="pb-">
+              <div className="">
                 <Label htmlFor={field.name} className="text-sm">
                   {field.question}
                 </Label>
