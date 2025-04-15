@@ -110,7 +110,6 @@ const Questions = ({
           {field.input === "terms" && (
             <Terms
               options={field.options}
-              // toggle={object[field.field].length === field.options.length}
               onClick={() => {
                 setObject({
                   ...object,
