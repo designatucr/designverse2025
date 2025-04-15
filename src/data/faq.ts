@@ -7,7 +7,7 @@ export const QUESTIONS: QuestionAnswer[] = [
   {
     question: "What is hackathon website?",
     answer:
-      "This repo centralizes the backbone for all websites. It serves as a template for mainly the backend, user registration, user dashboard and and admin portal for organizers. The frontend is built out by respective hackathon committees.",
+      "This repo centralizes the backbone for all websites. It serves as a template for mainly the backend, user registration, user dashboard and admin portal for organizers. The frontend is built out by respective hackathon committees.",
   },
   {
     question: "How do I join the committee?",

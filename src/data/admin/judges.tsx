@@ -134,13 +134,21 @@ export const COLUMNS: (ColumnDef<Judge> & Column)[] = [
 
       return (
         <div className="flex">
-          Photo <Download onClick={downloadZip} />
+          Photo
+          <Download
+            onClick={downloadZip}
+            className="text-hackathon-gray-200 hover:cursor-pointer hover:opacity-50"
+          />
         </div>
       );
     },
     enableSorting: false,
     cell: ({ row }) => (
-      <View src={row.getValue("photo")} title={row.getValue("name")} />
+      <View
+        src={row.getValue("photo")}
+        title={row.getValue("name")}
+        type="photo"
+      />
     ),
   },
 ];

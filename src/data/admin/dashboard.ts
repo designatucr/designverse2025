@@ -6,6 +6,7 @@ type keys =
   | "volunteers"
   | "interests"
   | "participants"
+  | "resumes"
   | "sponsors"
   | "panels"
   | "feedback"
@@ -90,7 +91,6 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "gender",
     "shirt",
     "diet",
-    "resume",
     "firstName",
     "lastName",
     "email",
@@ -98,6 +98,7 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "discord",
     "team",
   ],
+  resumes: ["name", "email", "school", "grade", "resume", "status"],
   sponsors: [
     "firstName",
     "lastName",
