@@ -6,6 +6,7 @@ import Notion from "@/public/sponsors/notion.webp";
 import RaisingCanes from "@/public/sponsors/raising_canes.webp";
 import Redbull from "@/public/sponsors/redbull.webp";
 import Snapchat from "@/public/sponsors/snapchat.webp";
+import PureButtons from "@/public/sponsors/purebuttons-logo-blue.png";
 import Fish1 from "@/public/sponsors/fish1.svg";
 import Fish2 from "@/public/sponsors/fish2.svg";
 
@@ -33,6 +34,10 @@ const sponsorships = [
   {
     logo: Snapchat,
     link: "https://www.snapchat.com",
+  },
+  {
+    logo: PureButtons,
+    link: "https://www.purebuttons.com",
   },
 ];
 
