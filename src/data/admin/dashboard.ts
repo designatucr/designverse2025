@@ -98,7 +98,15 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "discord",
     "team",
   ],
-  resumes: ["firstName", "lastName", "email", "school", "grade", "resume", "status"],
+  resumes: [
+    "firstName",
+    "lastName",
+    "email",
+    "school",
+    "grade",
+    "resume",
+    "status",
+  ],
   sponsors: [
     "firstName",
     "lastName",
