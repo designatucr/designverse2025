@@ -1,8 +1,9 @@
-import Checkbox from "@/components/checkbox";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Textarea } from "@/components/ui/textarea";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { cn } from "@/utils/tailwind";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -15,7 +16,6 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import React from "react";
-
 const Questions = ({
   fields,
   object,
@@ -28,38 +28,37 @@ const Questions = ({
     <div className="grid grid-cols-1 gap-3">
       {Object.values(fields).map((field, index) => (
         <div key={index}>
-          {field.input === "checkboxes" && (
+          {field.input === "toggle" && (
             <>
-              <div className="grid grid-cols-2 gap-2">
-                {field.options.map((option, i) => (
-                  <div
-                    key={i}
-                    className={`mb-2 flex items-center rounded-lg p-1 text-sm text-slate-600 ${
+              <ToggleGroup
+                type="multiple"
+                className="grid w-full grid-cols-3 gap-2"
+              >
+                {field.options.map((option, key) => (
+                  <ToggleGroupItem
+                    key={key}
+                    value={option}
+                    onClick={() => {
+                      setObject({
+                        ...object,
+                        [field.field]: object[field.field].includes(option)
+                          ? object[field.field].filter(
+                              (item) => item !== option,
+                            )
+                          : [...object[field.field], option],
+                      });
+                    }}
+                    className={cn(
                       object[field.field]?.includes(option)
-                        ? "bg-hackathon-green-300"
-                        : "bg-gray-200"
-                    }`}
+                        ? "!bg-hackathon-tags-teal-bg"
+                        : "bg-gray-200",
+                      "w-full rounded-xl text-sm",
+                    )}
                   >
-                    <Checkbox
-                      id={option.id}
-                      checked={object[field.field]?.includes(option)}
-                      onClick={() => {
-                        setObject({
-                          ...object,
-                          [field.field]: object[field.field]?.includes(option)
-                            ? object[field.field].filter(
-                                (item) => item !== option,
-                              )
-                            : [...object[field.field], option],
-                        });
-                      }}
-                      key={i}
-                    >
-                      {option}
-                    </Checkbox>
-                  </div>
+                    {option}
+                  </ToggleGroupItem>
                 ))}
-              </div>
+              </ToggleGroup>
             </>
           )}
           {field.input === "slider" && (
@@ -73,8 +72,7 @@ const Questions = ({
                 </Label>
               </div>
               <div className="mb-2 flex justify-between text-xs text-gray-500">
-                <p>poor</p>
-                <p>excellent</p>
+                <p>poor</p> <p>excellent</p>
               </div>
               <Slider
                 defaultValue={[object[field.field]?.rating || 0]}
@@ -149,5 +147,4 @@ const Questions = ({
     </div>
   );
 };
-
 export default Questions;
