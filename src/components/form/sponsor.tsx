@@ -42,6 +42,7 @@ const Sponsor = () => {
       header="SPONSORSHIP INQUIRY"
       onSubmit={onSubmit}
       statuses={STATUSES}
+      packet={true}
     />
   );
 };

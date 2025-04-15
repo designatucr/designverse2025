@@ -41,7 +41,7 @@ const Events = ({ events, totalDays }: props) => {
             }) === selectedDay,
         ).length == 0 ? (
           <div className="flex flex-row justify-center text-lg font-semibold">
-            No events Available
+            No events available
           </div>
         ) : (
           <>

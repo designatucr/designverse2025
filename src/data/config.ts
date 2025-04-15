@@ -16,20 +16,20 @@ type config = {
 };
 
 const data: config = {
-  name: "HACKATHON",
-  short_name: "Hackathon Site",
-  email: "contact.acmucr@gmail.com",
-  description: "DESCRIPTION",
+  name: "DesignVerse 2025",
+  short_name: "DesignVerse",
+  email: "designverseucr@gmail.com",
+  description: "",
   length: 24,
-  date: new Date("2024-04-12T13:20:00"),
-  end: new Date("2024-04-12T13:20:00"),
-  packet: "",
-  devpost: "https://devpost.com/",
-  domain: "https://www.placeholder.com",
-  instagram: "https://www.instagram.com",
-  linkedin: "https://www.linkedin.com",
-  discord: "https://www.discord.com",
-  heart: "🤎",
+  date: new Date("2025-05-10T08:00:00"),
+  end: new Date("2025-05-11T16:00:00"),
+  packet: "/DesignVerseSponsorship2025.pdf",
+  devpost: "https://designverseucr.devpost.com",
+  domain: "https://www.designverseucr.com",
+  instagram: "https://www.instagram.com/designverseucr/",
+  linkedin: "https://www.linkedin.com/company/designverseucr",
+  discord: "https://discord.gg/Vck5zFjz6m",
+  heart: "💙",
 };
 
 export default data;

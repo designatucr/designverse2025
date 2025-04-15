@@ -18,6 +18,12 @@ jobs:
           path: ${{ github.repository }}
           token: ${{ secrets.WORKFLOW_TOKEN }}
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "Github Actions Bot"
+          git config --global user.email "actions@github.com"
+          git config --global pull.rebase false
+
       - name: Fetch all
         working-directory: ${{ github.repository }}
         run: |
