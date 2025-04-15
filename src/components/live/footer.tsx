@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "@/public/logos/short.webp";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Mail, FileText } from "lucide-react";
 import {
   SiInstagram,
   SiLinkedin,
@@ -38,7 +38,7 @@ const Footer = () => {
         className="absolute bottom-[95%] w-full blur-[2px]"
       />
 
-      <div className="flex flex-col items-center justify-center gap-4 bg-[#081c28] py-5 text-white">
+      <div className="flex flex-col items-center justify-center gap-3 bg-[#081c28] py-5 text-white">
         <Image src={logo} width={100} alt="DesignVerse Short logo" />
         <div className="flex items-center justify-center gap-4">
           <Link href={`mailto:${data.email}`}>
@@ -52,6 +52,9 @@ const Footer = () => {
           </Link>
           <Link href="https://www.tiktok.com/@designverseucr">
             <SiTiktok className="text-2xl text-white hover:scale-125 hover:cursor-pointer lg:text-3xl" />
+          </Link>
+          <Link href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">
+            <FileText className="text-2xl text-white hover:scale-125 hover:cursor-pointer lg:text-3xl" />
           </Link>
         </div>
         <div className="font-work">
