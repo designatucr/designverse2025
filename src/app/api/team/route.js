@@ -24,7 +24,7 @@ export const POST = async (req) => {
         figma: "",
       },
       name: team.name,
-      members: [{ discord: user.discord, name: user.name, uid: user.id }],
+      members: [{ discord: user.discord, name: `${user.firstName} ${user.lastName}`, uid: user.id }],
       status: 0,
     };
     const docRef = await addDoc(collection(db, "teams"), newTeam);
@@ -46,10 +46,10 @@ export const POST = async (req) => {
   }
 };
 
+
 export const PUT = async (req) => {
   const res = NextResponse;
   const { auth, user } = await authenticate(AUTH.PUT);
-
   if (auth !== 200) {
     return res.json(
       { message: `Authentication Error: ${"MESSAGE VARIABLE SHOULD BE HERE"}` },
