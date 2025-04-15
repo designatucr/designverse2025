@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "@/public/logos/short.webp";
 import Link from "next/link";
-import { Mail, FileText } from "lucide-react";
+import { Mail } from "lucide-react";
 import {
   SiInstagram,
   SiLinkedin,
@@ -53,10 +53,15 @@ const Footer = () => {
           <Link href="https://www.tiktok.com/@designverseucr">
             <SiTiktok className="text-2xl text-white hover:scale-125 hover:cursor-pointer lg:text-3xl" />
           </Link>
-          <Link href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">
-            <FileText className="text-2xl text-white hover:scale-125 hover:cursor-pointer lg:text-3xl" />
-          </Link>
         </div>
+
+        <Link
+          href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+          className="hover:scale-105 hover:cursor-pointer"
+        >
+          MLH Code of Conduct
+        </Link>
+
         <div className="font-work">
           Made with&nbsp;{data.heart}
           &nbsp;by the DesignVerse Team 2025
