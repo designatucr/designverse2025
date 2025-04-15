@@ -31,6 +31,7 @@ interface Attributes {
   requirements: string[];
   team: string;
   discord: string;
+  mlh: boolean;
 }
 
 interface Fields {
@@ -255,4 +256,5 @@ export const ATTRIBUTES: Attributes = {
   requirements: [],
   team: "",
   discord: "",
+  mlh: false,
 };
