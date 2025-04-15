@@ -87,6 +87,7 @@ export const POST = async (req, { params }) => {
 
     return res.json({ message: "OK" }, { status: 200 });
   } catch (err) {
+    console.log(err.message);
     return res.json(
       { message: `Internal Server Error: ${err}` },
       { status: 500 },
@@ -161,6 +162,8 @@ export const GET = async (req, { params }) => {
 
       const total = countFromServer.data().count;
       const lastDoc = output.length > 0 ? output[output.length - 1].uid : "";
+
+      console.log(output);
 
       return res.json(
         {
