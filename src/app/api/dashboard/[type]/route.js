@@ -91,7 +91,7 @@ export const POST = async (req, { params }) => {
       send({
         email: user.email,
         id: "confirmation",
-        name: user.name,
+        name: user.firstName,
         position: params.type.slice(0, -1),
         subject: `[${data.name}] Thank you for applying!`,
         preview: `Thank you for applying to ${data.name}`,
@@ -226,7 +226,7 @@ export const PUT = async (req, { params }) => {
         await send({
           email: object.email,
           id: id,
-          name: object.name,
+          name: object.firstName,
           position: params.type.slice(0, -1),
           subject: `[${data.name}] ${subject}`,
           preview: preview,
