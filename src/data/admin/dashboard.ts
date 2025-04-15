@@ -6,6 +6,7 @@ type keys =
   | "volunteers"
   | "interests"
   | "participants"
+  | "resumes"
   | "sponsors"
   | "panels"
   | "feedback"
@@ -13,7 +14,8 @@ type keys =
 
 export const ATTRIBUTES: Record<keys, string[]> = {
   admins: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "age",
     "diet",
@@ -25,7 +27,8 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "shirt",
   ],
   committees: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "age",
     "affiliation",
@@ -37,7 +40,8 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "diet",
   ],
   judges: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "phone",
     "age",
@@ -49,7 +53,8 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "photo",
   ],
   mentors: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "discord",
     "availability",
@@ -58,7 +63,8 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "diet",
   ],
   volunteers: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "discord",
     "availability",
@@ -66,7 +72,15 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "age",
     "diet",
   ],
-  interests: ["name", "email", "age", "diet", "gender", "shirt"],
+  interests: [
+    "firstName",
+    "lastName",
+    "email",
+    "age",
+    "diet",
+    "gender",
+    "shirt",
+  ],
   participants: [
     "phone",
     "major",
@@ -77,15 +91,25 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "gender",
     "shirt",
     "diet",
-    "resume",
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "roles",
     "discord",
     "team",
   ],
+  resumes: [
+    "firstName",
+    "lastName",
+    "email",
+    "school",
+    "grade",
+    "resume",
+    "status",
+  ],
   sponsors: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "phone",
     "company",
@@ -94,7 +118,8 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "comments",
   ],
   panels: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "title",
     "gender",
@@ -113,7 +138,8 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "status",
   ],
   leads: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "grade",
     "gender",

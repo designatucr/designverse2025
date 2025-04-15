@@ -75,7 +75,14 @@ const Toolbar = ({
     try {
       await api({
         method: "DELETE",
-        url: `/api/dashboard/${page}?remove=${ids.join(",")}`,
+        url: `/api/dashboard/${page}`,
+        body: rows.map(({ uid, shirt, diet, gender, age }) => ({
+          uid,
+          shirt,
+          diet,
+          gender,
+          age,
+        })),
       });
 
       queryClient.invalidateQueries({ queryKey: [page, searchParams] });
