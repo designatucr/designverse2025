@@ -5,7 +5,11 @@ const Status = ({ object, statuses, setState }) => {
   return (
     <div className="flex flex-col items-center justify-center text-center">
       <p>
-        Hello <b>{object.name}</b>, your status is currently
+        Hello{" "}
+        <b>
+          {object.firstName} {object.lastName}
+        </b>
+        , your status is currently
       </p>
       <Badge type={object.roles[object.form]} className="my-3 capitalize">
         {statuses[object.roles[object.form]]}
