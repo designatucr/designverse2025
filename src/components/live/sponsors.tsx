@@ -3,9 +3,11 @@ import Link from "next/link";
 import Adobe from "@/public/sponsors/adobe.webp";
 import Doordash from "@/public/sponsors/doordash.webp";
 import Notion from "@/public/sponsors/notion.webp";
-import RaisingCanes from "@/public/sponsors/raising_canes.jpg";
-import Redbull from "@/public/sponsors/redbull.png";
-import Snapchat from "@/public/sponsors/snapchat.png";
+import RaisingCanes from "@/public/sponsors/raising_canes.webp";
+import Redbull from "@/public/sponsors/redbull.webp";
+import Snapchat from "@/public/sponsors/snapchat.webp";
+import Fish1 from "@/public/sponsors/fish1.svg";
+import Fish2 from "@/public/sponsors/fish2.svg";
 
 const sponsorships = [
   {
@@ -36,7 +38,7 @@ const sponsorships = [
 
 const Sponsors = () => {
   return (
-    <div className="z-[10] flex h-[70vh] flex-col items-center justify-start bg-[#3D859D]">
+    <div className="relative z-[10] flex h-[70vh] flex-col items-center justify-start bg-hackathon-blue-300">
       <p className="mt-8 flex font-sora text-3xl font-bold text-white lg:mb-8 lg:mt-32 lg:text-5xl">
         SPONSORS
       </p>
@@ -54,6 +56,16 @@ const Sponsors = () => {
           </Link>
         ))}
       </div>
+      <Image
+        src={Fish1}
+        alt="Fish1"
+        className="absolute -bottom-[20%] left-0 blur-[2px] 2xl:bottom-0"
+      />
+      <Image
+        src={Fish2}
+        alt="Fish2"
+        className="absolute right-6 top-6 blur-[2px]"
+      />
     </div>
   );
 };
