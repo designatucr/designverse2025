@@ -15,7 +15,8 @@ import data from "@/data/config";
 import { COUNTRIES } from "./countries";
 
 interface Attributes {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   major: string;
@@ -34,7 +35,8 @@ interface Attributes {
 
 interface Fields {
   description: Description;
-  name: TextInput;
+  firstName: TextInput;
+  lastName: TextInput;
   email: TextInput;
   phone: TextInput;
   discord: TextInput;
@@ -69,16 +71,27 @@ export const FIELDS: Fields = {
       "Participants are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
     ],
   },
-  name: {
+  firstName: {
     input: "input",
-    name: "name",
-    placeholder: "John Doe",
+    name: "firstName",
     type: "text",
-    title: "Name",
+    title: "First Name",
     maxLength: 50,
     width: 12,
     editable: false,
     required: true,
+    placeholder: "John",
+  },
+  lastName: {
+    input: "input",
+    name: "lastName",
+    type: "text",
+    title: "Last Name",
+    maxLength: 50,
+    width: 12,
+    editable: false,
+    required: true,
+    placeholder: "Doe",
   },
   email: {
     input: "input",
@@ -226,7 +239,8 @@ export const FIELDS: Fields = {
 };
 
 export const ATTRIBUTES: Attributes = {
-  name: "",
+  firstName: "",
+  lastName: "",
   email: "",
   phone: "",
   major: "",

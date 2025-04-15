@@ -12,7 +12,7 @@ import Contacts from "@/components/admin/services/contacts";
 import Participants from "@/components/admin/dashboards/participants";
 import Resumes from "@/components/admin/dashboards/resumes";
 import Sponsors from "@/components/admin/dashboards/sponsors";
-import Panelists from "@/components/admin/dashboards/panelists";
+import Panels from "@/components/admin/dashboards/panels";
 import Statistics from "@/components/admin/services/statistics";
 import Teams from "@/components/admin/dashboards/teams";
 import Volunteers from "@/components/admin/dashboards/volunteers";
@@ -37,7 +37,7 @@ const Page = ({ params, searchParams }) => {
     resumes: <Resumes searchParams={searchParams} />,
     settings: <Settings />,
     sponsors: <Sponsors searchParams={searchParams} />,
-    panelists: <Panelists searchParams={searchParams} />,
+    panels: <Panels searchParams={searchParams} />,
     statistics: <Statistics />,
     teams: <Teams searchParams={searchParams} />,
     volunteers: <Volunteers searchParams={searchParams} />,
