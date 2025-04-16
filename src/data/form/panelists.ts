@@ -89,7 +89,6 @@ export const FIELDS = {
     required: true,
     editable: true,
   },
-
   title: {
     input: "input",
     name: "title",

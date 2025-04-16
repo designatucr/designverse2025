@@ -26,6 +26,7 @@ type Panelist = {
   shirt: string;
   gender: string;
   grade: string;
+  company: string;
 };
 
 export const COLUMNS: (ColumnDef<Panelist> & Column)[] = [
@@ -74,6 +75,21 @@ export const COLUMNS: (ColumnDef<Panelist> & Column)[] = [
         className="hover:cursor-pointer"
       >
         {row.getValue("title")}
+      </div>
+    ),
+  },
+  {
+    accessorKey: "company",
+    header: "Company",
+    enableColumnFilter: true,
+    filterFn: "includesString",
+    searchable: true,
+    cell: ({ row }) => (
+      <div
+        onClick={row.getToggleSelectedHandler()}
+        className="hover:cursor-pointer"
+      >
+        {row.getValue("company")}
       </div>
     ),
   },
