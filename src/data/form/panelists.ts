@@ -3,8 +3,8 @@ import { SHIRTS } from "./information";
 import data from "@/data/config";
 
 export const PANELISTS = {
+  industry: "Industry Professional",
   professor: "Professor",
-  intern: "Intern",
   researcher: "Researcher",
 };
 
@@ -157,7 +157,7 @@ interface Attributes {
   photo: string;
   requirements: string[];
   company: string;
-  panelist: "Intern" | "Professor" | "Researcher";
+  panelist: "Industry Professional" | "Professor" | "Researcher";
 }
 
 export const ATTRIBUTES: Attributes = {
@@ -171,5 +171,5 @@ export const ATTRIBUTES: Attributes = {
   photo: "",
   requirements: [],
   company: "",
-  panelist: "Intern",
+  panelist: "Industry Professional",
 };
