@@ -88,7 +88,7 @@ const Rounds = ({ team }: props) => {
                           <div>
                             <div className="text-lg font-bold">{question}</div>
                             <div className="text-black/50">
-                              {comment ? comment : "No Response"}
+                              {comment ?? "No Response"}
                             </div>
                           </div>
                         </div>
