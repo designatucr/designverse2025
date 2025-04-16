@@ -43,8 +43,8 @@ const sponsorships = [
 
 const Sponsors = () => {
   return (
-    <div className="relative z-[10] flex h-[70vh] flex-col items-center justify-start bg-hackathon-blue-300">
-      <p className="mt-8 flex font-sora text-3xl font-bold text-white lg:mb-8 lg:mt-32 lg:text-5xl">
+    <div className="relative z-[10] flex flex-col items-center justify-start bg-hackathon-blue-300 py-[10vh]">
+      <p className="mb-8 mt-8 flex font-sora text-4xl font-bold text-white lg:mb-8 lg:mt-32 lg:text-5xl">
         SPONSORS
       </p>
       <div className="flex w-9/12 flex-wrap justify-center gap-16">
@@ -53,9 +53,7 @@ const Sponsors = () => {
             <Image
               src={logo}
               alt="Sponsor Logo"
-              width={200}
-              height={200}
-              className="aspect-square rounded-full bg-white hover:scale-110"
+              className="aspect-square w-32 rounded-full bg-white hover:scale-110 md:w-48"
               objectFit="contain"
             />
           </Link>
@@ -64,12 +62,12 @@ const Sponsors = () => {
       <Image
         src={Fish1}
         alt="Fish1"
-        className="absolute -bottom-[20%] left-0 blur-[2px] 2xl:bottom-0"
+        className="absolute -bottom-[20%] left-0 w-1/4 blur-[2px] md:w-auto 2xl:bottom-0"
       />
       <Image
         src={Fish2}
         alt="Fish2"
-        className="absolute right-6 top-6 blur-[2px]"
+        className="absolute right-6 top-6 w-1/4 blur-[2px] md:w-auto"
       />
     </div>
   );
