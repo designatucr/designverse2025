@@ -10,7 +10,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const Statistics = () => {
   const { data } = useQuery({
-    queryKey: ["/admin/statistics"],
+    queryKey: ["/api/statistics"],
     queryFn: async () => api({ url: "/api/statistics", method: "GET" }),
   });
 
