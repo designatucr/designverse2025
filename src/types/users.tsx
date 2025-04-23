@@ -1,3 +1,5 @@
+import { Round } from "./rounds";
+
 export type Team = {
   id: string;
   name: string;
@@ -7,7 +9,7 @@ export type Team = {
   }[];
   discords: string[];
   links: {
-    name: string;
-    link: string;
+    [link: string]: string;
   }[];
+  rounds: Round[][];
 };
