@@ -6,7 +6,8 @@ import Notion from "@/public/sponsors/notion.webp";
 import RaisingCanes from "@/public/sponsors/raising_canes.webp";
 import Redbull from "@/public/sponsors/redbull.webp";
 import Snapchat from "@/public/sponsors/snapchat.webp";
-import PureButtons from "@/public/sponsors/purebuttons-logo-blue.png";
+import PureButtons from "@/public/sponsors/purebuttons-logo-blue.webp";
+import SchoolofBusiness from "@/public/sponsors/school_of_business.webp";
 import Fish1 from "@/public/sponsors/fish1.svg";
 import Fish2 from "@/public/sponsors/fish2.svg";
 
@@ -38,6 +39,10 @@ const sponsorships = [
   {
     logo: PureButtons,
     link: "https://www.purebuttons.com",
+  },
+  {
+    logo: SchoolofBusiness,
+    link: "https://business.ucr.edu",
   },
 ];
 
