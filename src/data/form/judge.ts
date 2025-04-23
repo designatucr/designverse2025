@@ -17,7 +17,7 @@ interface Attributes {
   gender: string;
   age: string;
   shirt: string;
-  affiliation: "Professor" | "Student" | "Industry";
+  affiliation: "Professor" | "Student" | "Industry Professional";
   title: string;
   photo: string;
   diet: string;
@@ -43,7 +43,7 @@ interface Fields {
 export const AFFILIATIONS: Record<string, string> = {
   professor: "Professor",
   student: "Student",
-  industry: "Industry",
+  industry: "Industry Professional",
 };
 
 export const FIELDS: Fields = {

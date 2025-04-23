@@ -17,7 +17,7 @@ export const schema = z.object({
   shirt: z.enum(SHIRTS as [string, ...string[]], {
     message: "Please select your shirt size",
   }),
-  affiliation: z.enum(["Professor", "Student", "Industry"], {
+  affiliation: z.enum(["Professor", "Student", "Industry Professional"], {
     message: "Please select your affiliation",
   }),
   title: z.string().min(1, { message: "Title is required" }),
