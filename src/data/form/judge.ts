@@ -43,7 +43,7 @@ interface Fields {
 export const AFFILIATIONS: Record<string, string> = {
   professor: "Professor",
   student: "Student",
-  industry: "Industry Professional",
+  "industry professional": "Industry Professional",
 };
 
 export const FIELDS: Fields = {
