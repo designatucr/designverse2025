@@ -287,7 +287,7 @@ const Toolbar = ({
           />
         </div>
 
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center gap-3">
           {tags.map((tag, index) => (
             <Badge type={tag} key={index}>
               {tag}

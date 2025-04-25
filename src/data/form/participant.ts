@@ -50,6 +50,10 @@ interface Fields {
   shirt: RadioInput;
   diet: RadioInput;
   resume: UploadInput;
+  socials: TextInput;
+  food: TextInput;
+  overnight: RadioInput;
+  meeting: RadioInput;
   requirements: TermsAndConditions;
 }
 
@@ -62,7 +66,7 @@ export const FIELDS: Fields = {
         data.name
       }. Thank you for considering to become a participant, we appreciate your enthusiasm to join ${
         data.name
-      }. ${data.name} is a ${data.description} hackathon spanning ${
+      }. ${data.name} is a ${data.description} designathon spanning ${
         data.length
       } hours on ${data.date.toLocaleString("default", {
         month: "long",
@@ -219,6 +223,46 @@ export const FIELDS: Fields = {
     required: false,
     editable: true,
   },
+  socials: {
+    input: "input",
+    name: "socials",
+    placeholder: "ie. Movie Night",
+    type: "text",
+    title: "What socials and activities would you be interested in? ",
+    maxLength: 50,
+    width: 12,
+    required: true,
+    editable: true,
+  },
+  food: {
+    input: "input",
+    name: "food",
+    placeholder: "Sandwiches",
+    type: "text",
+    title: "What food would you be interested in having?",
+    maxLength: 50,
+    width: 12,
+    required: true,
+    editable: true,
+  },
+  overnight: {
+    input: "radio",
+    text: "Would you be staying overnight for the event?",
+    options: ["Yes", "No", "Maybe"],
+    field: "overnight",
+    width: 12,
+    required: true,
+    editable: true,
+  },
+  meeting: {
+    input: "radio",
+    text: "Would you be interested in meeting teammates during the event or prior?",
+    options: ["Prior to the Event", "During the Event", "N/A"],
+    field: "meeting",
+    width: 12,
+    required: true,
+    editable: true,
+  },
   requirements: {
     text: "Terms and Conditions",
     input: "terms",
@@ -231,7 +275,7 @@ export const FIELDS: Fields = {
       "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy",
       "I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
       "I consent to photographs being taken and being used for marketing purposes",
-      "I consent to providing a safe space for hackers to learn and grow their interests in computing",
+      "I consent to providing a safe space for designers to learn and grow their interests in computing",
       "I consent to following the provided guidelines and rules instructed by the organizing team",
       "I understand that failure to comply with guidelines or creating an unsafe space will result in my removal from the event",
       "I understand this is an in person event taking place in UCR and I must attend in person in order to participate",

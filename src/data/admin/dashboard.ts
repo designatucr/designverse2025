@@ -127,6 +127,7 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "panelist",
     "shirt",
     "photo",
+    "company",
   ],
   feedback: [
     "rating",
