@@ -1,4 +1,4 @@
-import { GENDERS } from "./information";
+import { DIETS, GENDERS } from "./information";
 import { SHIRTS } from "./information";
 import data from "@/data/config";
 
@@ -116,7 +116,15 @@ export const FIELDS = {
     width: 12,
     required: true,
   },
-
+  diet: {
+    input: "radio",
+    text: "Dietary Restrictions",
+    width: 12,
+    field: "diet",
+    options: DIETS,
+    required: true,
+    editable: true,
+  },
   photo: {
     input: "upload",
     field: "photo",
@@ -157,6 +165,7 @@ interface Attributes {
   requirements: string[];
   company: string;
   panelist: "Industry Professional" | "Professor" | "Researcher";
+  diet: string;
 }
 
 export const ATTRIBUTES: Attributes = {
@@ -171,4 +180,5 @@ export const ATTRIBUTES: Attributes = {
   requirements: [],
   company: "",
   panelist: "Industry Professional",
+  diet: "",
 };

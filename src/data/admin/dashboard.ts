@@ -128,6 +128,7 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "shirt",
     "photo",
     "company",
+    "diet",
   ],
   feedback: [
     "rating",
