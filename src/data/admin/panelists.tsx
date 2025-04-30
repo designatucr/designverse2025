@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ColumnDef } from "@tanstack/react-table";
 import { Column } from "@/types/dashboard";
 import { Panelist } from "@/types/users";
+import { COLORS } from "../tags";
 
 export const TAGS = [
   {
@@ -85,8 +86,15 @@ export const COLUMNS: (ColumnDef<Panelist, string> & Column)[] = [
     accessorKey: "panelist",
     header: "Panelist",
     cell: ({ row }) => (
-      <Badge className="capitalize" type={row.getValue("panelist")}>
-        {(row.getValue("panelist") as string).toLowerCase()}
+      <Badge
+        className="capitalize"
+        type={
+          (
+            row.getValue("panelist") as string
+          ).toLowerCase() as keyof typeof COLORS
+        }
+      >
+        {row.getValue("panelist")}
       </Badge>
     ),
     searchable: false,
