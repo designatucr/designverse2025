@@ -86,7 +86,7 @@ export const COLUMNS: (ColumnDef<Panelist, string> & Column)[] = [
     header: "Panelist",
     cell: ({ row }) => (
       <Badge className="capitalize" type={row.getValue("panelist")}>
-        {row.getValue("panelist")}
+        {(row.getValue("panelist") as string).toLowerCase()}
       </Badge>
     ),
     searchable: false,
