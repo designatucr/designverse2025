@@ -8,6 +8,8 @@ import Redbull from "@/public/sponsors/redbull.webp";
 import Snapchat from "@/public/sponsors/snapchat.webp";
 import PureButtons from "@/public/sponsors/purebuttons-logo-blue.webp";
 import SchoolofBusiness from "@/public/sponsors/school_of_business.webp";
+import ProgressiveGraphics from "@/public/sponsors/progressive.png";
+
 import Fish1 from "@/public/sponsors/fish1.svg";
 import Fish2 from "@/public/sponsors/fish2.svg";
 
@@ -43,6 +45,10 @@ const sponsorships = [
   {
     logo: SchoolofBusiness,
     link: "https://business.ucr.edu",
+  },
+  {
+    logo: ProgressiveGraphics,
+    link: "https://progressive-graphics.com/Progressive_Graphics/shop/home",
   },
 ];
 
