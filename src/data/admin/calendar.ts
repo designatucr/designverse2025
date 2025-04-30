@@ -11,7 +11,7 @@ export type EventTypes =
   | "marketing"
   | "operations"
   | "sponsorship"
-  | "publicRelations"
+  | "public relations"
   | "recruitment"
   | "software"
   | "uiux"
@@ -48,7 +48,7 @@ export const LABELS: Record<EventTypes, types> = {
     background: "!bg-hackathon-tags-purple-text",
     type: "leads",
   },
-  publicRelations: {
+  "public relations": {
     color: "teal",
     background: "!bg-hackathon-tags-teal-text",
     type: "leads",

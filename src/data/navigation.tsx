@@ -134,12 +134,12 @@ export const TABS: Tabs = {
     Services: {
       expand: true,
       tabs: [
-        {
-          name: "Calendar",
-          link: "/admin/calendar",
-          icon: <Calendar className={iconStyle} />,
-          target: "_self",
-        },
+        // {
+        //   name: "Calendar",
+        //   link: "/admin/calendar",
+        //   icon: <Calendar className={iconStyle} />,
+        //   target: "_self",
+        // },
         {
           name: "Contacts",
           link: "/admin/contacts",

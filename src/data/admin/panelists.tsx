@@ -85,7 +85,9 @@ export const COLUMNS: (ColumnDef<Panelist, string> & Column)[] = [
     accessorKey: "panelist",
     header: "Panelist",
     cell: ({ row }) => (
-      <Badge type={row.getValue("panelist")}>{row.getValue("panelist")}</Badge>
+      <Badge className="capitalize" type={row.getValue("panelist")}>
+        {row.getValue("panelist")}
+      </Badge>
     ),
     searchable: false,
   },
