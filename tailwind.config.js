@@ -19,6 +19,10 @@ module.exports = {
       colors: {
         designverse: {
           primary: "#07374B",
+          schedule: {
+            unselected: "#143841",
+            selected: "#458C9E",
+          },
           gradients: {
             landing: {
               start: "#61C0F0",

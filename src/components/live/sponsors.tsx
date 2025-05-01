@@ -8,7 +8,7 @@ import Redbull from "@/public/sponsors/redbull.webp";
 import Snapchat from "@/public/sponsors/snapchat.webp";
 import PureButtons from "@/public/sponsors/purebuttons-logo-blue.webp";
 import SchoolofBusiness from "@/public/sponsors/school_of_business.webp";
-import ProgressiveGraphics from "@/public/sponsors/progressive.png";
+import ProgressiveGraphics from "@/public/sponsors/progressive.webp";
 
 import Fish1 from "@/public/sponsors/fish1.svg";
 import Fish2 from "@/public/sponsors/fish2.svg";
@@ -64,8 +64,7 @@ const Sponsors = () => {
             <Image
               src={logo}
               alt="Sponsor Logo"
-              className="aspect-square w-32 rounded-full bg-white hover:scale-110 md:w-48"
-              objectFit="contain"
+              className="aspect-square w-32 rounded-full bg-white object-contain hover:scale-110 md:w-48"
             />
           </Link>
         ))}

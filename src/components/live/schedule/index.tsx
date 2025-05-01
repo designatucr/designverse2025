@@ -1,37 +1,30 @@
-// import { api } from "@/utils/api";
-// import Events from "./events";
-
+import { api } from "@/utils/api";
+import Events from "./events";
 import Image from "next/image";
-import Coming from "@/public/schedule/coming.svg";
 import Fish from "@/public/schedule/fish.svg";
 import Vine from "@/public/schedule/vine.svg";
 import BubblesLeft from "@/public/schedule/left_bubbles.svg";
 import BubblesRight from "@/public/schedule/right_bubbles.svg";
 
 const Schedule = async () => {
-  // const { items } = await api({
-  //   url: `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR}/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime`,
-  //   method: "GET",
-  // });
+  const { items } = await api({
+    url: `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR}/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime`,
+    method: "GET",
+    headers: {
+      "User-Agent": "Mozilla/5.0",
+      "Cache-Control": "no-cache",
+    },
+  });
 
-  // items.forEach((event) => {
-  //   event.start = new Date(event.start.dateTime);
-  //   event.end = new Date(event.end.dateTime);
-  //   event.day = event.start.toLocaleString("en-US", {
-  //     timeZone: "America/Los_Angeles",
-  //     weekday: "long",
-  //   });
-  // });
-
-  // const totalDays = [
-  //   "Monday",
-  //   "Tuesday",
-  //   "Wednesday",
-  //   "Thursday",
-  //   "Friday",
-  //   "Saturday",
-  //   "Sunday",
-  // ];
+  const totalDays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
 
   return (
     <div className="relative">
@@ -39,7 +32,7 @@ const Schedule = async () => {
         id="schedule"
         className="flex flex-col items-center justify-start bg-[#3D859D] py-40 text-white"
       >
-        <div className="-mb-10 flex w-full items-center justify-between md:w-8/12">
+        <div className="-mb-10 flex w-full items-center justify-between md:w-9/12">
           <Image
             src={BubblesLeft}
             alt="BubblesLeft"
@@ -60,13 +53,7 @@ const Schedule = async () => {
           Pacific Standard Time (PST)
         </p>
 
-        <Image
-          src={Coming}
-          alt="Coming Soon"
-          className="my-20 w-2/3 md:w-auto"
-        />
-
-        {/* <Events events={items} totalDays={totalDays} /> */}
+        <Events events={items} totalDays={totalDays} />
       </section>
       <Image
         src={Fish}

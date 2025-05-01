@@ -1,6 +1,8 @@
 "use client";
 import { GoogleEvent } from "@/types/calendar";
 import { useState } from "react";
+import Column from "@/public/schedule/column.svg";
+import Image from "next/image";
 
 interface props {
   events: GoogleEvent[];
@@ -19,12 +21,14 @@ const Events = ({ events, totalDays }: props) => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="mx-auto grid w-10/12 grid-cols-7 items-center justify-between rounded border-2 border-black text-base">
+      <div className="z-10 grid w-full grid-cols-7 items-center justify-between gap-4 rounded text-base">
         {totalDays.map((day) => (
           <button
             key={day}
-            className={`flex justify-center rounded p-2 text-black focus:outline-none ${
-              selectedDay === day ? "bg-hackathon-blue-100" : "bg-transparent"
+            className={`flex justify-center rounded p-2 text-white focus:outline-none ${
+              selectedDay === day
+                ? "bg-designverse-schedule-selected"
+                : "bg-designverse-schedule-unselected"
             }`}
             onClick={() => setSelectedDay(day)}
           >
@@ -32,7 +36,7 @@ const Events = ({ events, totalDays }: props) => {
           </button>
         ))}
       </div>
-      <div className="mt-6 h-full w-10/12">
+      <div className="z-10 mt-6 h-full w-full">
         {events.filter(
           ({ start }) =>
             new Date(start.dateTime).toLocaleString("en-US", {
@@ -40,11 +44,11 @@ const Events = ({ events, totalDays }: props) => {
               weekday: "long",
             }) === selectedDay,
         ).length == 0 ? (
-          <div className="flex flex-row justify-center text-lg font-semibold">
-            No events available
+          <div className="mt-6 flex flex-row justify-center text-lg font-semibold">
+            No Events Available
           </div>
         ) : (
-          <>
+          <div className="mt-6 flex-col gap-4">
             {events
               .filter(
                 ({ start }) =>
@@ -53,12 +57,14 @@ const Events = ({ events, totalDays }: props) => {
                     weekday: "long",
                   }) === selectedDay,
               )
-              .map(({ start, summary, description, location }, index) => (
+              .map(({ start, summary, location }, index) => (
                 <div
                   key={index}
-                  className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-3 text-lg font-semibold"
+                  className="font-workSans relative grid w-full grid-cols-5 items-center justify-center px-4 py-3 text-center text-lg font-semibold text-black"
                 >
-                  <p>
+                  <Image src={Column} alt="Column" className="absolute -z-10" />
+                  <p className="col-start-2">{summary}</p>
+                  <p className="">
                     {new Date(new Date(start.dateTime)).toLocaleTimeString(
                       "en-US",
                       {
@@ -68,14 +74,10 @@ const Events = ({ events, totalDays }: props) => {
                       },
                     )}
                   </p>
-                  <p className="flex w-full justify-center">{summary}</p>
-                  <p className="flex justify-center">
-                    {description.split("\n")[0].slice(1)}
-                  </p>
-                  <p className="flex justify-center">{location}</p>
+                  <p>{location}</p>
                 </div>
               ))}
-          </>
+          </div>
         )}
       </div>
     </div>
