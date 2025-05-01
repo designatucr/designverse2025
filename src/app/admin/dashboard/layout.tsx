@@ -1,3 +1,4 @@
+import ProtectedPage from "@/components/protected";
 import Providers from "@/components/providers";
 import { Toaster } from "react-hot-toast";
 import { getServerSession } from "next-auth";
@@ -13,7 +14,7 @@ const AdminLayout = async ({ children }: Props) => {
   return (
     <Providers session={session}>
       <Toaster />
-      {children}
+      <ProtectedPage restrictions={{ admins: [1] }}>{children}</ProtectedPage>
     </Providers>
   );
 };

@@ -1,17 +1,16 @@
-import ProtectedPage from "@/components/protected";
 import Volunteers from "@/components/admin/dashboards/volunteers";
 import { SearchParams } from "@/types/dashboard";
+
+export const metadata = {
+  title: "Admin | Volunteers",
+};
 
 type props = {
   searchParams: SearchParams;
 };
 
 const Page = ({ searchParams }: props) => {
-  return (
-    <ProtectedPage title="Admin | Volunteers" restrictions={{ admins: [1] }}>
-      <Volunteers searchParams={searchParams} />
-    </ProtectedPage>
-  );
+  return <Volunteers searchParams={searchParams} />;
 };
 
 export default Page;

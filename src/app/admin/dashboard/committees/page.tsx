@@ -1,17 +1,16 @@
-import ProtectedPage from "@/components/protected";
 import Committees from "@/components/admin/dashboards/committees";
 import { SearchParams } from "@/types/dashboard";
+
+export const metadata = {
+  title: "Admin | Committees",
+};
 
 type props = {
   searchParams: SearchParams;
 };
 
 const Page = ({ searchParams }: props) => {
-  return (
-    <ProtectedPage title="Admin | Committees" restrictions={{ admins: [1] }}>
-      <Committees searchParams={searchParams} />
-    </ProtectedPage>
-  );
+  return <Committees searchParams={searchParams} />;
 };
 
 export default Page;

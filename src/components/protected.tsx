@@ -8,10 +8,9 @@ import SignIn from "@/utils/signin";
 interface props {
   children: React.ReactNode;
   restrictions: Record<string, number[]>;
-  title: string;
 }
 
-const ProtectedPage = async ({ children, restrictions, title }: props) => {
+const ProtectedPage = async ({ children, restrictions }: props) => {
   const session = await getSession();
   const header = headers();
   const pathName = header.get("x-url") || "";
@@ -46,7 +45,6 @@ const ProtectedPage = async ({ children, restrictions, title }: props) => {
 
   return (
     <>
-      <title>{title}</title>
       {navigation && <Navigation />}
       <div className="relative z-0 flex h-screen w-full items-start overflow-x-hidden bg-hackathon-page px-10">
         <div className="h-full w-full py-10 md:py-0">{children}</div>

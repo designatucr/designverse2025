@@ -1,17 +1,16 @@
-import ProtectedPage from "@/components/protected";
 import Interests from "@/components/admin/dashboards/interests";
 import { SearchParams } from "@/types/dashboard";
+
+export const metadata = {
+  title: "Admin | Interests",
+};
 
 type props = {
   searchParams: SearchParams;
 };
 
 const Page = ({ searchParams }: props) => {
-  return (
-    <ProtectedPage title="Admin | Interests" restrictions={{ admins: [1] }}>
-      <Interests searchParams={searchParams} />
-    </ProtectedPage>
-  );
+  return <Interests searchParams={searchParams} />;
 };
 
 export default Page;
