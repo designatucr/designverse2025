@@ -10,7 +10,7 @@ import Divyank from "@/public/team/divyank.webp";
 import Hannah from "@/public/team/hannah.webp";
 import Hrithik from "@/public/team/hrithik.webp";
 import Kaitlyn from "@/public/team/kaitlyn.webp";
-import Natalie from "@/public/team/natalie.webp";
+import Natalie from "@/public/team/natalie.jpg";
 import Peter from "@/public/team/peter.webp";
 import Saanvi from "@/public/team/saanvi.webp";
 import Sarah from "@/public/team/sarah.webp";

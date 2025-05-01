@@ -1476,6 +1476,7 @@ export const SCHOOLS: schools = [
   "Santa Barbara City College",
   "Santa Clara University",
   "Santa Margarita Catholic High School",
+  "Santa Monica College",
   "Santa Rosa Junior College",
   "Saratoga High School",
   "Sardar Patel Institute Of Technology",
