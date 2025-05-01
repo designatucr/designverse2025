@@ -64,8 +64,7 @@ const Sponsors = () => {
             <Image
               src={logo}
               alt="Sponsor Logo"
-              className="aspect-square w-32 rounded-full bg-white hover:scale-110 md:w-48"
-              objectFit="contain"
+              className="aspect-square w-32 rounded-full bg-white object-contain hover:scale-110 md:w-48"
             />
           </Link>
         ))}
