@@ -1,12 +1,16 @@
 import Judge from "@/components/form/judge";
 import ProtectedPage from "@/components/protected";
 
+export const metadata = {
+    title: "Judge | Register",
+}
+
 const Page = () => {
-  return (
-    <ProtectedPage title="Judge | Register" restrictions={{}}>
-      <Judge />
-    </ProtectedPage>
-  );
+    return (
+        <ProtectedPage restrictions={{}}>
+            <Judge />
+        </ProtectedPage>
+    );
 };
 
 export default Page;

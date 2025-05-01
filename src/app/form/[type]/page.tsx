@@ -15,40 +15,40 @@ import React from "react";
 import { notFound } from "next/navigation";
 
 type props = {
-  params: { type: string };
+    params: { type: string };
 };
 
 const components: Record<string, React.ReactElement> = {
-  admin: <Admin />,
-  committee: <Committee />,
-  feedback: <Feedback />,
-  interest: <Interest />,
-  mentor: <Mentor />,
-  participant: <Participant />,
-  judge: <Judge />,
-  sponsor: <Sponsor />,
-  panel: <Panel />,
-  volunteer: <Volunteer />,
-  lead: <Lead />,
-  idea: <Ideas />,
+    admin: <Admin />,
+    committee: <Committee />,
+    feedback: <Feedback />,
+    interest: <Interest />,
+    mentor: <Mentor />,
+    participant: <Participant />,
+    judge: <Judge />,
+    sponsor: <Sponsor />,
+    panel: <Panel />,
+    volunteer: <Volunteer />,
+    lead: <Lead />,
+    idea: <Ideas />,
 };
 const capitalizeFirstLetter = (word: string) => {
-  return word[0].toUpperCase() + word.slice(1);
+    return word[0].toUpperCase() + word.slice(1);
 };
 
 const Page = ({ params }: props) => {
-  if (components.hasOwnProperty(params.type)) {
-    return (
-      <ProtectedPage
-        title={`Form | ${capitalizeFirstLetter(params.type)}`}
-        restrictions={{}}
-      >
-        {components[params.type]}
-      </ProtectedPage>
-    );
-  } else {
-    notFound();
-  }
+    if (components.hasOwnProperty(params.type)) {
+        return (
+            <ProtectedPage
+                title={`Form | ${capitalizeFirstLetter(params.type)}`}
+                restrictions={{}}
+            >
+                {components[params.type]}
+            </ProtectedPage>
+        );
+    } else {
+        notFound();
+    }
 };
 
 export default Page;
