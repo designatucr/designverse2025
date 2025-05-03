@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import Jessica from "@/public/judges/jessica.jpeg";
-import Mike from "@/public/judges/mike.jpeg";
-import Hara from "@/public/judges/hara.jpeg";
-import Jerry from "@/public/judges/jerry.jpeg";
+import Jessica from "@/public/judges/jessica.webp";
+import Mike from "@/public/judges/mike.webp";
+import Hara from "@/public/judges/hara.webp";
+import Jerry from "@/public/judges/jerry.webp";
 
 const judges = [
   {
