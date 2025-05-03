@@ -52,7 +52,7 @@ const Judges = () => {
           >
             <Image
               src={image}
-              alt="Lead picture"
+              alt="Judge Picture"
               width={200}
               height={200}
               className="aspect-square rounded-full hover:scale-110"
