@@ -20,7 +20,7 @@ const Events = ({ events, totalDays }: props) => {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex w-8/12 flex-col items-center justify-center">
       <div className="z-10 grid w-full grid-cols-7 items-center justify-between gap-4 rounded text-base">
         {totalDays.map((day) => (
           <button
@@ -48,7 +48,7 @@ const Events = ({ events, totalDays }: props) => {
             No Events Available
           </div>
         ) : (
-          <div className="mt-6 flex-col gap-4">
+          <div className="mt-6 flex flex-col items-center justify-center gap-4">
             {events
               .filter(
                 ({ start }) =>
@@ -60,10 +60,14 @@ const Events = ({ events, totalDays }: props) => {
               .map(({ start, summary, location }, index) => (
                 <div
                   key={index}
-                  className="font-workSans relative grid w-full grid-cols-5 items-center justify-center px-4 py-3 text-center text-lg font-semibold text-black"
+                  className="font-workSans relative mt-4 grid w-full grid-cols-6 items-center justify-center px-4 py-8 text-center text-lg font-semibold text-black"
                 >
-                  <Image src={Column} alt="Column" className="absolute -z-10" />
-                  <p className="col-start-2">{summary}</p>
+                  <Image
+                    src={Column}
+                    alt="Column"
+                    className="absolute -z-10 w-full"
+                  />
+                  <p className="col-span-2 col-start-2">{summary}</p>
                   <p className="">
                     {new Date(new Date(start.dateTime)).toLocaleTimeString(
                       "en-US",
