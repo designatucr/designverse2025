@@ -69,7 +69,7 @@
     "firebase-admin": "^12.5.0",
     "input-otp": "^1.2.4",
     "jszip": "^3.10.1",
-    "lucide-react": "^0.446.0",
+    "lucide-react": "^0.507.0",
     "next": "^14.2.13",
     "next-auth": "^4.24.7",
     "next-route-visualizer": "^1.1.3",

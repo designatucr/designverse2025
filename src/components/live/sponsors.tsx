@@ -54,7 +54,10 @@ const sponsorships = [
 
 const Sponsors = () => {
   return (
-    <div className="relative z-[10] flex flex-col items-center justify-start bg-hackathon-blue-300 py-[10vh]">
+    <section
+      id="sponsors"
+      className="relative z-[10] flex flex-col items-center justify-start bg-hackathon-blue-300 py-[10vh]"
+    >
       <p className="mb-8 mt-8 flex font-sora text-4xl font-bold text-white lg:mb-8 lg:mt-32 lg:text-5xl">
         SPONSORS
       </p>
@@ -79,7 +82,7 @@ const Sponsors = () => {
         alt="Fish2"
         className="absolute right-6 top-6 w-1/4 blur-[2px] md:w-auto"
       />
-    </div>
+    </section>
   );
 };
 

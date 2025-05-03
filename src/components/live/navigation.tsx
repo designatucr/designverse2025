@@ -12,6 +12,8 @@ import {
   Calendar,
   CupSoda,
   Droplets,
+  Shrimp,
+  Bubbles,
 } from "lucide-react";
 
 const items = [
@@ -44,6 +46,16 @@ const items = [
     name: "Resources",
     link: "/#resources",
     icon: <Fish />,
+  },
+  {
+    name: "Sponsors",
+    link: "/#sponsors",
+    icon: <Shrimp />,
+  },
+  {
+    name: "Judges",
+    link: "/#judges",
+    icon: <Bubbles />,
   },
   {
     name: "Meet the Team",
