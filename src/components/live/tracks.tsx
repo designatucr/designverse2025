@@ -56,10 +56,13 @@ const tracks = [
 
 const Tracks = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-hackathon-blue-300">
-      <h1 className="py-8 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
+    <section
+      id="tracks"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-hackathon-blue-300"
+    >
+      <h2 className="py-8 font-sora text-3xl font-bold text-white lg:mb-8 lg:text-5xl">
         TRACKS
-      </h1>
+      </h2>
       <div className="mx-auto w-full py-16 lg:max-w-7xl">
         <div className="flex flex-col items-center gap-6 md:flex-row md:flex-wrap md:justify-center">
           <div className="flex w-full flex-col items-center gap-6 md:w-11/12 md:flex-row md:justify-center">
@@ -106,7 +109,7 @@ const Tracks = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

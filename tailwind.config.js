@@ -21,7 +21,7 @@ module.exports = {
           primary: "#07374B",
           schedule: {
             unselected: "#143841",
-            selected: "#458C9E",
+            selected: "#5DB5CB",
           },
           gradients: {
             landing: {

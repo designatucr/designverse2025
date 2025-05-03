@@ -11,6 +11,7 @@ import {
   CircleHelp,
   Calendar,
   CupSoda,
+  Droplets,
 } from "lucide-react";
 
 const items = [
@@ -20,7 +21,7 @@ const items = [
     icon: <Anchor />,
   },
   {
-    name: "About",
+    name: "About Us",
     link: "/#about",
     icon: <Waves />,
   },
@@ -28,6 +29,11 @@ const items = [
     name: "Support Us",
     link: "/#support-us",
     icon: <Ship />,
+  },
+  {
+    name: "Tracks",
+    link: "/#tracks",
+    icon: <Droplets />,
   },
   {
     name: "Schedule",
@@ -40,7 +46,7 @@ const items = [
     icon: <Fish />,
   },
   {
-    name: "Team",
+    name: "Meet the Team",
     link: "/#team",
     icon: <CupSoda />,
   },
