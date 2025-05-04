@@ -28,6 +28,17 @@ const Schedule = async () => {
 
   return (
     <div className="relative">
+      <Image
+        src={Fish}
+        alt="Fish"
+        className="absolute right-4 top-72 z-10 w-1/6 blur-[2px] md:top-96 lg:right-20"
+      />
+      <Image
+        src={Vine}
+        alt="Vine"
+        className="absolute left-0 top-72 w-1/6 blur-[2px] md:top-96"
+      />
+
       <section
         id="schedule"
         className="flex flex-col items-center justify-start bg-[#3D859D] py-40 text-white"
@@ -55,16 +66,6 @@ const Schedule = async () => {
 
         <Events events={items} totalDays={totalDays} />
       </section>
-      <Image
-        src={Fish}
-        alt="Fish"
-        className="absolute bottom-[20%] right-4 w-1/6 blur-[2px] lg:right-20"
-      />
-      <Image
-        src={Vine}
-        alt="Vine"
-        className="absolute bottom-[25%] left-0 w-1/6 blur-[2px]"
-      />
     </div>
   );
 };
