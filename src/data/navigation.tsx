@@ -136,49 +136,49 @@ export const TABS: Tabs = {
       tabs: [
         {
           name: "Calendar",
-          link: "/admin/calendar",
+          link: "/admin/services/calendar",
           icon: <Calendar className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Contacts",
-          link: "/admin/contacts",
+          link: "/admin/services/contacts",
           icon: <Mail className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Checkin",
-          link: "/admin/checkin",
+          link: "/admin/services/checkin",
           icon: <QrCode className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Judging",
-          link: "/admin/judging",
+          link: "/admin/services/judging",
           icon: <MonitorCog className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Results",
-          link: "/admin/results",
+          link: "/admin/services/results",
           icon: <Trophy className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Statistics",
-          link: "/admin/statistics",
+          link: "/admin/services/statistics",
           icon: <BarChart className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Settings",
-          link: "/admin/settings",
+          link: "/admin/services/settings",
           icon: <Settings className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Timer",
-          link: "/admin/timer",
+          link: "/admin/services/timer",
           icon: <Timer className={iconStyle} />,
           target: "_self",
         },
@@ -189,7 +189,7 @@ export const TABS: Tabs = {
       tabs: [
         {
           name: "Feedback",
-          link: "/form/feedback",
+          link: "/apply/feedback",
           icon: <Search className={iconStyle} />,
           target: "_self",
         },

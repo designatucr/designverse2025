@@ -1,22 +1,24 @@
-/* eslint-disable new-cap */
 import Providers from "@/components/providers";
 import { Toaster } from "react-hot-toast";
 import { getServerSession } from "next-auth";
+import ProtectedPage from "@/components/protected";
 import { options } from "@/utils/auth";
 
 type Props = {
   children: React.ReactNode;
 };
 
-const AdminLayout = async ({ children }: Props) => {
+const FormLayout = async ({ children }: Props) => {
   const session = await getServerSession(options);
 
   return (
     <Providers session={session}>
       <Toaster />
-      {children}
+      <ProtectedPage session={session} restrictions={{}}>
+        {children}
+      </ProtectedPage>
     </Providers>
   );
 };
 
-export default AdminLayout;
+export default FormLayout;

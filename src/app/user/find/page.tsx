@@ -1,17 +1,11 @@
-import ProtectedPage from "@/components/protected";
 import Find from "@/components/user/find";
 
+export const metadata = {
+  title: "User | Find",
+};
+
 const Page = () => {
-  return (
-    <ProtectedPage
-      title="User | Find"
-      restrictions={{
-        participants: [1, 0, -1],
-      }}
-    >
-      <Find />
-    </ProtectedPage>
-  );
+  return <Find />;
 };
 
 export default Page;

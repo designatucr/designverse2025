@@ -1,17 +1,11 @@
-import ProtectedPage from "@/components/protected";
 import ScheduleWrapper from "@/components/user/schedule/Wrapper";
 
+export const metadata = {
+  title: "User | Schedule",
+};
+
 const Page = () => {
-  return (
-    <ProtectedPage
-      title="User | Schedule"
-      restrictions={{
-        participants: [1, 0, -1],
-      }}
-    >
-      <ScheduleWrapper />
-    </ProtectedPage>
-  );
+  return <ScheduleWrapper />;
 };
 
 export default Page;

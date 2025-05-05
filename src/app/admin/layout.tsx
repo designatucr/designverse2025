@@ -14,7 +14,9 @@ const AdminLayout = async ({ children }: Props) => {
   return (
     <Providers session={session}>
       <Toaster />
-      <ProtectedPage restrictions={{ admins: [1] }}>{children}</ProtectedPage>
+      <ProtectedPage session={session} restrictions={{ admins: [1] }}>
+        {children}
+      </ProtectedPage>
     </Providers>
   );
 };
