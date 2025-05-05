@@ -4,8 +4,4 @@ export const metadata = {
   title: "Admin | Timer",
 };
 
-const Page = () => {
-  return <Timer />;
-};
-
-export default Page;
+export default Timer;

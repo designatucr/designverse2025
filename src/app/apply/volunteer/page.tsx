@@ -4,8 +4,4 @@ export const metadata = {
   title: "Form | Volunteer",
 };
 
-const Page = () => {
-  return <Volunteer />;
-};
-
-export default Page;
+export default Volunteer;

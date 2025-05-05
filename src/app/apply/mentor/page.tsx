@@ -4,8 +4,4 @@ export const metadata = {
   title: "Form | Mentor",
 };
 
-const Page = () => {
-  return <Mentor />;
-};
-
-export default Page;
+export default Mentor;

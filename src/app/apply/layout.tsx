@@ -1,15 +1,14 @@
 import Providers from "@/components/providers";
 import { Toaster } from "react-hot-toast";
-import { getServerSession } from "next-auth";
 import ProtectedPage from "@/components/protected";
-import { options } from "@/utils/auth";
+import { getSession } from "@/utils/auth";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const FormLayout = async ({ children }: Props) => {
-  const session = await getServerSession(options);
+  const session = await getSession();
 
   return (
     <Providers session={session}>

@@ -4,8 +4,4 @@ export const metadata = {
   title: "Form | Admin",
 };
 
-const Page = () => {
-  return <Admin />;
-};
-
-export default Page;
+export default Admin;

@@ -4,8 +4,4 @@ export const metadata = {
   title: "Admin | Contacts",
 };
 
-const Page = () => {
-  return <Contacts />;
-};
-
-export default Page;
+export default Contacts;

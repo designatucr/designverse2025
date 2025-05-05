@@ -4,8 +4,4 @@ export const metadata = {
   title: "Admin | Settings",
 };
 
-const Page = () => {
-  return <Settings />;
-};
-
-export default Page;
+export default Settings;

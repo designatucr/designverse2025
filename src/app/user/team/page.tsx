@@ -4,8 +4,4 @@ export const metadata = {
   title: "User | Team",
 };
 
-const Page = () => {
-  return <Team />;
-};
-
-export default Page;
+export default Team;

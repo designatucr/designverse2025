@@ -4,8 +4,4 @@ export const metadata = {
   title: "Form | Panel",
 };
 
-const Page = () => {
-  return <Panel />;
-};
-
-export default Page;
+export default Panel;

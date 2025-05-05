@@ -4,8 +4,4 @@ export const metadata = {
   title: "Form | Lead",
 };
 
-const Page = () => {
-  return <Lead />;
-};
-
-export default Page;
+export default Lead;

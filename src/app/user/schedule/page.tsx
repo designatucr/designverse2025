@@ -1,13 +1,9 @@
-import ScheduleWrapper from "@/components/user/schedule/Wrapper";
+import Schedule from "@/components/user/schedule/Wrapper";
 
 export const metadata = {
   title: "User | Schedule",
 };
 
-const Page = () => {
-  return <ScheduleWrapper />;
-};
-
-export default Page;
+export default Schedule;
 
 export const dynamic = "force-dynamic";

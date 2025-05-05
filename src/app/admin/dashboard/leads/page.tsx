@@ -5,11 +5,7 @@ export const metadata = {
   title: "Admin | Leads",
 };
 
-type props = {
-  searchParams: SearchParams;
-};
-
-const Page = ({ searchParams }: props) => {
+const Page = ({ searchParams }: { searchParams: SearchParams }) => {
   return <Leads searchParams={searchParams} />;
 };
 
