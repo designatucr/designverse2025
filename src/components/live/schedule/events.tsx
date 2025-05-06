@@ -20,12 +20,12 @@ const Events = ({ events, totalDays }: props) => {
   );
 
   return (
-    <div className="flex w-8/12 flex-col items-center justify-center">
-      <div className="z-10 grid w-full grid-cols-7 items-center justify-between gap-4 rounded text-base">
+    <div className="flex w-11/12 flex-col items-center justify-center md:w-8/12">
+      <div className="z-10 flex w-full items-center justify-between gap-4 overflow-x-scroll rounded text-sm md:text-base">
         {totalDays.map((day) => (
           <button
             key={day}
-            className={`flex justify-center rounded p-2 text-white focus:outline-none ${
+            className={`flex w-full justify-center rounded p-2 text-white focus:outline-none ${
               selectedDay === day
                 ? "bg-designverse-schedule-selected"
                 : "bg-designverse-schedule-unselected"
@@ -48,7 +48,7 @@ const Events = ({ events, totalDays }: props) => {
             No Events Available
           </div>
         ) : (
-          <div className="mt-6 flex flex-col items-center justify-center gap-4">
+          <div className="mt-6 flex flex-col items-center justify-center gap-10">
             {events
               .filter(
                 ({ start }) =>
@@ -60,14 +60,14 @@ const Events = ({ events, totalDays }: props) => {
               .map(({ start, summary, location }, index) => (
                 <div
                   key={index}
-                  className="font-workSans relative mt-4 grid w-full grid-cols-6 items-center justify-center px-4 py-8 text-center text-lg font-semibold text-black"
+                  className="font-workSans relative mt-4 flex w-full flex-col items-center justify-center px-4 text-center text-xs font-semibold text-black md:grid md:grid-cols-6 md:py-8 md:text-lg"
                 >
                   <Image
                     src={Column}
                     alt="Column"
-                    className="absolute -z-10 w-full"
+                    className="absolute -z-10 w-full scale-y-[200%] md:scale-y-100"
                   />
-                  <p className="col-span-2 col-start-2">{summary}</p>
+                  <p className="md:col-span-2 md:col-start-2">{summary}</p>
                   <p className="">
                     {new Date(new Date(start.dateTime)).toLocaleTimeString(
                       "en-US",
