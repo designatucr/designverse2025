@@ -10,6 +10,7 @@ import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
 import Resources from "./resources";
+import Panelists from "./panelists";
 
 const Live = () => {
   return (
@@ -23,6 +24,7 @@ const Live = () => {
       <Resources />
       <Sponsors />
       <Judges />
+      <Panelists />
       <Team />
       <FAQ />
       <Footer />

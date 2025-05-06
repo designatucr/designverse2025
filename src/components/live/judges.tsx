@@ -48,7 +48,7 @@ const Judges = () => {
             href={profile}
             key={index}
             target="_blank"
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center text-center"
           >
             <Image
               src={image}

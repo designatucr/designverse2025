@@ -14,6 +14,7 @@ import {
   Droplets,
   Shrimp,
   Bubbles,
+  WavesLadder,
 } from "lucide-react";
 
 const items = [
@@ -56,6 +57,11 @@ const items = [
     name: "Judges",
     link: "/#judges",
     icon: <Bubbles />,
+  },
+  {
+    name: "Panelists",
+    link: "/#panelists",
+    icon: <WavesLadder />,
   },
   {
     name: "Meet the Team",
