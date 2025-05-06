@@ -42,7 +42,7 @@ const Judges = () => {
         JUDGES
       </p>
 
-      <div className="grid grid-cols-1 gap-16 lg:grid-cols-4">
+      <div className="grid w-11/12 grid-cols-1 gap-16 lg:grid-cols-4">
         {judges.map(({ image, profile, name, position }, index) => (
           <Link
             href={profile}
