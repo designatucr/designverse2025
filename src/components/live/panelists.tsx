@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Wesley from "@/public/panelists/wesley.jpeg";
-import Jamie from "@/public/panelists/jamie.jpeg";
-import George from "@/public/panelists/george.jpeg";
-import Anastasia from "@/public/panelists/anastasia.png";
-import Kashif from "@/public/panelists/kashif.jpeg";
+import Wesley from "@/public/panelists/wesley.webp";
+import Jamie from "@/public/panelists/jamie.webp";
+import George from "@/public/panelists/george.webp";
+import Anastasia from "@/public/panelists/anastasia.webp";
+import Kashif from "@/public/panelists/kashif.webp";
 
 const panels = [
   {

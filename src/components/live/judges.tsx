@@ -4,7 +4,7 @@ import Link from "next/link";
 import Mike from "@/public/judges/mike.webp";
 import Hara from "@/public/judges/hara.webp";
 import Jerry from "@/public/judges/jerry.webp";
-import George from "@/public/panelists/george.jpeg";
+import George from "@/public/panelists/george.webp";
 const judges = [
   /*   {
     image: Jessica,
