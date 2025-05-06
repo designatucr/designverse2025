@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import Jessica from "@/public/judges/jessica.webp";
+/* import Jessica from "@/public/judges/jessica.webp"; */
 import Mike from "@/public/judges/mike.webp";
 import Hara from "@/public/judges/hara.webp";
 import Jerry from "@/public/judges/jerry.webp";
-
+import George from "@/public/panelists/george.jpeg";
 const judges = [
-  {
+  /*   {
     image: Jessica,
     profile: "https://www.linkedin.com/in/jessica-s-yan/",
     name: "Jessica Yan",
     position: "Marketing @ Meta",
-  },
+  }, */
   {
     image: Mike,
     profile: "https://www.linkedin.com/in/qihang-zhang-mike/",
@@ -29,6 +29,12 @@ const judges = [
     profile: "https://www.linkedin.com/in/jerosino/",
     name: "Jerry Sinocruz",
     position: "Staff Product Researcher @ Snap",
+  },
+  {
+    image: George,
+    profile: "https://www.linkedin.com/in/georgeivanvasquez/",
+    name: "George Vasquez",
+    position: "Freelance",
   },
 ];
 
