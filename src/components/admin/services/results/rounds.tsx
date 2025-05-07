@@ -17,16 +17,19 @@ const Rounds = ({ team }: props) => {
     <div className="flex flex-col gap-3">
       <div className="flex w-full flex-row items-center gap-3">
         <Label className="pr-5 text-2xl font-bold">{team.name}</Label>
-        {Object.entries(team.links).map(([key, value], index) => (
-          <Link
-            key={index}
-            href={value ?? ""}
-            target="_blank"
-            className="text-xl text-black no-underline hover:!text-hackathon-blue-100"
-          >
-            {ICONS[key]}
-          </Link>
-        ))}
+        {Object.entries(team.links).map(([key, value], index) => {
+          if (!value.length) return null;
+          return (
+            <Link
+              key={index}
+              href={value ?? ""}
+              target="_blank"
+              className="text-xl text-black no-underline hover:!text-hackathon-blue-100"
+            >
+              {ICONS[key]}
+            </Link>
+          );
+        })}
       </div>
 
       <Accordion

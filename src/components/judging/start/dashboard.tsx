@@ -5,15 +5,17 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
-import { Pencil } from "lucide-react";
+import { Pencil, UserRoundX } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/utils/api";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Loading from "@/components/loading";
-import { useRouter } from "next/navigation";
+import Confirm from "./confirm";
+import { Round } from "@/types/rounds";
+import { useState } from "react";
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -23,12 +25,18 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Round } from "@/types/rounds";
+import { Button } from "@/components/ui/button";
+import toaster from "@/utils/toaster";
 
+type TeamUpdateType = {
+  uid: string;
+  round: number;
+};
 const Dashboard = () => {
-  const router = useRouter();
+  const queryClient = useQueryClient();
+  const [unavailable, setUnavailable] = useState<TeamUpdateType | null>(null);
+
   const fetchRounds = async () => {
     const { items } = await api({ url: "/api/judging/start", method: "GET" });
     return items;
@@ -37,8 +45,30 @@ const Dashboard = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["rounds"],
     queryFn: fetchRounds,
+    refetchOnWindowFocus: false,
   });
 
+  const mutation = useMutation({
+    mutationFn: (body: TeamUpdateType) =>
+      api({
+        method: "POST",
+        url: "/api/judging/start",
+        body,
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["rounds"] });
+      toaster(`Round updated`, "success");
+    },
+    onError: (error) => {
+      toaster(`Error updating round! ${error}`, "error");
+    },
+  });
+
+  const handleUpdate = () => {
+    mutation.mutate(unavailable!);
+
+    setUnavailable(null);
+  };
   if (isLoading) return <Loading />;
   return (
     <div className="flex h-full w-full flex-col items-center justify-between bg-[#E7E7E7]">
@@ -82,8 +112,16 @@ const Dashboard = () => {
                       R{index + 1} - {name}
                     </AccordionTrigger>
                   </div>
-                  <div className="flex flex-row gap-2">
+                  <div className="flex flex-row gap-3">
                     <Badge className="whitespace-nowrap">{table}</Badge>
+                    <Badge
+                      className="cursor-pointer whitespace-nowrap"
+                      onClick={() =>
+                        setUnavailable({ uid: current.uid, round: index })
+                      }
+                    >
+                      <UserRoundX size={20} />
+                    </Badge>
                     <Link
                       href={`/judge/start/${round[0]?.uid}?name=${name}&round=${index + 1}&table=${table}`}
                       className="text-md flex flex-row items-center justify-between gap-2 rounded-md bg-hackathon-tags-gray-bg px-2 py-1 text-black"
@@ -126,25 +164,25 @@ const Dashboard = () => {
         </Accordion>
       </div>
 
-      <AlertDialog>
-        <AlertDialogTrigger asChild>
-          <Button>Done Judging</Button>
-        </AlertDialogTrigger>
+      <AlertDialog open={unavailable ? true : false}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Ready to finish?</AlertDialogTitle>
+            <AlertDialogTitle>Is the team not available?</AlertDialogTitle>
             <AlertDialogDescription>
-              This will take you back to the confirmation page.
+              This will direct you to the next available team.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel onClick={() => setUnavailable(null)}>
+              Cancel
+            </AlertDialogCancel>
             <AlertDialogAction asChild>
-              <Button onClick={() => router.push("/judge/end")}>Confirm</Button>
+              <Button onClick={handleUpdate}>Confirm</Button>
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+      <Confirm />
     </div>
   );
 };
