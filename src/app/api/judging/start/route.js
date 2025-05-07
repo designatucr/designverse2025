@@ -136,7 +136,10 @@ export const POST = async (req) => {
     const formattedRounds = JSON.parse(rounds);
 
     const filteredTeams = teams.filter((team) => {
-      return !team.rounds[round].length;
+      const isNotAssigned = !team.rounds[round].length;
+      const haveNotJudged = !team.rounds.some((round) => round.uid === user.id);
+
+      return isNotAssigned && haveNotJudged;
     });
 
     let selectedTeam;
