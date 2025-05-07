@@ -7,7 +7,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { ICONS } from "@/data/admin/icons";
-import { QUESTIONS } from "@/data/judge/form";
+import { FIELDS } from "@/data/judge/form";
 import { Team } from "@/types/users";
 import { Round } from "@/types/rounds";
 import Link from "next/link";
@@ -68,7 +68,7 @@ const Rounds = ({ team }: props) => {
                         ))}
                       </div>
                     </div>
-                    {QUESTIONS.map((value, index) => {
+                    {Object.entries(FIELDS).map(([_, value], index) => {
                       const title = value.title;
                       const question = value.question;
                       const rating =
