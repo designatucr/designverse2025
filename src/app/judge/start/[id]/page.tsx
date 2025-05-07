@@ -4,16 +4,20 @@ interface props {
   params: {
     id: string;
   };
+  searchParams: { [key: string]: string };
 }
 
-export const metadata = {
-  title: "Judge | Round",
-};
-
-const Page = ({ params }: props) => {
+const Page = ({ params, searchParams }: props) => {
   const { id } = params;
 
-  return <Start id={id} />;
+  return (
+    <Start
+      id={id}
+      name={searchParams.name}
+      round={searchParams.round}
+      table={searchParams.table}
+    />
+  );
 };
 
 export default Page;

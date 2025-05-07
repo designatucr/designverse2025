@@ -13,8 +13,6 @@ interface props {
 }
 
 const Event = ({ event }: props) => {
-  console.log(event);
-
   return (
     <Dialog>
       <DialogTrigger>
