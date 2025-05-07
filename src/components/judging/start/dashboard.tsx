@@ -32,7 +32,7 @@ const Dashboard = () => {
       <Accordion
         type="single"
         collapsible
-        className="bg-hackathon-blue-200 w-full rounded-md border-black/20 text-white"
+        className="bg-hackathon-primary w-full rounded-md border-black/20 text-white"
       >
         {data.rounds.map((round: Round[], index: number) => {
           const current = round[0];

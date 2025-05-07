@@ -25,7 +25,7 @@ module.exports = {
           "gray-200": "#9ea4af",
           "gray-300": "#525252",
           page: "#F5F5F5",
-          stats: {
+          status: {
             pending: "#FFCF55",
             accepted: "#80ED99",
             rejected: "#F07167",
