@@ -117,7 +117,7 @@ export const POST = async (req) => {
     );
   }
 
-  const { round } = await req.json();
+  const { uid: teamId, round } = await req.json();
   try {
     const judgeSnapshot = await getDoc(doc(db, "users", user.id));
     const teamSnapShot = await getDocs(
@@ -159,7 +159,9 @@ export const POST = async (req) => {
       },
     ];
     const selectedSnapshot = await getDoc(doc(db, "teams", selectedTeam.uid));
+    const oldSnapshot = await getDoc(doc(db, "teams", teamId));
     const selectedRounds = JSON.parse(selectedSnapshot.data().rounds);
+    const oldRounds = JSON.parse(oldSnapshot.data().rounds);
     selectedRounds[round] = [
       {
         name: user.firstName + " " + user.lastName,
@@ -168,9 +170,13 @@ export const POST = async (req) => {
         rounds: formattedRounds,
       },
     ];
+    oldRounds[round] = [];
 
     await updateDoc(doc(db, "teams", selectedTeam.uid), {
       rounds: JSON.stringify(selectedRounds),
+    });
+    await updateDoc(doc(db, "teams", teamId), {
+      rounds: JSON.stringify(oldRounds),
     });
     await updateDoc(doc(db, "users", user.id), {
       rounds: JSON.stringify(formattedRounds),
