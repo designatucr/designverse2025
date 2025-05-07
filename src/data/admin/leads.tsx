@@ -2,6 +2,7 @@ import { generateSelect, generateStatus } from "./columns";
 import { STATUSES } from "@/data/statuses";
 import { Column, Tags } from "@/types/dashboard";
 import { ColumnDef } from "@tanstack/react-table";
+import { Lead } from "@/types/users";
 
 export const TAGS: Tags[] = [
   {
@@ -14,18 +15,12 @@ export const TAGS: Tags[] = [
   },
 ];
 
-type Lead = {
-  name: string;
-  email: string;
-  discord: string;
-  grade: string;
-  gender: string;
-};
-
-export const COLUMNS: (ColumnDef<Lead> & Column)[] = [
+export const COLUMNS: (ColumnDef<Lead, string> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
@@ -35,7 +30,7 @@ export const COLUMNS: (ColumnDef<Lead> & Column)[] = [
         onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {row.getValue("name")}
+        {row.getValue("fullName")}
       </div>
     ),
   },

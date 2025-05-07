@@ -1,5 +1,4 @@
 import View from "@/components/admin/dashboards/dashboard/view";
-import { AFFILIATIONS } from "../form/information";
 import { generateAffiliation, generateSelect, generateStatus } from "./columns";
 import { STATUSES } from "@/data/statuses";
 import JSZip from "jszip";
@@ -8,17 +7,7 @@ import { Download } from "lucide-react";
 import data from "../config";
 import { Column, Tags } from "@/types/dashboard";
 import { ColumnDef } from "@tanstack/react-table";
-
-type Judge = {
-  name: string;
-  email: string;
-  phone: string;
-  gender: string;
-  title: string;
-  affiliation: string;
-  shirt: string;
-  photo: string;
-};
+import { Judge } from "@/types/users";
 
 export const TAGS: Tags[] = [
   {
@@ -31,10 +20,12 @@ export const TAGS: Tags[] = [
   },
 ];
 
-export const COLUMNS: (ColumnDef<Judge> & Column)[] = [
+export const COLUMNS: (ColumnDef<Judge, string> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
@@ -44,7 +35,7 @@ export const COLUMNS: (ColumnDef<Judge> & Column)[] = [
         onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {row.getValue("name")}
+        {row.getValue("fullName")}
       </div>
     ),
   },
@@ -94,7 +85,7 @@ export const COLUMNS: (ColumnDef<Judge> & Column)[] = [
       </div>
     ),
   },
-  generateAffiliation(AFFILIATIONS),
+  generateAffiliation(),
   generateStatus(STATUSES),
   {
     accessorKey: "photo",
@@ -102,10 +93,12 @@ export const COLUMNS: (ColumnDef<Judge> & Column)[] = [
     header: ({ table }) => {
       const downloadZip = () => {
         const { rows } = table.getRowModel();
-        const photos = rows.map(({ original: { name, photo } }) => ({
-          photo,
-          name,
-        }));
+        const photos = rows.map(
+          ({ original: { firstName, lastName, photo } }) => ({
+            photo,
+            name: `${firstName} ${lastName}`,
+          }),
+        );
 
         const zip = new JSZip();
         const folder = zip.folder("photos");
@@ -141,7 +134,7 @@ export const COLUMNS: (ColumnDef<Judge> & Column)[] = [
     cell: ({ row }) => (
       <View
         src={row.getValue("photo")}
-        title={row.getValue("name")}
+        title={row.getValue("fullName")}
         type="photo"
       />
     ),

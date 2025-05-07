@@ -3,15 +3,7 @@ import { generateSelect, generateStatus, generateTiers } from "./columns";
 import { STATUSES } from "@/data/statuses";
 import { ColumnDef } from "@tanstack/react-table";
 import { Column, Tags } from "@/types/dashboard";
-
-type Sponsor = {
-  name: string;
-  email: string;
-  company: string;
-  position: string;
-  tier: string;
-  comments: string;
-};
+import { Sponsor } from "@/types/users";
 
 export const TAGS: Tags[] = [
   {
@@ -24,10 +16,12 @@ export const TAGS: Tags[] = [
   },
 ];
 
-export const COLUMNS: (ColumnDef<Sponsor> & Column)[] = [
+export const COLUMNS: (ColumnDef<Sponsor, string> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
@@ -37,7 +31,7 @@ export const COLUMNS: (ColumnDef<Sponsor> & Column)[] = [
         onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {row.getValue("name")}
+        {row.getValue("fullName")}
       </div>
     ),
   },

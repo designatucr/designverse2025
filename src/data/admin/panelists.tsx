@@ -4,6 +4,7 @@ import { STATUSES } from "@/data/statuses";
 import { Badge } from "@/components/ui/badge";
 import { ColumnDef } from "@tanstack/react-table";
 import { Column } from "@/types/dashboard";
+import { Panelist } from "@/types/users";
 
 export const TAGS = [
   {
@@ -16,21 +17,12 @@ export const TAGS = [
   },
 ];
 
-type Panelist = {
-  name: string;
-  email: string;
-  discord: string;
-  availability: string[];
-  response: string;
-  shirt: string;
-  gender: string;
-  grade: string;
-};
-
-export const COLUMNS: (ColumnDef<Panelist> & Column)[] = [
+export const COLUMNS: (ColumnDef<Panelist, string> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
@@ -40,7 +32,7 @@ export const COLUMNS: (ColumnDef<Panelist> & Column)[] = [
         onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {row.getValue("name")}
+        {row.getValue("fullName")}
       </div>
     ),
   },
