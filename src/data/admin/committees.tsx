@@ -1,23 +1,8 @@
 import { generateAffiliation, generateSelect, generateStatus } from "./columns";
-import { AFFILIATIONS } from "../form/information";
 import { STATUSES } from "@/data/statuses";
 import { ColumnDef } from "@tanstack/react-table";
 import { Column, Tags } from "@/types/dashboard";
-
-type Committee = {
-  name: string;
-  email: string;
-  discord: string;
-  phone: string;
-  age: string;
-  gender: string;
-  school: string;
-  major: string;
-  grade: string;
-  shirt: string;
-  diet: string;
-  restriction: string;
-};
+import { Committee } from "@/types/users";
 
 export const TAGS: Tags[] = [
   {
@@ -30,10 +15,13 @@ export const TAGS: Tags[] = [
   },
 ];
 
-export const COLUMNS: (ColumnDef<Committee> & Column)[] = [
+export const COLUMNS: (ColumnDef<Committee, string> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
@@ -43,7 +31,7 @@ export const COLUMNS: (ColumnDef<Committee> & Column)[] = [
         onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {row.getValue("name")}
+        {row.getValue("fullName")}
       </div>
     ),
   },
@@ -107,6 +95,6 @@ export const COLUMNS: (ColumnDef<Committee> & Column)[] = [
       </div>
     ),
   },
-  generateAffiliation(AFFILIATIONS),
+  generateAffiliation(),
   generateStatus(STATUSES),
 ];

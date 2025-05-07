@@ -12,18 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { api } from "@/utils/api";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/loading";
-
-type Round = {
-  name: string;
-  affiliation: string;
-  uid: "string";
-  feedback?: {
-    implementation: { rating: number; comment: string };
-    idea: { rating: number; comment: string };
-    design: { rating: number; comment: string };
-    tracks?: string[];
-  };
-};
+import { Round } from "@/types/rounds";
 const Dashboard = () => {
   const fetchRounds = async () => {
     const { items } = await api({ url: "/api/judging/start", method: "GET" });
