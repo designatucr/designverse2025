@@ -121,7 +121,7 @@ export type Team = {
   discords: string[];
   links: {
     [link: string]: string;
-  }[];
+  };
   rounds: Round[][];
   table: number;
 };

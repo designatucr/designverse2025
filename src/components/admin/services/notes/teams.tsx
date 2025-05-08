@@ -4,7 +4,7 @@ import { Team } from "@/types/users";
 type props = { teams: Team[]; setTeam: (value: Team) => void };
 const Teams = ({ teams, setTeam }: props) => {
   return (
-    <ToggleGroup type="single" className="grid w-full grid-cols-6">
+    <ToggleGroup type="single" className="grid w-full grid-cols-5 gap-3">
       {teams?.map(({ name, table, ...team }, index) => {
         return (
           <ToggleGroupItem
@@ -14,7 +14,7 @@ const Teams = ({ teams, setTeam }: props) => {
             onClick={() => setTeam({ name, table, ...team })}
           >
             <div className="w-3/4 truncate text-ellipsis">
-              Team {table} - {name}
+              {table} - {name}
             </div>
           </ToggleGroupItem>
         );

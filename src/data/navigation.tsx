@@ -26,6 +26,7 @@ import {
   HandCoins,
   Cat,
   Trophy,
+  Notebook,
 } from "lucide-react";
 import data from "./config";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
@@ -159,9 +160,9 @@ export const TABS: Tabs = {
           target: "_self",
         },
         {
-          name: "Results",
-          link: "/admin/services/results",
-          icon: <Trophy className={iconStyle} />,
+          name: "Notes",
+          link: "/admin/services/notes",
+          icon: <Notebook className={iconStyle} />,
           target: "_self",
         },
         {
