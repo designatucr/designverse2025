@@ -15,21 +15,21 @@ const support = [
     description:
       "Have experience leading, using Figma, or coordinating groups? Share your knowledge and become a mentor!",
     form: "Mentor",
-    link: "/form/mentor",
+    link: "/apply/mentor",
   },
   {
     title: "Sponsor Us",
     description:
       "Have a company or brand you want to bring attention to? Sponsor Us to raise Brand awareness and exposure through social media and giveaways!",
     form: "Sponsor",
-    link: "/form/sponsor",
+    link: "/apply/sponsor",
   },
   {
     title: "Volunteer Work",
     description:
       "Need experience or just want to help our organization come to life? Volunteer to help the Designathon happen!",
     form: "Volunteer",
-    link: "/form/volunteer",
+    link: "/apply/volunteer",
   },
 ];
 

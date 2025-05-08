@@ -24,8 +24,23 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/apply",
+        source: "/(form|apply)",
         destination: "/apply/participant",
+        permanent: true,
+      },
+      {
+        source: "/form/mentor",
+        destination: "/apply/mentor",
+        permanent: true,
+      },
+      {
+        source: "/form/volunteer",
+        destination: "/apply/volunteer",
+        permanent: true,
+      },
+      {
+        source: "/form/sponsor",
+        destination: "/apply/sponsor",
         permanent: true,
       },
     ];
