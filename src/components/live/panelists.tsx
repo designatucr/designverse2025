@@ -6,7 +6,7 @@ import Anastasia from "@/public/panelists/anastasia.webp";
 import Kashif from "@/public/panelists/kashif.webp";
 import Link from "next/link";
 
-const panels = [
+const first = [
   {
     image: Wesley,
     name: "Wesley Hong",
@@ -25,6 +25,9 @@ const panels = [
     position: "UIUX @ BrokerBotics",
     profile: "https://www.linkedin.com/in/georgeivanvasquez/",
   },
+];
+
+const second = [
   {
     image: Anastasia,
     name: "Anastasia Dvorzhanska",
@@ -49,8 +52,8 @@ const Panelists = () => {
         PANELISTS
       </p>
 
-      <div className="grid w-11/12 grid-cols-1 gap-16 lg:grid-cols-5">
-        {panels.map(({ image, name, profile, position }, index) => (
+      <div className="grid w-9/12 grid-cols-1 gap-16 lg:grid-cols-3">
+        {first.map(({ image, name, profile, position }, index) => (
           <Link
             href={profile}
             key={index}
@@ -60,6 +63,26 @@ const Panelists = () => {
             <Image
               src={image}
               alt="Judge Picture"
+              width={200}
+              height={200}
+              className="aspect-square rounded-full hover:scale-110"
+            />
+            <p className="mt-3 text-2xl font-semibold text-white">{name}</p>
+            <p className="mt-3 text-xl font-semibold text-white">{position}</p>
+          </Link>
+        ))}
+      </div>
+      <div className="mt-8 grid grid-cols-1 gap-16 lg:grid-cols-2">
+        {second.map(({ image, profile, name, position }, index) => (
+          <Link
+            href={profile}
+            key={index}
+            target="_blank"
+            className="flex flex-col items-center justify-center"
+          >
+            <Image
+              src={image}
+              alt="Lead picture"
               width={200}
               height={200}
               className="aspect-square rounded-full hover:scale-110"
