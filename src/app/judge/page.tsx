@@ -14,7 +14,7 @@ const Page = () => {
     <div className="flex w-full flex-col items-center justify-between bg-gradient-to-t from-hackathon-blue-200 to-[#3A749A]">
       <Image src={image1} className="w-full md:w-1/3" alt="" />
       <div className="flex flex-col items-center justify-center">
-        <p className="mb-2 font-poppins text-4xl font-bold text-white">
+        <p className="font-poppins mb-2 text-4xl font-bold text-white">
           Judging Portal
         </p>
         <p className="font-poppins text-2xl text-white">Welcome {name}</p>
