@@ -9,17 +9,38 @@ const nextConfig = {
     return [
       {
         source: "/admin",
-        destination: "/admin/participants",
+        destination: "/admin/dashboard/participants",
         permanent: true,
       },
+      {
+        source: "/admin/dashboard",
+        destination: "/admin/dashboard/participants",
+        permanent: true,
+      },
+
       {
         source: "/user",
         destination: "/user/dashboard",
         permanent: true,
       },
       {
-        source: "/form",
-        destination: "/form/participant",
+        source: "/(form|apply)",
+        destination: "/apply/participant",
+        permanent: true,
+      },
+      {
+        source: "/form/mentor",
+        destination: "/apply/mentor",
+        permanent: true,
+      },
+      {
+        source: "/form/volunteer",
+        destination: "/apply/volunteer",
+        permanent: true,
+      },
+      {
+        source: "/form/sponsor",
+        destination: "/apply/sponsor",
         permanent: true,
       },
     ];
