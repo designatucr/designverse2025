@@ -96,6 +96,14 @@ const Landing = () => {
             APPLY NOW !
           </Link>
         </Button>
+        <Button
+          asChild
+          className="sm:cols-span-3 rounded-full bg-[#406F82] px-8 py-6 sm:col-start-2 sm:grid-cols-subgrid"
+        >
+          <Link href="/user" className="flex gap-2 text-xl">
+            DASHBOARD !
+          </Link>
+        </Button>
       </div>
 
       <Image
