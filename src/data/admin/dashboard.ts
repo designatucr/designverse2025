@@ -138,6 +138,7 @@ export const ATTRIBUTES: Record<keys, string[]> = {
     "notBeneficial",
     "helpful",
     "status",
+    "marketing",
   ],
   leads: [
     "firstName",

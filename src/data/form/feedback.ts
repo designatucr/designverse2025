@@ -33,7 +33,7 @@ export const FIELDS = {
     input: "textarea",
     name: "improvements",
     rows: 4,
-    title: `Was there anything that you would have liked to see at ${data.name}?`,
+    title: `Was there anything that you would have liked to see at ${data.name} that you would like to have for DesignVerse 2026?`,
     placeholder: "ie. More food",
     width: 12,
     required: true,
@@ -42,7 +42,7 @@ export const FIELDS = {
     input: "textarea",
     name: "notBenficial",
     rows: 4,
-    title: `Was there anything that you did not find beneficial about ${data.name}?`,
+    title: `Was there anything that you did not find beneficial about ${data.name}? What could we have added to make this event more beneficial for you?`,
     placeholder: "N/A",
     width: 12,
     required: true,
@@ -64,6 +64,16 @@ export const FIELDS = {
     width: 12,
     required: true,
   },
+  marketing: {
+    input: "input",
+    name: "marketing",
+    rows: 4,
+    title: `If you are interested in recieving email communication from the DesignVerse team regarding DesignVerse 2026, please provide a preferred email address.`,
+    placeholder: "johndoe@gmail.com",
+    width: 12,
+    required: true,
+    editable: true,
+  },
 };
 
 interface Attributes {
@@ -73,6 +83,7 @@ interface Attributes {
   rating: "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10";
   eventSource: string;
   additionalComments: string;
+  marketing: string;
 }
 
 export const ATTRIBUTES: Attributes = {
@@ -82,4 +93,5 @@ export const ATTRIBUTES: Attributes = {
   rating: "10",
   eventSource: "",
   additionalComments: "",
+  marketing: "",
 };
