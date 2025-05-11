@@ -22,7 +22,7 @@ const first = [
   {
     image: George,
     name: "George Vasquez",
-    position: "UIUX @ BrokerBotics",
+    position: "Freelance",
     profile: "https://www.linkedin.com/in/georgeivanvasquez/",
   },
 ];

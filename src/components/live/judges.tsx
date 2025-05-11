@@ -1,17 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-/* import Jessica from "@/public/judges/jessica.webp"; */
 import Mike from "@/public/judges/mike.webp";
 import Hara from "@/public/judges/hara.webp";
 import Jerry from "@/public/judges/jerry.webp";
 import George from "@/public/panelists/george.webp";
+import Jamie from "@/public/panelists/jamie.webp";
+import Aaron from "@/public/judges/aaron.jpg";
+
 const judges = [
-  /*   {
-    image: Jessica,
-    profile: "https://www.linkedin.com/in/jessica-s-yan/",
-    name: "Jessica Yan",
-    position: "Marketing @ Meta",
-  }, */
   {
     image: Mike,
     profile: "https://www.linkedin.com/in/qihang-zhang-mike/",
@@ -36,6 +32,18 @@ const judges = [
     name: "George Vasquez",
     position: "Freelance",
   },
+  {
+    image: Jamie,
+    name: "Jamie Sun",
+    position: "Senior Product Designer @ Saatchi & Saatchi",
+    profile: "https://www.linkedin.com/in/jamieindesign/",
+  },
+  {
+    image: Aaron,
+    name: "Aaron Guhin",
+    position: "UX @ Esri",
+    profile: "https://www.linkedin.com/in/aaron-guhin/",
+  },
 ];
 
 const Judges = () => {
@@ -48,7 +56,7 @@ const Judges = () => {
         JUDGES
       </p>
 
-      <div className="grid w-11/12 grid-cols-1 gap-16 lg:grid-cols-4">
+      <div className="grid w-11/12 grid-cols-1 gap-16 lg:grid-cols-3">
         {judges.map(({ image, profile, name, position }, index) => (
           <Link
             href={profile}
