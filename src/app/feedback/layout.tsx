@@ -13,7 +13,7 @@ const FeedbackLayout = async ({ children }: Props) => {
   return (
     <Providers session={session}>
       <Toaster />
-      <ProtectedPage session={session} restrictions={{ participants: [1] }}>
+      <ProtectedPage session={session} restrictions={{}}>
         {children}
       </ProtectedPage>
     </Providers>
