@@ -1,11 +1,11 @@
 import { getResults } from "./actions";
-import Result from "./result";
+import Notes from "./notes";
 import { ReactQuery } from "@/utils/react-query";
 
 const Index = async () => {
   return (
-    <ReactQuery query={getResults} queryKey={["/admin/results"]}>
-      <Result />
+    <ReactQuery query={getResults} queryKey={["/admin/notes"]}>
+      <Notes />
     </ReactQuery>
   );
 };

@@ -1,4 +1,4 @@
-const mappings = {
+export const mappings = {
   red: {
     background: "bg-hackathon-tags-red-bg",
     text: "text-hackathon-tags-red-text",
@@ -103,4 +103,17 @@ export const COLORS = {
   none: mappings["none"],
   read: mappings["green"],
   unread: mappings["red"],
+  figma: mappings["red"],
+  github: mappings["grayblue"],
+  devpost: mappings["teal"],
+  beginner: mappings["lightgreen"],
+  sustainable: mappings["green"],
+  women: mappings["purple"],
+  data: mappings["teal"],
+  "0/5": mappings["red"],
+  "1/5": mappings["red"],
+  "2/5": mappings["yellow"],
+  "3/5": mappings["green"],
+  "4/5": mappings["green"],
+  "5/5": mappings["purple"],
 };

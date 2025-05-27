@@ -9,9 +9,9 @@ import Teams from "./teams";
 import { getResults } from "./actions";
 import { Team } from "@/types/users";
 
-const Result = () => {
+const Notes = () => {
   const { data, isLoading } = useQuery({
-    queryKey: ["/admin/results"],
+    queryKey: ["/admin/notes"],
     queryFn: async () => await getResults(),
   });
   const [team, setTeam] = useState<Team | null>(null);
@@ -19,7 +19,7 @@ const Result = () => {
   if (isLoading) return <Loading />;
   return (
     <div className="flex h-full flex-col gap-3 py-4 font-poppins">
-      <Label className="pr-5 text-2xl font-bold">Results</Label>
+      <Label className="pr-5 text-2xl font-bold">Notes</Label>
       {data ? (
         <div className="flex flex-col gap-3">
           <Teams teams={data} setTeam={setTeam} />
@@ -32,4 +32,4 @@ const Result = () => {
   );
 };
 
-export default Result;
+export default Notes;

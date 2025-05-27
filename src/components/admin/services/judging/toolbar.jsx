@@ -163,9 +163,7 @@ const Toolbar = ({
           : team.name;
         team.rounds.forEach((round, index) => {
           if (round.some((individual) => individual.name === judge.name))
-            judge.rounds[index] = [
-              { name: name, affiliation: "student", uid: team.uid },
-            ];
+            judge.rounds[index] = [{ name: name, uid: team.uid }];
         });
       });
     });
