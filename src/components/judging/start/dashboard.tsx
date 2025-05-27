@@ -80,7 +80,7 @@ const Dashboard = () => {
         <Accordion
           type="single"
           collapsible
-          className="w-full rounded border-black/20 bg-hackathon-blue-200 text-white"
+          className="w-full rounded-xl border-black/20 bg-hackathon-primary text-white"
         >
           {data.rounds.map((round: Round[], index: number) => {
             const current = round[0];

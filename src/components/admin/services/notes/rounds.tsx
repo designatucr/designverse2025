@@ -48,7 +48,7 @@ const Rounds = ({ team }: props) => {
       <Accordion
         type="single"
         collapsible
-        className="w-full overflow-hidden rounded border-black/20 bg-hackathon-blue-200 text-white"
+        className="bg-hackathon-blue-200 w-full overflow-hidden rounded border-black/20 text-white"
       >
         {team.rounds.map((round: Round[], index: number) => {
           const current = round[0];
@@ -68,7 +68,7 @@ const Rounds = ({ team }: props) => {
 
           return (
             <AccordionItem value={index.toString() + 1} key={index}>
-              <AccordionTrigger className="w-full bg-hackathon-blue-200 px-6 text-white">
+              <AccordionTrigger className="bg-hackathon-blue-200 w-full px-6 text-white">
                 R{index + 1} - {judge}
               </AccordionTrigger>
               <AccordionContent className="flex flex-col bg-white p-6 text-black">

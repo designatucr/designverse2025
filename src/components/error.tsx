@@ -9,11 +9,11 @@ const Error = ({ code, name, message, dev }: Fault) => {
       <p className="m-0 text-center text-lg font-bold text-black md:text-2xl">
         {name}
       </p>
-      <p className="m-0 text-center text-sm text-hackathon-blue-200 md:text-lg">
+      <p className="m-0 text-center text-sm text-hackathon-primary md:text-lg">
         {message}
       </p>
       {dev && (
-        <p className="m-0 text-center text-sm text-hackathon-blue-200 md:text-lg">
+        <p className="m-0 text-center text-sm text-hackathon-primary md:text-lg">
           Developer Notes: {dev}
         </p>
       )}

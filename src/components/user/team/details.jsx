@@ -179,7 +179,7 @@ const Details = ({ team }) => {
         <Button variant="destructive" onClick={handleLeave}>
           Leave Team
         </Button>
-        <Button onClick={handleSave} className="bg-hackathon-green-400">
+        <Button onClick={handleSave} className="bg-hackathon-green-300">
           Save Team
         </Button>
       </CardFooter>
